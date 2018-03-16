@@ -1,8 +1,0 @@
-#+TITLE: Comparando
-#+author: yo
-#+LaTeX_header: \usepackage{booktabs}\usepackage{multirow}
-#+options: toc:nil
-
-#+BEGIN_EXPORT latex
-\input{results}
-#+END_EXPORT

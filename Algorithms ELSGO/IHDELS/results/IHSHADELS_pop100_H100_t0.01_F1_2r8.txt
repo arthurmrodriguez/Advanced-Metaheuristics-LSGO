@@ -1,4 +1,0 @@
-Best initial_sol
-MTS Global: 2.098e+11 -> 1.070e+08 [2.10e+11, 1.00]
-SHADE partial: 1.070e+08 -> 3.277e+07 [7.42e+07, 0.69]
-MTS Local: 3.277e+07 -> 2.922e+06 [2.98e+07, 0.91]
