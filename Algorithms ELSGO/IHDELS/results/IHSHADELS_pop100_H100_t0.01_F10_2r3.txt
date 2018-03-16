@@ -1,0 +1,130 @@
+MTS Global: 9.575e+07 -> 9.506e+07 [6.89e+05, 0.01]
+SHADE partial: 9.506e+07 -> 9.506e+07 [0.00e+00, 0.00]
+MTS Local: 9.506e+07 -> 9.504e+07 [1.80e+04, 0.00]
+9.50e+07(9.50e+07): with 54901 evaluations
+GRAD Global: 9.504e+07 -> 9.499e+07 [5.29e+04, 0.00]
+SHADE partial: 9.499e+07 -> 9.499e+07 [0.00e+00, 0.00]
+GRAD Local: 9.499e+07 -> 9.499e+07 [2.90e+01, 0.00]
+9.50e+07(9.50e+07): with 114836 evaluations
+MTS Global: 9.499e+07 -> 9.499e+07 [6.70e-02, 0.00]
+[1.2e+05]: 9.499030e+07,139836
+SHADE partial: 9.499e+07 -> 9.462e+07 [3.71e+05, 0.00]
+MTS Local: 9.462e+07 -> 9.411e+07 [5.05e+05, 0.01]
+Restart:9.41e+07 for 0.01: with 169736 evaluations
+9.78e+07(9.41e+07): with 169936 evaluations
+GRAD Global: 9.777e+07 -> 9.729e+07 [4.75e+05, 0.00]
+SHADE partial: 9.729e+07 -> 9.516e+07 [2.14e+06, 0.02]
+MTS Local: 9.516e+07 -> 9.514e+07 [1.93e+04, 0.00]
+9.51e+07(9.41e+07): with 230867 evaluations
+MTS Global: 9.514e+07 -> 9.490e+07 [2.36e+05, 0.00]
+SHADE partial: 9.490e+07 -> 9.490e+07 [0.00e+00, 0.00]
+GRAD Local: 9.490e+07 -> 9.478e+07 [1.16e+05, 0.00]
+9.48e+07(9.41e+07): with 287774 evaluations
+MTS Global: 9.478e+07 -> 9.469e+07 [9.42e+04, 0.00]
+SHADE partial: 9.469e+07 -> 9.469e+07 [0.00e+00, 0.00]
+MTS Local: 9.469e+07 -> 9.468e+07 [1.44e+04, 0.00]
+9.47e+07(9.41e+07): with 342674 evaluations
+MTS Global: 9.468e+07 -> 9.467e+07 [5.14e+03, 0.00]
+SHADE partial: 9.467e+07 -> 9.467e+07 [0.00e+00, 0.00]
+MTS Local: 9.467e+07 -> 9.467e+07 [2.23e+03, 0.00]
+Restart:9.47e+07 for 0.00: with 397574 evaluations
+9.93e+07(9.41e+07): with 397774 evaluations
+MTS Global: 9.928e+07 -> 9.386e+07 [5.42e+06, 0.05]
+SHADE partial: 9.386e+07 -> 9.386e+07 [0.00e+00, 0.00]
+MTS Local: 9.386e+07 -> 9.371e+07 [1.44e+05, 0.00]
+9.37e+07(9.37e+07): with 452674 evaluations
+GRAD Global: 9.371e+07 -> 9.363e+07 [8.55e+04, 0.00]
+SHADE partial: 9.363e+07 -> 9.363e+07 [0.00e+00, 0.00]
+GRAD Local: 9.363e+07 -> 9.361e+07 [1.71e+04, 0.00]
+9.36e+07(9.36e+07): with 517614 evaluations
+MTS Global: 9.361e+07 -> 9.360e+07 [7.51e+03, 0.00]
+SHADE partial: 9.360e+07 -> 9.360e+07 [0.00e+00, 0.00]
+MTS Local: 9.360e+07 -> 9.360e+07 [1.66e+03, 0.00]
+9.36e+07(9.36e+07): with 572514 evaluations
+MTS Global: 9.360e+07 -> 9.360e+07 [5.40e+02, 0.00]
+SHADE partial: 9.360e+07 -> 9.360e+07 [0.00e+00, 0.00]
+[6.0e+05]: 9.359978e+07,622414
+MTS Local: 9.360e+07 -> 9.360e+07 [1.46e+03, 0.00]
+Restart:9.36e+07 for 0.00: with 627414 evaluations
+9.85e+07(9.36e+07): with 627614 evaluations
+GRAD Global: 9.853e+07 -> 9.677e+07 [1.76e+06, 0.02]
+SHADE partial: 9.677e+07 -> 9.492e+07 [1.84e+06, 0.02]
+GRAD Local: 9.492e+07 -> 9.438e+07 [5.41e+05, 0.01]
+9.44e+07(9.36e+07): with 683545 evaluations
+MTS Global: 9.438e+07 -> 9.309e+07 [1.29e+06, 0.01]
+SHADE partial: 9.309e+07 -> 9.309e+07 [0.00e+00, 0.00]
+MTS Local: 9.309e+07 -> 9.300e+07 [9.09e+04, 0.00]
+9.30e+07(9.30e+07): with 738445 evaluations
+MTS Global: 9.300e+07 -> 9.285e+07 [1.50e+05, 0.00]
+SHADE partial: 9.285e+07 -> 9.285e+07 [0.00e+00, 0.00]
+MTS Local: 9.285e+07 -> 9.269e+07 [1.62e+05, 0.00]
+9.27e+07(9.27e+07): with 793345 evaluations
+MTS Global: 9.269e+07 -> 9.269e+07 [7.52e+02, 0.00]
+SHADE partial: 9.269e+07 -> 9.269e+07 [0.00e+00, 0.00]
+MTS Local: 9.269e+07 -> 9.268e+07 [6.47e+03, 0.00]
+9.27e+07(9.27e+07): with 848245 evaluations
+MTS Global: 9.268e+07 -> 9.268e+07 [5.12e+02, 0.00]
+SHADE partial: 9.268e+07 -> 9.268e+07 [0.00e+00, 0.00]
+MTS Local: 9.268e+07 -> 9.267e+07 [1.47e+04, 0.00]
+Restart:9.27e+07 for 0.00: with 903145 evaluations
+9.76e+07(9.27e+07): with 903345 evaluations
+MTS Global: 9.761e+07 -> 9.507e+07 [2.54e+06, 0.03]
+SHADE partial: 9.507e+07 -> 9.507e+07 [0.00e+00, 0.00]
+GRAD Local: 9.507e+07 -> 9.506e+07 [4.01e+03, 0.00]
+9.51e+07(9.27e+07): with 963255 evaluations
+GRAD Global: 9.506e+07 -> 9.477e+07 [2.91e+05, 0.00]
+SHADE partial: 9.477e+07 -> 9.477e+07 [0.00e+00, 0.00]
+MTS Local: 9.477e+07 -> 9.477e+07 [2.94e+03, 0.00]
+9.48e+07(9.27e+07): with 1018180 evaluations
+MTS Global: 9.477e+07 -> 9.477e+07 [2.86e+01, 0.00]
+SHADE partial: 9.477e+07 -> 9.477e+07 [0.00e+00, 0.00]
+MTS Local: 9.477e+07 -> 9.477e+07 [4.50e+02, 0.00]
+9.48e+07(9.27e+07): with 1073080 evaluations
+MTS Global: 9.477e+07 -> 9.477e+07 [3.11e+00, 0.00]
+SHADE partial: 9.477e+07 -> 9.477e+07 [0.00e+00, 0.00]
+MTS Local: 9.477e+07 -> 9.476e+07 [3.96e+03, 0.00]
+Restart:9.48e+07 for 0.00: with 1127980 evaluations
+9.85e+07(9.27e+07): with 1128180 evaluations
+GRAD Global: 9.846e+07 -> 9.677e+07 [1.69e+06, 0.02]
+SHADE partial: 9.677e+07 -> 9.527e+07 [1.50e+06, 0.02]
+GRAD Local: 9.527e+07 -> 9.515e+07 [1.17e+05, 0.00]
+9.52e+07(9.27e+07): with 1190117 evaluations
+MTS Global: 9.515e+07 -> 9.416e+07 [9.90e+05, 0.01]
+SHADE partial: 9.416e+07 -> 9.416e+07 [0.00e+00, 0.00]
+MTS Local: 9.416e+07 -> 9.408e+07 [7.67e+04, 0.00]
+9.41e+07(9.27e+07): with 1245017 evaluations
+MTS Global: 9.408e+07 -> 9.398e+07 [1.02e+05, 0.00]
+SHADE partial: 9.398e+07 -> 9.398e+07 [0.00e+00, 0.00]
+MTS Local: 9.398e+07 -> 9.397e+07 [7.86e+03, 0.00]
+9.40e+07(9.27e+07): with 1299917 evaluations
+MTS Global: 9.397e+07 -> 9.397e+07 [1.34e+00, 0.00]
+SHADE partial: 9.397e+07 -> 9.397e+07 [0.00e+00, 0.00]
+MTS Local: 9.397e+07 -> 9.397e+07 [3.41e+01, 0.00]
+9.40e+07(9.27e+07): with 1354817 evaluations
+MTS Global: 9.397e+07 -> 9.397e+07 [2.43e-01, 0.00]
+SHADE partial: 9.397e+07 -> 9.397e+07 [0.00e+00, 0.00]
+MTS Local: 9.397e+07 -> 9.397e+07 [2.41e+01, 0.00]
+Restart:9.40e+07 for 0.00: with 1409717 evaluations
+9.75e+07(9.27e+07): with 1409917 evaluations
+GRAD Global: 9.753e+07 -> 9.664e+07 [8.88e+05, 0.01]
+SHADE partial: 9.664e+07 -> 9.528e+07 [1.36e+06, 0.01]
+MTS Local: 9.528e+07 -> 9.524e+07 [3.61e+04, 0.00]
+9.52e+07(9.27e+07): with 1464842 evaluations
+MTS Global: 9.524e+07 -> 9.494e+07 [3.07e+05, 0.00]
+SHADE partial: 9.494e+07 -> 9.465e+07 [2.83e+05, 0.00]
+GRAD Local: 9.465e+07 -> 9.457e+07 [8.08e+04, 0.00]
+9.46e+07(9.27e+07): with 1523751 evaluations
+MTS Global: 9.457e+07 -> 9.447e+07 [1.03e+05, 0.00]
+SHADE partial: 9.447e+07 -> 9.447e+07 [8.00e+02, 0.00]
+MTS Local: 9.447e+07 -> 9.443e+07 [3.87e+04, 0.00]
+9.44e+07(9.27e+07): with 1578651 evaluations
+MTS Global: 9.443e+07 -> 9.439e+07 [4.31e+04, 0.00]
+SHADE partial: 9.439e+07 -> 9.439e+07 [0.00e+00, 0.00]
+MTS Local: 9.439e+07 -> 9.430e+07 [8.48e+04, 0.00]
+Restart:9.43e+07 for 0.00: with 1633551 evaluations
+9.92e+07(9.27e+07): with 1633751 evaluations
+GRAD Global: 9.924e+07 -> 9.838e+07 [8.55e+05, 0.01]
+SHADE partial: 9.838e+07 -> 9.492e+07 [3.46e+06, 0.04]
+GRAD Local: 9.492e+07 -> 9.488e+07 [3.71e+04, 0.00]
+9.49e+07(9.27e+07): with 1696689 evaluations
+MTS Global: 9.488e+07 -> 9.480e+07 [8.77e+04, 0.00]

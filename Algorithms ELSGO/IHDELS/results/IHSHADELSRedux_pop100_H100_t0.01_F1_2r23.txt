@@ -1,0 +1,13 @@
+Best initial_sol
+MTS Global: 2.098e+11 -> 1.065e+08 [2.10e+11, 1.00]
+SHADE partial: 1.065e+08 -> 9.950e+06 [9.65e+07, 0.91]
+MTS Local: 9.950e+06 -> 9.906e+06 [4.38e+04, 0.00]
+TotalImprovement[99%] 2.098e+11 => 9.906e+06 (0)	Restart: 0
+9.91e+06(9.91e+06): with 54901 evaluations
+GRAD Global: 9.906e+06 -> 4.468e+05 [9.46e+06, 0.95]
+SHADE partial: 4.468e+05 -> 1.278e+05 [3.19e+05, 0.71]
+GRAD Local: 1.278e+05 -> 1.107e+05 [1.70e+04, 0.13]
+TotalImprovement[98%] 9.906e+06 => 1.107e+05 (0)	Restart: 0
+1.11e+05(1.11e+05): with 109831 evaluations
+MTS Global: 1.107e+05 -> 6.174e+02 [1.10e+05, 0.99]
+[1.2e+05]: 6.174106e+02,134831

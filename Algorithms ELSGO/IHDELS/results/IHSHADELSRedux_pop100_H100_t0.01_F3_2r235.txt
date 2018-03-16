@@ -1,0 +1,12 @@
+MTS Global: 2.166e+01 -> 2.019e+01 [1.47e+00, 0.07]
+SHADE partial: 2.019e+01 -> 2.019e+01 [0.00e+00, 0.00]
+MTS Local: 2.019e+01 -> 2.019e+01 [6.00e-03, 0.00]
+TotalImprovement[6%] 2.166e+01 => 2.019e+01 (0)	Restart: 0
+2.02e+01(2.02e+01): with 54901 evaluations
+GRAD Global: 2.019e+01 -> 2.018e+01 [2.45e-03, 0.00]
+SHADE partial: 2.018e+01 -> 2.018e+01 [0.00e+00, 0.00]
+GRAD Local: 2.018e+01 -> 2.018e+01 [2.07e-05, 0.00]
+TotalImprovement[0%] 2.019e+01 => 2.018e+01 (0)	Restart: 0
+Pools Improvements: mts:0.00029694791426798395,grad:1.0244634137774226e-062.02e+01(2.02e+01): with 112834 evaluations
+MTS Global: 2.018e+01 -> 2.011e+01 [7.75e-02, 0.00]
+[1.2e+05]: 2.010652e+01,137834

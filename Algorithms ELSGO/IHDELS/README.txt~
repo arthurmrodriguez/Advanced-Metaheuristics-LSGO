@@ -1,0 +1,37 @@
+===================
+About this document
+===================
+
+This project contains the Source code used for the work:
+
+"Molina, Daniel; Herrera, Francisco, "Iterative hybridization of DE with local search
+for the CEC'2015 special session on large scale global optimization," in Evolutionary
+Computation (CEC), 2015 IEEE Congress on , vol., no., pp.1974-1978, 25-28 May 2015 doi:
+10.1109/CEC.2015.7257127"
+
+Requirements
+------------
+
+This software has been developed and tested with:
+
+- Python 2.7.9. 
+- numpy 1.8.2.
+- Cython 0.21.7.
+
+There is no used specific features used for these version, so other versions could also be used.
+
+Install
+-------
+
+1- Compile and Install the package ea:
+
+$ cd ea
+$ python setup.py install --user
+$ cd ..
+
+2- Use the program ihdels_cec2015.py
+
+Running
+-------
+
+
