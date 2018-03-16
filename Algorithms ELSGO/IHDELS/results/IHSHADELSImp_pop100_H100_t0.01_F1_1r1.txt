@@ -1,0 +1,6 @@
+Best initial_sol
+MTS Global: 2.098e+11 -> 1.070e+08 [2.10e+11, 1.00]
+SHADE partial: 1.070e+08 -> 1.280e+07 [9.42e+07, 0.88]
+GRAD Local: 1.280e+07 -> 6.204e+06 [6.60e+06, 0.52]
+TotalImprovement[99%] 2.098e+11 => 6.204e+06 (0)	Restart: 0
+6.20e+06(6.20e+06): with 54906 evaluations

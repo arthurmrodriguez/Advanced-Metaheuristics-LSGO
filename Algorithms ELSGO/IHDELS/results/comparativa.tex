@@ -1,0 +1,88 @@
+% Created 2018-01-13 Sat 11:45
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{booktabs}\usepackage{multirow}
+\author{Daniel Molina Cabrera <dmolina@decsai.ugr.es}
+\date{\today}
+\title{Comparative with IHDELS and IHSHADELS (and versions)}
+\hypersetup{
+ pdfauthor={Daniel Molina Cabrera <dmolina@decsai.ugr.es},
+ pdftitle={Comparative with IHDELS and IHSHADELS (and versions)},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.1.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Original version IHDELS-CEC2015}
+\label{sec:org94939ca}
+
+
+\subsection{Comparison against MOS}
+\label{sec:org4487420}
+
+\input{table_original_mos.tex}
+
+\subsection{Conclusions}
+\label{sec:org8a2809b}
+
+\begin{itemize}
+\item MOS improve in 12 of 15 functions.
+\item IHDELS is not competitive.
+\end{itemize}
+
+
+\section{IHDELS-CEC2015 vs IHDELS-Restart}
+\label{sec:org3874841}
+
+\subsection{Differences}
+\label{sec:org1e63b23}
+
+\begin{itemize}
+\item Changed the selection of LS method.
+
+\item Changed the restart, the original did not applied restart in many function,
+and never improve.
+\end{itemize}
+
+\subsection{Comparison}
+\label{sec:org6726dc8}
+
+\input{table_original.tex}
+
+\begin{itemize}
+\item Improve in 10 of 15 functions.
+\item Improve specially in more difficult problems.
+\end{itemize}
+
+\subsection{Comparison against MOS}
+\label{sec:org6a26c8a}
+
+\input{table_restart_mos.tex}
+
+\begin{itemize}
+\item Now IHDELS\(_{\text{restart}}\) improve in 7 of 15 functions.
+\item Improve specially in more difficult ones.
+\item In several functions: F11, F13 the improvement is several order of magnitud.
+\end{itemize}
+
+\section{New proposal:  IHDELS vs IHSHADELS}
+\label{sec:orgb4c976e}
+\end{document}

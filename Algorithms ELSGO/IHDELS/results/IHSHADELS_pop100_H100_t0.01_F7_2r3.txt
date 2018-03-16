@@ -1,0 +1,220 @@
+Best initial_sol
+MTS Global: 9.938e+14 -> 4.431e+09 [9.94e+14, 1.00]
+SHADE partial: 4.431e+09 -> 1.455e+09 [2.98e+09, 0.67]
+MTS Local: 1.455e+09 -> 1.010e+09 [4.45e+08, 0.31]
+1.01e+09(1.01e+09): with 54901 evaluations
+GRAD Global: 1.010e+09 -> 7.059e+08 [3.04e+08, 0.30]
+SHADE partial: 7.059e+08 -> 3.403e+08 [3.66e+08, 0.52]
+GRAD Local: 3.403e+08 -> 3.378e+08 [2.44e+06, 0.01]
+3.38e+08(3.38e+08): with 111833 evaluations
+MTS Global: 3.378e+08 -> 3.000e+08 [3.78e+07, 0.11]
+[1.2e+05]: 3.000156e+08,136833
+SHADE partial: 3.000e+08 -> 2.064e+08 [9.36e+07, 0.31]
+MTS Local: 2.064e+08 -> 1.945e+08 [1.19e+07, 0.06]
+1.94e+08(1.94e+08): with 166733 evaluations
+MTS Global: 1.945e+08 -> 1.721e+08 [2.24e+07, 0.12]
+SHADE partial: 1.721e+08 -> 1.084e+08 [6.36e+07, 0.37]
+MTS Local: 1.084e+08 -> 1.008e+08 [7.57e+06, 0.07]
+1.01e+08(1.01e+08): with 221633 evaluations
+MTS Global: 1.008e+08 -> 9.704e+07 [3.79e+06, 0.04]
+SHADE partial: 9.704e+07 -> 6.820e+07 [2.88e+07, 0.30]
+MTS Local: 6.820e+07 -> 6.469e+07 [3.51e+06, 0.05]
+6.47e+07(6.47e+07): with 276533 evaluations
+MTS Global: 6.469e+07 -> 6.032e+07 [4.37e+06, 0.07]
+SHADE partial: 6.032e+07 -> 3.211e+07 [2.82e+07, 0.47]
+MTS Local: 3.211e+07 -> 3.003e+07 [2.08e+06, 0.06]
+3.00e+07(3.00e+07): with 331433 evaluations
+MTS Global: 3.003e+07 -> 2.723e+07 [2.80e+06, 0.09]
+SHADE partial: 2.723e+07 -> 1.779e+07 [9.45e+06, 0.35]
+MTS Local: 1.779e+07 -> 1.668e+07 [1.11e+06, 0.06]
+1.67e+07(1.67e+07): with 386333 evaluations
+MTS Global: 1.668e+07 -> 1.425e+07 [2.43e+06, 0.15]
+SHADE partial: 1.425e+07 -> 9.338e+06 [4.91e+06, 0.34]
+MTS Local: 9.338e+06 -> 8.903e+06 [4.35e+05, 0.05]
+8.90e+06(8.90e+06): with 441233 evaluations
+MTS Global: 8.903e+06 -> 8.017e+06 [8.86e+05, 0.10]
+SHADE partial: 8.017e+06 -> 5.388e+06 [2.63e+06, 0.33]
+MTS Local: 5.388e+06 -> 5.105e+06 [2.83e+05, 0.05]
+5.11e+06(5.11e+06): with 496133 evaluations
+MTS Global: 5.105e+06 -> 4.547e+06 [5.59e+05, 0.11]
+SHADE partial: 4.547e+06 -> 3.242e+06 [1.30e+06, 0.29]
+MTS Local: 3.242e+06 -> 3.067e+06 [1.76e+05, 0.05]
+3.07e+06(3.07e+06): with 551033 evaluations
+MTS Global: 3.067e+06 -> 2.681e+06 [3.86e+05, 0.13]
+SHADE partial: 2.681e+06 -> 1.905e+06 [7.77e+05, 0.29]
+[6.0e+05]: 1.904538e+06,600933
+MTS Local: 1.905e+06 -> 1.817e+06 [8.71e+04, 0.05]
+1.82e+06(1.82e+06): with 605933 evaluations
+MTS Global: 1.817e+06 -> 1.642e+06 [1.75e+05, 0.10]
+SHADE partial: 1.642e+06 -> 1.146e+06 [4.96e+05, 0.30]
+MTS Local: 1.146e+06 -> 1.085e+06 [6.16e+04, 0.05]
+1.08e+06(1.08e+06): with 660833 evaluations
+MTS Global: 1.085e+06 -> 9.809e+05 [1.04e+05, 0.10]
+SHADE partial: 9.809e+05 -> 7.760e+05 [2.05e+05, 0.21]
+MTS Local: 7.760e+05 -> 7.405e+05 [3.55e+04, 0.05]
+7.41e+05(7.41e+05): with 715733 evaluations
+MTS Global: 7.405e+05 -> 6.773e+05 [6.32e+04, 0.09]
+SHADE partial: 6.773e+05 -> 5.488e+05 [1.29e+05, 0.19]
+MTS Local: 5.488e+05 -> 5.276e+05 [2.11e+04, 0.04]
+5.28e+05(5.28e+05): with 770633 evaluations
+MTS Global: 5.276e+05 -> 4.888e+05 [3.88e+04, 0.07]
+SHADE partial: 4.888e+05 -> 4.313e+05 [5.76e+04, 0.12]
+MTS Local: 4.313e+05 -> 4.171e+05 [1.41e+04, 0.03]
+4.17e+05(4.17e+05): with 825533 evaluations
+MTS Global: 4.171e+05 -> 3.942e+05 [2.30e+04, 0.06]
+SHADE partial: 3.942e+05 -> 3.528e+05 [4.14e+04, 0.11]
+MTS Local: 3.528e+05 -> 3.424e+05 [1.03e+04, 0.03]
+3.42e+05(3.42e+05): with 880433 evaluations
+MTS Global: 3.424e+05 -> 3.255e+05 [1.69e+04, 0.05]
+SHADE partial: 3.255e+05 -> 2.924e+05 [3.31e+04, 0.10]
+MTS Local: 2.924e+05 -> 2.844e+05 [7.97e+03, 0.03]
+2.84e+05(2.84e+05): with 935333 evaluations
+MTS Global: 2.844e+05 -> 2.683e+05 [1.61e+04, 0.06]
+SHADE partial: 2.683e+05 -> 2.279e+05 [4.04e+04, 0.15]
+MTS Local: 2.279e+05 -> 2.189e+05 [9.00e+03, 0.04]
+2.19e+05(2.19e+05): with 990233 evaluations
+MTS Global: 2.189e+05 -> 2.065e+05 [1.24e+04, 0.06]
+SHADE partial: 2.065e+05 -> 1.758e+05 [3.08e+04, 0.15]
+MTS Local: 1.758e+05 -> 1.705e+05 [5.27e+03, 0.03]
+1.70e+05(1.70e+05): with 1045133 evaluations
+MTS Global: 1.705e+05 -> 1.612e+05 [9.27e+03, 0.05]
+SHADE partial: 1.612e+05 -> 1.488e+05 [1.24e+04, 0.08]
+MTS Local: 1.488e+05 -> 1.455e+05 [3.27e+03, 0.02]
+1.46e+05(1.46e+05): with 1100033 evaluations
+MTS Global: 1.455e+05 -> 1.387e+05 [6.77e+03, 0.05]
+SHADE partial: 1.387e+05 -> 1.254e+05 [1.33e+04, 0.10]
+MTS Local: 1.254e+05 -> 1.222e+05 [3.19e+03, 0.03]
+1.22e+05(1.22e+05): with 1154933 evaluations
+MTS Global: 1.222e+05 -> 1.168e+05 [5.38e+03, 0.04]
+SHADE partial: 1.168e+05 -> 1.022e+05 [1.46e+04, 0.12]
+MTS Local: 1.022e+05 -> 9.916e+04 [3.08e+03, 0.03]
+9.92e+04(9.92e+04): with 1209833 evaluations
+MTS Global: 9.916e+04 -> 9.312e+04 [6.04e+03, 0.06]
+SHADE partial: 9.312e+04 -> 8.367e+04 [9.45e+03, 0.10]
+MTS Local: 8.367e+04 -> 8.164e+04 [2.03e+03, 0.02]
+8.16e+04(8.16e+04): with 1264733 evaluations
+MTS Global: 8.164e+04 -> 7.789e+04 [3.75e+03, 0.05]
+SHADE partial: 7.789e+04 -> 6.826e+04 [9.62e+03, 0.12]
+MTS Local: 6.826e+04 -> 6.682e+04 [1.45e+03, 0.02]
+6.68e+04(6.68e+04): with 1319633 evaluations
+MTS Global: 6.682e+04 -> 6.381e+04 [3.01e+03, 0.04]
+SHADE partial: 6.381e+04 -> 5.736e+04 [6.45e+03, 0.10]
+MTS Local: 5.736e+04 -> 5.591e+04 [1.45e+03, 0.03]
+5.59e+04(5.59e+04): with 1374533 evaluations
+MTS Global: 5.591e+04 -> 5.355e+04 [2.36e+03, 0.04]
+SHADE partial: 5.355e+04 -> 4.945e+04 [4.10e+03, 0.08]
+MTS Local: 4.945e+04 -> 4.827e+04 [1.18e+03, 0.02]
+4.83e+04(4.83e+04): with 1429433 evaluations
+MTS Global: 4.827e+04 -> 4.642e+04 [1.86e+03, 0.04]
+SHADE partial: 4.642e+04 -> 4.298e+04 [3.44e+03, 0.07]
+MTS Local: 4.298e+04 -> 4.218e+04 [8.06e+02, 0.02]
+4.22e+04(4.22e+04): with 1484333 evaluations
+MTS Global: 4.218e+04 -> 4.087e+04 [1.31e+03, 0.03]
+SHADE partial: 4.087e+04 -> 3.687e+04 [4.00e+03, 0.10]
+MTS Local: 3.687e+04 -> 3.597e+04 [8.96e+02, 0.02]
+3.60e+04(3.60e+04): with 1539233 evaluations
+MTS Global: 3.597e+04 -> 3.453e+04 [1.45e+03, 0.04]
+SHADE partial: 3.453e+04 -> 3.270e+04 [1.83e+03, 0.05]
+MTS Local: 3.270e+04 -> 3.223e+04 [4.67e+02, 0.01]
+3.22e+04(3.22e+04): with 1594133 evaluations
+MTS Global: 3.223e+04 -> 3.125e+04 [9.79e+02, 0.03]
+SHADE partial: 3.125e+04 -> 2.852e+04 [2.73e+03, 0.09]
+MTS Local: 2.852e+04 -> 2.795e+04 [5.71e+02, 0.02]
+2.80e+04(2.80e+04): with 1649033 evaluations
+MTS Global: 2.795e+04 -> 2.699e+04 [9.66e+02, 0.03]
+SHADE partial: 2.699e+04 -> 2.476e+04 [2.23e+03, 0.08]
+MTS Local: 2.476e+04 -> 2.412e+04 [6.36e+02, 0.03]
+2.41e+04(2.41e+04): with 1703933 evaluations
+MTS Global: 2.412e+04 -> 2.328e+04 [8.43e+02, 0.03]
+SHADE partial: 2.328e+04 -> 2.108e+04 [2.20e+03, 0.09]
+MTS Local: 2.108e+04 -> 2.066e+04 [4.11e+02, 0.02]
+2.07e+04(2.07e+04): with 1758833 evaluations
+MTS Global: 2.066e+04 -> 1.989e+04 [7.73e+02, 0.04]
+SHADE partial: 1.989e+04 -> 1.847e+04 [1.42e+03, 0.07]
+MTS Local: 1.847e+04 -> 1.811e+04 [3.59e+02, 0.02]
+1.81e+04(1.81e+04): with 1813733 evaluations
+MTS Global: 1.811e+04 -> 1.753e+04 [5.83e+02, 0.03]
+SHADE partial: 1.753e+04 -> 1.594e+04 [1.59e+03, 0.09]
+MTS Local: 1.594e+04 -> 1.563e+04 [3.08e+02, 0.02]
+1.56e+04(1.56e+04): with 1868633 evaluations
+MTS Global: 1.563e+04 -> 1.516e+04 [4.74e+02, 0.03]
+SHADE partial: 1.516e+04 -> 1.414e+04 [1.02e+03, 0.07]
+MTS Local: 1.414e+04 -> 1.391e+04 [2.30e+02, 0.02]
+1.39e+04(1.39e+04): with 1923533 evaluations
+MTS Global: 1.391e+04 -> 1.355e+04 [3.60e+02, 0.03]
+SHADE partial: 1.355e+04 -> 1.246e+04 [1.09e+03, 0.08]
+MTS Local: 1.246e+04 -> 1.222e+04 [2.38e+02, 0.02]
+1.22e+04(1.22e+04): with 1978433 evaluations
+MTS Global: 1.222e+04 -> 1.184e+04 [3.78e+02, 0.03]
+SHADE partial: 1.184e+04 -> 1.097e+04 [8.74e+02, 0.07]
+MTS Local: 1.097e+04 -> 1.077e+04 [1.97e+02, 0.02]
+1.08e+04(1.08e+04): with 2033333 evaluations
+MTS Global: 1.077e+04 -> 1.046e+04 [3.12e+02, 0.03]
+SHADE partial: 1.046e+04 -> 9.756e+03 [7.01e+02, 0.07]
+MTS Local: 9.756e+03 -> 9.607e+03 [1.49e+02, 0.02]
+9.61e+03(9.61e+03): with 2088233 evaluations
+MTS Global: 9.607e+03 -> 9.342e+03 [2.64e+02, 0.03]
+SHADE partial: 9.342e+03 -> 8.605e+03 [7.38e+02, 0.08]
+MTS Local: 8.605e+03 -> 8.468e+03 [1.37e+02, 0.02]
+8.47e+03(8.47e+03): with 2143133 evaluations
+MTS Global: 8.468e+03 -> 8.230e+03 [2.38e+02, 0.03]
+SHADE partial: 8.230e+03 -> 7.504e+03 [7.25e+02, 0.09]
+MTS Local: 7.504e+03 -> 7.353e+03 [1.51e+02, 0.02]
+7.35e+03(7.35e+03): with 2198033 evaluations
+MTS Global: 7.353e+03 -> 7.074e+03 [2.79e+02, 0.04]
+SHADE partial: 7.074e+03 -> 6.438e+03 [6.36e+02, 0.09]
+MTS Local: 6.438e+03 -> 6.311e+03 [1.26e+02, 0.02]
+6.31e+03(6.31e+03): with 2252933 evaluations
+MTS Global: 6.311e+03 -> 6.117e+03 [1.95e+02, 0.03]
+SHADE partial: 6.117e+03 -> 5.402e+03 [7.15e+02, 0.12]
+MTS Local: 5.402e+03 -> 5.262e+03 [1.39e+02, 0.03]
+5.26e+03(5.26e+03): with 2307833 evaluations
+MTS Global: 5.262e+03 -> 5.060e+03 [2.02e+02, 0.04]
+SHADE partial: 5.060e+03 -> 4.463e+03 [5.97e+02, 0.12]
+MTS Local: 4.463e+03 -> 4.327e+03 [1.35e+02, 0.03]
+4.33e+03(4.33e+03): with 2362733 evaluations
+MTS Global: 4.327e+03 -> 4.130e+03 [1.98e+02, 0.05]
+SHADE partial: 4.130e+03 -> 3.683e+03 [4.46e+02, 0.11]
+MTS Local: 3.683e+03 -> 3.583e+03 [1.00e+02, 0.03]
+3.58e+03(3.58e+03): with 2417633 evaluations
+MTS Global: 3.583e+03 -> 3.432e+03 [1.51e+02, 0.04]
+SHADE partial: 3.432e+03 -> 3.075e+03 [3.57e+02, 0.10]
+MTS Local: 3.075e+03 -> 3.001e+03 [7.39e+01, 0.02]
+3.00e+03(3.00e+03): with 2472533 evaluations
+MTS Global: 3.001e+03 -> 2.879e+03 [1.22e+02, 0.04]
+SHADE partial: 2.879e+03 -> 2.675e+03 [2.03e+02, 0.07]
+MTS Local: 2.675e+03 -> 2.631e+03 [4.46e+01, 0.02]
+2.63e+03(2.63e+03): with 2527433 evaluations
+MTS Global: 2.631e+03 -> 2.548e+03 [8.23e+01, 0.03]
+SHADE partial: 2.548e+03 -> 2.252e+03 [2.97e+02, 0.12]
+MTS Local: 2.252e+03 -> 2.198e+03 [5.30e+01, 0.02]
+2.20e+03(2.20e+03): with 2582333 evaluations
+MTS Global: 2.198e+03 -> 2.110e+03 [8.89e+01, 0.04]
+SHADE partial: 2.110e+03 -> 1.927e+03 [1.83e+02, 0.09]
+MTS Local: 1.927e+03 -> 1.884e+03 [4.27e+01, 0.02]
+1.88e+03(1.88e+03): with 2637233 evaluations
+MTS Global: 1.884e+03 -> 1.812e+03 [7.24e+01, 0.04]
+SHADE partial: 1.812e+03 -> 1.613e+03 [1.99e+02, 0.11]
+MTS Local: 1.613e+03 -> 1.566e+03 [4.67e+01, 0.03]
+1.57e+03(1.57e+03): with 2692133 evaluations
+MTS Global: 1.566e+03 -> 1.509e+03 [5.73e+01, 0.04]
+SHADE partial: 1.509e+03 -> 1.352e+03 [1.57e+02, 0.10]
+MTS Local: 1.352e+03 -> 1.323e+03 [2.90e+01, 0.02]
+1.32e+03(1.32e+03): with 2747033 evaluations
+MTS Global: 1.323e+03 -> 1.274e+03 [4.96e+01, 0.04]
+SHADE partial: 1.274e+03 -> 1.167e+03 [1.06e+02, 0.08]
+MTS Local: 1.167e+03 -> 1.147e+03 [2.07e+01, 0.02]
+1.15e+03(1.15e+03): with 2801933 evaluations
+MTS Global: 1.147e+03 -> 1.106e+03 [4.05e+01, 0.04]
+SHADE partial: 1.106e+03 -> 1.020e+03 [8.62e+01, 0.08]
+MTS Local: 1.020e+03 -> 1.001e+03 [1.91e+01, 0.02]
+1.00e+03(1.00e+03): with 2856833 evaluations
+MTS Global: 1.001e+03 -> 9.625e+02 [3.84e+01, 0.04]
+SHADE partial: 9.625e+02 -> 8.872e+02 [7.53e+01, 0.08]
+MTS Local: 8.872e+02 -> 8.701e+02 [1.71e+01, 0.02]
+8.70e+02(8.70e+02): with 2911733 evaluations
+MTS Global: 8.701e+02 -> 8.405e+02 [2.97e+01, 0.03]
+SHADE partial: 8.405e+02 -> 7.802e+02 [6.02e+01, 0.07]
+MTS Local: 7.802e+02 -> 7.581e+02 [2.22e+01, 0.03]
+7.58e+02(7.58e+02): with 2966633 evaluations
+MTS Global: 7.581e+02 -> 7.093e+02 [4.87e+01, 0.06]

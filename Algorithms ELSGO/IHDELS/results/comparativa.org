@@ -1,0 +1,48 @@
+#+TITLE: Comparative with IHDELS and IHSHADELS (and versions)
+#+AUTHOR: Daniel Molina Cabrera <dmolina@decsai.ugr.es
+#+LATEX_HEADER: \usepackage{booktabs}\usepackage{multirow}
+
+* Original version IHDELS-CEC2015
+
+
+** Comparison against MOS
+
+#+BEGIN_EXPORT latex
+\input{table_original_mos.tex}
+#+END_EXPORT
+
+** Conclusions
+
+- MOS improve in 12 of 15 functions. 
+- IHDELS is not competitive.
+
+
+* IHDELS-CEC2015 vs IHDELS-Restart
+
+** Differences
+
+- Changed the selection of LS method.
+
+- Changed the restart, the original did not applied restart in many function,
+  and never improve. 
+
+** Comparison
+
+#+BEGIN_EXPORT latex
+\input{table_original.tex}
+#+END_EXPORT
+
+- Improve in 10 of 15 functions.
+- Improve specially in more difficult problems.
+
+** Comparison against MOS
+
+#+BEGIN_EXPORT latex
+\input{table_restart_mos.tex}
+#+END_EXPORT
+
+- Now IHDELS_restart improve in 7 of 15 functions.  
+- Improve specially in more difficult ones.
+- In several functions: F11, F13 the improvement is several order of magnitud.
+
+* New proposal:  IHDELS vs IHSHADELS

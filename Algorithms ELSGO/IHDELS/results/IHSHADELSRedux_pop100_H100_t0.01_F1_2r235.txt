@@ -1,0 +1,32 @@
+Best initial_sol
+MTS Global: 2.098e+11 -> 1.062e+08 [2.10e+11, 1.00]
+SHADE partial: 1.062e+08 -> 1.012e+07 [9.61e+07, 0.90]
+MTS Local: 1.012e+07 -> 4.778e+06 [5.35e+06, 0.53]
+TotalImprovement[99%] 2.098e+11 => 4.778e+06 (0)	Restart: 0
+4.78e+06(4.78e+06): with 54901 evaluations
+GRAD Global: 4.778e+06 -> 5.457e+05 [4.23e+06, 0.89]
+SHADE partial: 5.457e+05 -> 2.207e+05 [3.25e+05, 0.60]
+GRAD Local: 2.207e+05 -> 1.982e+05 [2.25e+04, 0.10]
+TotalImprovement[95%] 4.778e+06 => 1.982e+05 (0)	Restart: 0
+1.98e+05(1.98e+05): with 109831 evaluations
+MTS Global: 1.982e+05 -> 2.454e+02 [1.98e+05, 1.00]
+[1.2e+05]: 2.454351e+02,134831
+SHADE partial: 2.454e+02 -> 9.299e+01 [1.52e+02, 0.62]
+MTS Local: 9.299e+01 -> 6.210e+01 [3.09e+01, 0.33]
+TotalImprovement[99%] 1.982e+05 => 6.210e+01 (0)	Restart: 0
+6.21e+01(6.21e+01): with 164731 evaluations
+MTS Global: 6.210e+01 -> 2.251e-03 [6.21e+01, 1.00]
+SHADE partial: 2.251e-03 -> 9.915e-04 [1.26e-03, 0.56]
+MTS Local: 9.915e-04 -> 7.783e-04 [2.13e-04, 0.22]
+TotalImprovement[99%] 6.210e+01 => 7.783e-04 (0)	Restart: 0
+7.78e-04(7.78e-04): with 219631 evaluations
+MTS Global: 7.783e-04 -> 3.557e-08 [7.78e-04, 1.00]
+SHADE partial: 3.557e-08 -> 1.297e-08 [2.26e-08, 0.64]
+MTS Local: 1.297e-08 -> 1.118e-08 [1.79e-09, 0.14]
+TotalImprovement[99%] 7.783e-04 => 1.118e-08 (0)	Restart: 0
+1.12e-08(1.12e-08): with 274531 evaluations
+MTS Global: 1.118e-08 -> 1.756e-12 [1.12e-08, 1.00]
+SHADE partial: 1.756e-12 -> 6.156e-13 [1.14e-12, 0.65]
+MTS Local: 6.156e-13 -> 5.103e-13 [1.05e-13, 0.17]
+TotalImprovement[99%] 1.118e-08 => 5.103e-13 (0)	Restart: 0
+5.10e-13(5.10e-13): with 329431 evaluations
