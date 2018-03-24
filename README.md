@@ -1,2 +1,4 @@
 # UGR-GII-TFG
-Este repositorio contiene el Trabajo de Fin de Grado del Grado en Ingeniería Informática de la UGR (ETSIIT). La temática consiste en aplicar los más avanzados y potentes algoritmos metaheurísticos para un problema de optimización real de miles de variables, concretamente se trata de comparar experimentos del benchmark teórico con datos reales de un electroencefalograma.
+
+This repo contains my Computer Engineering Degree's Final Project, studied at the University of Granada, Spain. The main focus is to apply state-of-the-art metaheuristic algorithms into a **Big Optimization** problem with thousands of variables.
+Our task is to find out how accurate are theoretical benchmark results compared to real EEG (Electroencephalography) data 
