@@ -1,5 +1,0 @@
-- Solo los problemas usados (SOCO 2010) han sido compilados. Otros problemas podrian no llegar a compilar.
-- Solo se han ejecutado f7 y f15 del SOCO 2010, que son las funciones que empiezan con unos valores de fitness muy malos y que no pueden ser representados con un double. El resto de funciones deberian de funcionar igual, pero no se han probado.
-- Los problemas del CEC 2013 NO van a funcionar, porque al hacer el cambio de double a long double de manera automatica se habra cambiado tambien el codigo que se encarga de cargar los ficheros de Matlab, y como son binarios y se usa un cursor, se estara intentando leer un dato long double donde hay un double.
-- Para que la traza salga correctamente, hay que cambiar el formato de salida que se usa en la funcion sprintf en los ficheros SingleLogStat y CollectionLogStat de "E" a "LE".
-- Extensiones que fueron probadas para el cambio automatico: .cc .C .cpp .cxx .c .c++ .h .hpp .h++
