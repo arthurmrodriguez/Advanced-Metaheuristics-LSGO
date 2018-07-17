@@ -7,5 +7,5 @@ This research is directed by Ph.D. Daniel Molina Cabrera.
 
 ## The set of algorithms that will be compared are the following:
 
-### 1. MOS-CEC2013
-Multiple Offspring Sampling hybrid-based algorithm that combinates Genetic Algorithm (GA) with two powerful Local Searches (LS): the Solis Wets' algorithm and the MTS-LS1-Reduced. This algorithm was proposed for the CEC 2013 by A. LaTorre, S. Muelas, J.M. Peña.
+### 1. MOS-SOCO2010
+Multiple Offspring Sampling hybrid-based algorithm that combines a Differential Evolution Algorithm (DE) with a powerful Local Search (LS), the MTS-LS1. This algorithm was proposed for the SOCO 2010 by A. LaTorre, S. Muelas, J.M. Peña.
