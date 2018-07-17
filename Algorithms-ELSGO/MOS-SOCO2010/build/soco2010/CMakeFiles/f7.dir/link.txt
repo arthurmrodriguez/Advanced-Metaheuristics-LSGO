@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -dynamiclib -Wl,-headerpad_max_install_names  -o libf7.so -install_name /Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf7.so CMakeFiles/f7.dir/f7.o  -L../gaeda -l'gaeda' -Wl,-rpath,../gaeda 

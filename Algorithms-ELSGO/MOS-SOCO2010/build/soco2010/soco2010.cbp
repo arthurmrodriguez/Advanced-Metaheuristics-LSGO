@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="soco2010" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\gaeda\;CMake Files\gaedaexec\;CMake Files\cec2012\;CMake Files\cec2013_lsgo\;CMake Files\soco2010\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f19">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf19.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f19" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f19/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf19.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f19/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f18">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf18.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f18" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f18/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf18.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f18/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f15">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf15.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f15" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f15/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf15.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f15/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f14">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf14.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f14" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f14/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf14.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f14/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f12">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf12.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f12" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f12/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf12.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f12/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f10">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf10.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f10" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f10/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf10.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f10/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f17">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf17.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f17" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f17/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf17.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f17/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f16">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf16.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f16" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f16/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf16.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f16/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f9">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf9.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f9" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f9/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf9.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f9/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f8">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf8.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f8" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f8/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf8.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f8/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_sphere">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_sphere.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_sphere" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_sphere/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_sphere.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_sphere/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_rastrigin">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_rastrigin.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_rastrigin" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_rastrigin/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_rastrigin.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_rastrigin/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f13">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf13.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f13" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f13/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf13.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f13/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f7">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf7.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f7" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f7/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf7.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f7/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_ackley">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_ackley.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_ackley" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_ackley/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_ackley.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_ackley/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_rosembrock">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_rosembrock.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_rosembrock" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_rosembrock/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_rosembrock.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_rosembrock/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_griewank">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_griewank.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_griewank" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="shifted_griewank/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_griewank.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 shifted_griewank/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f11">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf11.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f11" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="f11/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf11.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 f11/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="schwefel_problem">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libschwefel_problem.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 schwefel_problem" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="schwefel_problem/fast">
+         <Option output="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libschwefel_problem.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Developer/CommandLineTools/usr/include" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1" />
+            <Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/../gaeda" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 schwefel_problem/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/aux.cc">
+         <Option target="f19"/>
+         <Option target="f18"/>
+         <Option target="f15"/>
+         <Option target="f14"/>
+         <Option target="f12"/>
+         <Option target="f17"/>
+         <Option target="f16"/>
+         <Option target="f13"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/aux.h">
+         <Option target="f19"/>
+         <Option target="f18"/>
+         <Option target="f15"/>
+         <Option target="f14"/>
+         <Option target="f12"/>
+         <Option target="f17"/>
+         <Option target="f16"/>
+         <Option target="f13"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f10.cc">
+         <Option target="f10"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f10.h">
+         <Option target="f10"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f11.cc">
+         <Option target="f11"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f11.h">
+         <Option target="f11"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f12.cc">
+         <Option target="f12"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f13.cc">
+         <Option target="f13"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f14.cc">
+         <Option target="f14"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f15.cc">
+         <Option target="f15"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f16.cc">
+         <Option target="f16"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f17.cc">
+         <Option target="f17"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f18.cc">
+         <Option target="f18"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f19.cc">
+         <Option target="f19"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f7.cc">
+         <Option target="f7"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f7.h">
+         <Option target="f7"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f8.cc">
+         <Option target="f8"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f8.h">
+         <Option target="f8"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f9.cc">
+         <Option target="f9"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/f9.h">
+         <Option target="f9"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/schwefel_problem.cc">
+         <Option target="schwefel_problem"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/schwefel_problem.h">
+         <Option target="schwefel_problem"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_ackley.cc">
+         <Option target="shifted_ackley"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_ackley.h">
+         <Option target="shifted_ackley"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_griewank.cc">
+         <Option target="shifted_griewank"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_griewank.h">
+         <Option target="shifted_griewank"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_rastrigin.cc">
+         <Option target="shifted_rastrigin"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_rastrigin.h">
+         <Option target="shifted_rastrigin"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_rosembrock.cc">
+         <Option target="shifted_rosembrock"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_rosembrock.h">
+         <Option target="shifted_rosembrock"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_sphere.cc">
+         <Option target="shifted_sphere"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/shifted_sphere.h">
+         <Option target="shifted_sphere"/>
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/gaeda/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\gaeda\" />
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/gaeda/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\gaeda\" />
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/gaedaexec/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\gaedaexec\" />
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/gaedaexec/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\gaedaexec\" />
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cec2012\" />
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2013_lsgo/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cec2013_lsgo\" />
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\soco2010\" />
+      </Unit>
+      <Unit filename="/Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\soco2010\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

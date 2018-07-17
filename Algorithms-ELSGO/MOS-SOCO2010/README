@@ -1,0 +1,42 @@
+README
+======
+
+- This source code is the code from MOS explained in the paper
+
+"A. LaTorre, S. Muelas, J.M. Peña
+A MOS-based Dynamic Memetic Differential Evolution Algorithm for Continuous Optimization A Scalability Test
+Soft Computing, 15, pages: 2187-2199, 2011"
+
+The paper and the last version of this code is available at
+
+http://sci2s.ugr.es/EAMHCO/#LSCOP-special-issue-SOCO
+
+Compile
+-------
+
+To compile the source code you need:
+
+1) CMake: A open source tool compiling available at
+
+http://cmake.org/cmake/resources/software.html
+
+2) Make
+3) gcc and g++ (4.6.3 or upper).
+
+It is supposes to compile both in Windows and Linux, however
+it was only checked in Linux.
+
+With this source to process to compile it is:
+
+$ unzip mos_newcode.zip
+$ cd zip/
+$ cmake . && make
+
+Run
+---
+There is a program in shell (bash) con help you to run the program. 
+
+$ bash run.sh
+
+This previous command will run the program with the same parameters than
+used in the paper. 

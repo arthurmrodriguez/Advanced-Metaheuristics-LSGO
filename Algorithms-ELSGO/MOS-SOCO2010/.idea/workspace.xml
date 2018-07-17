@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="GAEDALib" targetName="eeg_problem" />
+      <config projectName="GAEDALib" targetName="gaeda" />
+      <config projectName="GAEDALib" targetName="gaedaexec" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Default" GENERATION_DIR="." />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69b7e211-2aed-42b4-8323-de08e7afd228" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/soco2010/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/cec2013_lsgo/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/gaedaexec/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/cec2012/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/gaeda/CMakeFiles/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="eeg_problem.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/soco2010/eeg_problem.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="58" column="50" lean-forward="false" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+              <folding>
+                <element signature="e#49#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gaedaexec/main.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="235" column="57" lean-forward="false" selection-start-line="235" selection-start-column="57" selection-end-line="235" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eeg_problem.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/soco2010/eeg_problem.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2281">
+              <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <folding>
+                <element signature="e#112#148#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logfile-egg_problemD4.out" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-egg_problemD4.out">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="7" column="21293" lean-forward="false" selection-start-line="7" selection-start-column="21293" selection-end-line="7" selection-end-column="21293" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Shif</find>
+      <find>RealBlendCrossover</find>
+      <find>optimum_genome</find>
+      <find>f7_opt</find>
+      <find>ifs</find>
+      <find>tama</find>
+      <find>DtypeG</find>
+      <find>std::</find>
+      <find>long</find>
+      <find>empty</find>
+      <find>double</find>
+      <find>getOptimum</find>
+      <find>optimum</find>
+      <find>-0.37134 -1.6759 0.46197 -0.074416 -0.60712 -0.10908 -0.25201 0.68555 -0.47203 0.4341 -0.62596 -0.85259 0.49556 -1.5799 0.25798 0.071548 1.5952 0.77879 2.4137 0.43842 -0.81725 2.3445 -0.22173 1.0979 0.25548 -0.6471 -0.89926 1.4479 -1.0534 0.40204 -2.5626 -0.72479 -0.11774 1.4294 0.32064 -0.20048 -0.55645 -1.9911 -2.9016 0.014787 1.0976 -1.9764 -0.99647 -0.63199 -0.52329 -1.2091 -1.2127 0.37004 0.72659 -1.9292 2.6413 2.7927 3.4547 -0.4215 -0.78667 0.19795 -1.5987 -1.2572 -0.41266 -0.77109 -0.14607 1.7319 1.2804 -1.7514 0.16998 0.43282 0.55 -0.71473 1.1778 1.3803 -1.1704 0.083651 1.4922 2.3148 -1.717 1.7726 -1.3812 1.4082 -0.74396 0.22812 -0.030715 1.3236 2.656 -1.0652 1.6643 -1.45 -0.66427 -0.65709 1.5365 -0.30105 2.4027 1.1241 0.83361 -0.011994 -1.1053 0.80275 -0.18011 -0.53874 1.2297 -0.64299 -0.035666 0.64462 0.12849 1.0118 0.39832 -0.25087 0.26341 -0.058726 1.653 -0.55567 1.6581 -0.48924 0.61559 -1.4771 0.84303 -0.10783 0.77013 1.3323 1.1235 -1.8989 -0.32379 0.32028 -0.41029 -2.566 -0.55558 -2.4157 0.16918 -0.34412 0.82552 -1.9787 -2.1798 -1.4551 1.2361 0.53979 0.24972 1.7087 0.28093 -0.24652 0.76648 -0.13563 2.6468 0.8275 0.76711 0.9542 -1.0081 0.3186 -0.90035 1.8786 1.2783 -3.3797 0.62359 -0.074505 -0.89623 -0.11752 0.7921 -0.56759 -0.5876 -0.70214 3.1428 -0.67882 -1.1287 1.455 0.047672 1.6692 0.83142 3.417 1.0555 0.72827 -1.6121 2.1294 -1.1085 -0.00018019 -1.3442 -1.9973 0.1294 0.71861 0.93822 0.71933 -1.1017 -1.0153 -1.429 -0.73323 0.53619 -0.32525 0.5742 -0.24257 -2.3015 0.70266 0.86843 -1.8177 0.38349 -0.20675 0.30184 -0.18155 -0.1568 -1.0681 -0.21337 -1.0686 -1.1246 -1.3866 1.4709 1.2042 0.42863 -1.9008 0.16732 -0.29174 -0.39625 0.54895 1.2279 -0.49465 0.34796 -1.9142 -1.3322 0.16725 -1.2962 -0.10223 0.64628 0.42749 -1.6108 -0.25667 -1.5889 1.0696 -1.6996 -0.4334 1.7944 0.75149 0.097754 -0.00091221 2.5896 1.6638 -1.0411 1.0808 0.55234 1.6592 -1.7096 -1.1582 -1.3684 -0.6367 -1.442 1.3066 0.23387 0.93994 0.57562 0.47288 0.63098 -0.67287 -1.9486 0.73057 -0.18506 -0.34076 -0.15913 2.4339 0.1245 0.14598 0.31134 -4.0071</find>
+      <find>evaluate</find>
+      <find>show</find>
+      <find>genome</find>
+      <find>cfg</find>
+      <find>runAnd</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/soco2010/eeg_problem.cpp" />
+        <option value="$PROJECT_DIR$/exp_soco2010/run_soco2010.sh" />
+        <option value="$PROJECT_DIR$/exp_soco2010/run_eggProblemD4.sh" />
+        <option value="$PROJECT_DIR$/exp_soco2010/run_eegProblemD12.sh" />
+        <option value="$PROJECT_DIR$/exp_soco2010/run_eegProblemD19.sh" />
+        <option value="$PROJECT_DIR$/exp_soco2010/run_eegProblemD4.sh" />
+        <option value="$PROJECT_DIR$/soco2010/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/soco2010/loaddata_bigopt.h" />
+        <option value="$PROJECT_DIR$/gaeda/genomes/GAGenome.h" />
+        <option value="$PROJECT_DIR$/gaeda/genomes/GAGenome.cc" />
+        <option value="$PROJECT_DIR$/soco2010/eeg_problem.h" />
+        <option value="$PROJECT_DIR$/soco2010/eeg_problem.cc" />
+        <option value="$PROJECT_DIR$/gaedaexec/main.cc" />
+        <option value="$PROJECT_DIR$/soco2010.cfg" />
+        <option value="$PROJECT_DIR$/exp_soco2010/res/logfile-egg_problemD4.out" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GAEDALib" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="MOS-SOCO2010" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GAEDALib" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="MOS-SOCO2010" type="462c0819:PsiDirectoryNode" />
+              <item name="exp_soco2010" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GAEDALib" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="MOS-SOCO2010" type="462c0819:PsiDirectoryNode" />
+              <item name="exp_soco2010" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GAEDALib" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="MOS-SOCO2010" type="462c0819:PsiDirectoryNode" />
+              <item name="gaedaexec" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/soco2010/DATAin" />
+      <recent name="$PROJECT_DIR$/soco2010" />
+      <recent name="$PROJECT_DIR$/exp_soco2010" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Bash.run_eegProblemD4.sh">
+    <configuration name="run_eegProblemD4.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/exp_soco2010" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exp_soco2010/run_eegProblemD4.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="MOS-SOCO2010" />
+      <envs />
+    </configuration>
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="eeg_problem" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GAEDALib" TARGET_NAME="eeg_problem" CONFIG_NAME="Default">
+      <envs />
+    </configuration>
+    <configuration name="gaeda" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GAEDALib" TARGET_NAME="gaeda" CONFIG_NAME="Default">
+      <envs />
+    </configuration>
+    <configuration name="gaedaexec" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GAEDALib" TARGET_NAME="gaedaexec" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="GAEDALib" RUN_TARGET_NAME="gaedaexec">
+      <envs />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.gaeda" />
+      <item index="2" class="java.lang.String" itemvalue="Application.gaedaexec" />
+      <item index="3" class="java.lang.String" itemvalue="Application.eeg_problem" />
+      <item index="4" class="java.lang.String" itemvalue="Bash.run_eegProblemD4.sh" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Bash.run_eegProblemD4.sh" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69b7e211-2aed-42b4-8323-de08e7afd228" name="Default" comment="" />
+      <created>1522433028937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522433028937</updated>
+      <workItem from="1522433032071" duration="112000" />
+      <workItem from="1529659327420" duration="1299000" />
+      <workItem from="1529661374349" duration="2462000" />
+      <workItem from="1530783542457" duration="9246000" />
+      <workItem from="1530799051644" duration="2450000" />
+      <workItem from="1530802013412" duration="3869000" />
+      <workItem from="1530956918390" duration="8462000" />
+      <workItem from="1531045954096" duration="3694000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31594000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1640625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08533333" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5631068" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.cfg" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/soco2010/f9.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1544">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/schwefel_problem.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/schwefel_problem.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2198">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/shifted_ackley.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/shifted_rosembrock.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/shifted_rosembrock.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/math.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="853" column="35" lean-forward="false" selection-start-line="853" selection-start-column="35" selection-end-line="853" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/aux.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/CMakeCache.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1017">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/cmake_install.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/egg_problem.h" />
+    <entry file="file://$PROJECT_DIR$/soco2010/eeg_problem.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#49#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-f9-run1-0" />
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-f9-run1.out" />
+    <entry file="file://$PROJECT_DIR$/gaeda/GAEDAConfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/run_eegProblemD12.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="155" lean-forward="false" selection-start-line="7" selection-start-column="155" selection-end-line="7" selection-end-column="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/run_eegProblemD19.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="158" lean-forward="true" selection-start-line="7" selection-start-column="158" selection-end-line="7" selection-end-column="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-egg_problem-0" />
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/run_soco2010.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="202" lean-forward="false" selection-start-line="13" selection-start-column="202" selection-end-line="13" selection-end-column="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/aux.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/iosfwd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="155" column="17" lean-forward="false" selection-start-line="155" selection-start-column="14" selection-end-line="155" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/fstream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="1133" column="33" lean-forward="false" selection-start-line="1133" selection-start-column="33" selection-end-line="1133" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/D4A.txt" />
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-egg_problem.out" />
+    <entry file="file://$PROJECT_DIR$/soco2010/f7.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/f7.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/f8NoTrans.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/soco2010.cbp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/DATAin/D4S1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/DATAin/D12S1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/DATAin/D19S1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2059" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="2059" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaeda/Algorithm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaeda/genomes/MOSGenome.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="231" column="23" lean-forward="false" selection-start-line="231" selection-start-column="23" selection-end-line="231" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaeda/genomes/GA1DArrayGenome.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaeda/genomes/GA1DArrayGenome.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="169" column="73" lean-forward="false" selection-start-line="169" selection-start-column="73" selection-end-line="169" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaeda/genomes/GAGenome.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="310" column="26" lean-forward="false" selection-start-line="310" selection-start-column="26" selection-end-line="310" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaeda/genomes/GAGenome.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="182" column="12" lean-forward="false" selection-start-line="182" selection-start-column="12" selection-end-line="182" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-egg_problemD12-0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/loaddata_bigopt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1588">
+          <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/run_eegProblemD4.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/techs_soco.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-egg_problemD12.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="6" column="7029" lean-forward="true" selection-start-line="6" selection-start-column="7029" selection-end-line="6" selection-end-column="7029" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/eeg_problem.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="58" column="50" lean-forward="false" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+          <folding>
+            <element signature="e#49#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaedaexec/main.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="235" column="57" lean-forward="false" selection-start-line="235" selection-start-column="57" selection-end-line="235" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-egg_problemD4-0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soco2010/eeg_problem.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2281">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="e#112#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_soco2010/res/logfile-egg_problemD4.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="7" column="21293" lean-forward="false" selection-start-line="7" selection-start-column="21293" selection-end-line="7" selection-end-column="21293" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

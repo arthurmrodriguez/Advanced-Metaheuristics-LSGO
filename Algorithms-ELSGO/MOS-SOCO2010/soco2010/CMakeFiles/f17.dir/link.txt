@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -dynamiclib -Wl,-headerpad_max_install_names  -o libf17.so -install_name /Users/Arthur18/Documents/UGR-GII/4toCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf17.so CMakeFiles/f17.dir/f17.cc.o CMakeFiles/f17.dir/aux.cc.o  -L../gaeda -l'gaeda' -Wl,-rpath,../gaeda 

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -dynamiclib -Wl,-headerpad_max_install_names  -o libshifted_sphere.so -install_name /Users/Arthur18/Documents/UGR-GII/4ºCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libshifted_sphere.so CMakeFiles/shifted_sphere.dir/shifted_sphere.o  -L../gaeda -l'gaeda' -Wl,-rpath,../gaeda 

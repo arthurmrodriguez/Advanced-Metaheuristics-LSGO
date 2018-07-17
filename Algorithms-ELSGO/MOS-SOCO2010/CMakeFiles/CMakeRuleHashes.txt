@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+de6169a4055a8d62e08747e6e497f967 cec2012/f19.cc

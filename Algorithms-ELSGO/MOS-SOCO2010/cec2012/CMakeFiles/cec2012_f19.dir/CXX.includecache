@@ -1,0 +1,330 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+vector
+-
+fstream
+-
+string
+-
+cstring
+-
+cstdlib
+-
+iostream
+-
+cmath
+-
+ctime
+-
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F1.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F10.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F11.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F12.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F13.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F14.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F15.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F16.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F17.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F18.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F19.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F2.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F20.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F3.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F4.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F5.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F6.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F7.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F8.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F9.h
+Benchmarks.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Benchmarks.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Header.h
+iostream
+-
+cstring
+-
+cstdio
+-
+F1.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F1.h
+F2.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F2.h
+F3.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F3.h
+F4.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F4.h
+F5.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F5.h
+F6.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F6.h
+F7.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F7.h
+F8.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F8.h
+F9.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F9.h
+F10.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F10.h
+F11.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F11.h
+F12.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F12.h
+F13.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F13.h
+F14.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F14.h
+F15.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F15.h
+F16.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F16.h
+F17.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F17.h
+F18.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F18.h
+F19.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F19.h
+F20.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/F20.h
+
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/f19.cc
+stdexcept
+-
+GARealOps.h
+-
+MOSGenomeFactory.h
+-
+GAEDAConfig.h
+-
+genomes/GA1DArrayGenome.h
+-
+Header.h
+/Users/Arthur18/Documents/UGR-GII/4to Curso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/cec2012/Header.h
+
+gaeda/Algorithm.h
+gaid.h
+gaeda/gaid.h
+
+gaeda/GAEDAConfig.h
+MOSConfig.h
+gaeda/MOSConfig.h
+logger/GALogger.h
+gaeda/logger/GALogger.h
+extras/problemloader.h
+gaeda/extras/problemloader.h
+genomes/GAGenome.h
+gaeda/genomes/GAGenome.h
+
+gaeda/GAEvalData.h
+
+gaeda/GARealOps.h
+
+gaeda/MOSConfig.h
+map
+-
+vector
+-
+
+gaeda/MOSGenomeFactory.h
+genomes/GAGenome.h
+gaeda/genomes/GAGenome.h
+MOSConfig.h
+gaeda/MOSConfig.h
+
+gaeda/Serializable.h
+iostream
+-
+
+gaeda/extras/problemloader.h
+
+gaeda/gaconfig.h
+sgidefs.h
+-
+stdlib.h
+-
+assert.h
+-
+
+gaeda/gaerror.h
+gatypes.h
+gaeda/gatypes.h
+gaconfig.h
+gaeda/gaconfig.h
+std_stream.h
+gaeda/std_stream.h
+
+gaeda/gaid.h
+
+gaeda/garandom.h
+stdlib.h
+-
+gatypes.h
+gaeda/gatypes.h
+gaconfig.h
+gaeda/gaconfig.h
+math.h
+-
+limits.h
+-
+
+gaeda/gatypes.h
+
+gaeda/genomes/GA1DArrayGenome.cc
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+../garandom.h
+gaeda/garandom.h
+GA1DArrayGenome.h
+gaeda/genomes/GA1DArrayGenome.h
+
+gaeda/genomes/GA1DArrayGenome.h
+GAArray.h
+gaeda/genomes/GAArray.h
+GAGenome.h
+gaeda/genomes/GAGenome.h
+GAAllele.h
+gaeda/genomes/GAAllele.h
+GA1DArrayGenome.cc
+gaeda/genomes/GA1DArrayGenome.cc
+
+gaeda/genomes/GAAllele.cc
+string.h
+-
+GAAllele.h
+gaeda/genomes/GAAllele.h
+../gaerror.h
+gaeda/gaerror.h
+
+gaeda/genomes/GAAllele.h
+string.h
+-
+../gaconfig.h
+gaeda/gaconfig.h
+../garandom.h
+gaeda/garandom.h
+../std_stream.h
+gaeda/std_stream.h
+GAAllele.cc
+gaeda/genomes/GAAllele.cc
+
+gaeda/genomes/GAArray.h
+
+gaeda/genomes/GAGenome.h
+stdlib.h
+-
+string.h
+-
+vector
+-
+../gaid.h
+gaeda/gaid.h
+../gaconfig.h
+gaeda/gaconfig.h
+../gaerror.h
+gaeda/gaerror.h
+../GAEvalData.h
+gaeda/GAEvalData.h
+../std_stream.h
+gaeda/std_stream.h
+../Serializable.h
+gaeda/Serializable.h
+
+gaeda/logger/GALogger.h
+iostream
+-
+string
+-
+vector
+-
+LogStat.h
+gaeda/logger/LogStat.h
+
+gaeda/logger/LogStat.h
+assert.h
+-
+string
+-
+../Algorithm.h
+gaeda/Algorithm.h
+
+gaeda/std_stream.h
+gaconfig.h
+gaeda/gaconfig.h
+iostream
+-
+fstream
+-
+iostream.h
+-
+fstream.h
+-
+

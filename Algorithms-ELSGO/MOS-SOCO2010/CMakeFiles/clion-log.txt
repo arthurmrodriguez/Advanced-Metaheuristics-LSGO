@@ -1,0 +1,80 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /Users/Arthur18/Documents/UGR-GII/4toCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010
+CMake Warning at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/FindBoost.cmake:786 (message):
+  New Boost version may have incorrect or missing dependencies and imported
+  targets
+Call Stack (most recent call first):
+  /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/FindBoost.cmake:892 (_Boost_COMPONENT_DEPENDENCIES)
+  /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/FindBoost.cmake:1523 (_Boost_MISSING_DEPENDENCIES)
+  gaeda/CMakeLists.txt:4 (find_package)
+
+
+-- Boost version: 1.66.0
+-- Found the following Boost libraries:
+--   program_options
+CMake Deprecation Warning at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/CMakeForceCompiler.cmake:83 (message):
+  The CMAKE_FORCE_CXX_COMPILER macro is deprecated.  Instead just set
+  CMAKE_CXX_COMPILER and allow CMake to identify the compiler.
+Call Stack (most recent call first):
+  gaeda/CMakeLists.txt:7 (cmake_force_cxx_compiler)
+
+
+CMake Deprecation Warning at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/CMakeForceCompiler.cmake:69 (message):
+  The CMAKE_FORCE_C_COMPILER macro is deprecated.  Instead just set
+  CMAKE_C_COMPILER and allow CMake to identify the compiler.
+Call Stack (most recent call first):
+  gaeda/CMakeLists.txt:8 (cmake_force_c_compiler)
+
+
+CMake Warning at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/FindBoost.cmake:786 (message):
+  New Boost version may have incorrect or missing dependencies and imported
+  targets
+Call Stack (most recent call first):
+  /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/FindBoost.cmake:892 (_Boost_COMPONENT_DEPENDENCIES)
+  /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/FindBoost.cmake:1523 (_Boost_MISSING_DEPENDENCIES)
+  gaedaexec/CMakeLists.txt:4 (find_package)
+
+
+-- Boost version: 1.66.0
+-- Found the following Boost libraries:
+--   program_options
+CMake Deprecation Warning at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/CMakeForceCompiler.cmake:83 (message):
+  The CMAKE_FORCE_CXX_COMPILER macro is deprecated.  Instead just set
+  CMAKE_CXX_COMPILER and allow CMake to identify the compiler.
+Call Stack (most recent call first):
+  gaedaexec/CMakeLists.txt:7 (cmake_force_cxx_compiler)
+
+
+CMake Deprecation Warning at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/CMakeForceCompiler.cmake:69 (message):
+  The CMAKE_FORCE_C_COMPILER macro is deprecated.  Instead just set
+  CMAKE_C_COMPILER and allow CMake to identify the compiler.
+Call Stack (most recent call first):
+  gaedaexec/CMakeLists.txt:8 (cmake_force_c_compiler)
+
+
+CMake Warning (dev) at gaedaexec/CMakeLists.txt:11 (link_directories):
+  This command specifies the relative path
+
+    ../gaeda
+
+  as a link directory.
+
+  Policy CMP0015 is not set: link_directories() treats paths relative to the
+  source dir.  Run "cmake --help-policy CMP0015" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at soco2010/CMakeLists.txt:4 (link_directories):
+  This command specifies the relative path
+
+    ../gaeda
+
+  as a link directory.
+
+  Policy CMP0015 is not set: link_directories() treats paths relative to the
+  source dir.  Run "cmake --help-policy CMP0015" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/Arthur18/Documents/UGR-GII/4toCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010

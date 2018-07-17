@@ -1,0 +1,24 @@
+GAEDAlib: A C++ GA library with EDA and multiprocessor (MPI) support
+
+(C) 2005 Pedro Diaz (pdiaz@laurel.datsi.fi.upm.es)
+(C) 2008 Manuel Zaforas (mzaforas@laurel.datsi.fi.upm.es)
+(C) 2009 Jaime Fernandez (jaime.fernandez@upm.es)
+(C) 2009 Carlos Pascual (carlospmdn@gmail.com)
+(C) 2011 Jose Maria Peña (jmpena@fi.upm.es)
+(C) 2011 Santiago Muelas (smuelas@fi.upm.es)
+(C) 2011 Antonio LaTorre (atorre@fi.upm.es)
+
+GAEDAlib is distributed under the terms of the BSD software license.
+See LICENSE file for further details.
+
+GAEDAlib is heavily based on GAlib, a C++ GA library by Mathew Wall:
+Copyright (c) 1995-1996 Massachusetts Institute of Technology (MIT)
+Copyright (c) 1996-2000 Matthew Wall (author of GAlib). See
+LICENSE.GALib file dor futher details.
+
+Some portions of GAEDAlib's source code come from the GNU C++ compiler
+library and therefore are covered under the terms of a different license,
+the GNU Public License.
+
+The file AUTHORS lists the people who have contributed (directly or
+indirectly) to GAEDAlib.

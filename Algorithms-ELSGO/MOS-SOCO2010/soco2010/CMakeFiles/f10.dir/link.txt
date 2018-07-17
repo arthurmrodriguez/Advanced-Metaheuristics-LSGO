@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -dynamiclib -Wl,-headerpad_max_install_names  -o libf10.so -install_name /Users/Arthur18/Documents/UGR-GII/4toCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS-SOCO2010/soco2010/libf10.so CMakeFiles/f10.dir/f10.cc.o  -L../gaeda -l'gaeda' -Wl,-rpath,../gaeda 
