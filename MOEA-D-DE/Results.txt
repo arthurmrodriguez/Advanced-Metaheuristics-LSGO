@@ -1,0 +1,243 @@
+Instances: pf shape 21  - distance 1, - ps shape 21 
+ gen = 20  gd = 1e+10  
+gen = 40  gd = 1e+10  
+gen = 60  gd = 1e+10  
+gen = 80  gd = 1e+10  
+gen = 100  gd = 1e+10  
+gen = 120  gd = 1e+10  
+gen = 140  gd = 1e+10  
+gen = 160  gd = 1e+10  
+gen = 180  gd = 1e+10  
+gen = 200  gd = 1e+10  
+gen = 220  gd = 1e+10  
+gen = 240  gd = 1e+10  
+gen = 260  gd = 1e+10  
+gen = 280  gd = 1e+10  
+gen = 300  gd = 1e+10  
+gen = 320  gd = 1e+10  
+gen = 340  gd = 1e+10  
+gen = 360  gd = 1e+10  
+gen = 380  gd = 1e+10  
+gen = 400  gd = 1e+10  
+gen = 420  gd = 1e+10  
+gen = 440  gd = 1e+10  
+gen = 460  gd = 1e+10  
+gen = 480  gd = 1e+10  
+gen = 500  gd = 1e+10  
+ Outcome of the 1th run:  distance= 1e+10 nfes = 150000
+Instances: pf shape 21  - distance 1, - ps shape 22 
+ gen = 20  gd = 1e+10  
+gen = 40  gd = 1e+10  
+gen = 60  gd = 1e+10  
+gen = 80  gd = 1e+10  
+gen = 100  gd = 1e+10  
+gen = 120  gd = 1e+10  
+gen = 140  gd = 1e+10  
+gen = 160  gd = 1e+10  
+gen = 180  gd = 1e+10  
+gen = 200  gd = 1e+10  
+gen = 220  gd = 1e+10  
+gen = 240  gd = 1e+10  
+gen = 260  gd = 1e+10  
+gen = 280  gd = 1e+10  
+gen = 300  gd = 1e+10  
+gen = 320  gd = 1e+10  
+gen = 340  gd = 1e+10  
+gen = 360  gd = 1e+10  
+gen = 380  gd = 1e+10  
+gen = 400  gd = 1e+10  
+gen = 420  gd = 1e+10  
+gen = 440  gd = 1e+10  
+gen = 460  gd = 1e+10  
+gen = 480  gd = 1e+10  
+gen = 500  gd = 1e+10  
+ Outcome of the 1th run:  distance= 1e+10 nfes = 150000
+Instances: pf shape 21  - distance 1, - ps shape 23 
+ gen = 20  gd = 1e+10  
+gen = 40  gd = 1e+10  
+gen = 60  gd = 1e+10  
+gen = 80  gd = 1e+10  
+gen = 100  gd = 1e+10  
+gen = 120  gd = 1e+10  
+gen = 140  gd = 1e+10  
+gen = 160  gd = 1e+10  
+gen = 180  gd = 1e+10  
+gen = 200  gd = 1e+10  
+gen = 220  gd = 1e+10  
+gen = 240  gd = 1e+10  
+gen = 260  gd = 1e+10  
+gen = 280  gd = 1e+10  
+gen = 300  gd = 1e+10  
+gen = 320  gd = 1e+10  
+gen = 340  gd = 1e+10  
+gen = 360  gd = 1e+10  
+gen = 380  gd = 1e+10  
+gen = 400  gd = 1e+10  
+gen = 420  gd = 1e+10  
+gen = 440  gd = 1e+10  
+gen = 460  gd = 1e+10  
+gen = 480  gd = 1e+10  
+gen = 500  gd = 1e+10  
+ Outcome of the 1th run:  distance= 1e+10 nfes = 150000
+Instances: pf shape 21  - distance 1, - ps shape 24 
+ gen = 20  gd = 12.5529  
+gen = 40  gd = 1e+10  
+gen = 60  gd = 1e+10  
+gen = 80  gd = 1e+10  
+gen = 100  gd = 1e+10  
+gen = 120  gd = 1e+10  
+gen = 140  gd = 1e+10  
+gen = 160  gd = 1e+10  
+gen = 180  gd = 1e+10  
+gen = 200  gd = 1e+10  
+gen = 220  gd = 1e+10  
+gen = 240  gd = 1e+10  
+gen = 260  gd = 1e+10  
+gen = 280  gd = 1e+10  
+gen = 300  gd = 1e+10  
+gen = 320  gd = 1e+10  
+gen = 340  gd = 1e+10  
+gen = 360  gd = 1e+10  
+gen = 380  gd = 1e+10  
+gen = 400  gd = 1e+10  
+gen = 420  gd = 1e+10  
+gen = 440  gd = 1e+10  
+gen = 460  gd = 1e+10  
+gen = 480  gd = 1e+10  
+gen = 500  gd = 1e+10  
+ Outcome of the 1th run:  distance= 1e+10 nfes = 150000
+Instances: pf shape 21  - distance 1, - ps shape 26 
+ gen = 20  gd = 1e+10  
+gen = 40  gd = 1e+10  
+gen = 60  gd = 1e+10  
+gen = 80  gd = 1e+10  
+gen = 100  gd = 1e+10  
+gen = 120  gd = 1e+10  
+gen = 140  gd = 1e+10  
+gen = 160  gd = 1e+10  
+gen = 180  gd = 1e+10  
+gen = 200  gd = 1e+10  
+gen = 220  gd = 1e+10  
+gen = 240  gd = 1e+10  
+gen = 260  gd = 1e+10  
+gen = 280  gd = 1e+10  
+gen = 300  gd = 1e+10  
+gen = 320  gd = 1e+10  
+gen = 340  gd = 1e+10  
+gen = 360  gd = 1e+10  
+gen = 380  gd = 1e+10  
+gen = 400  gd = 1e+10  
+gen = 420  gd = 1e+10  
+gen = 440  gd = 1e+10  
+gen = 460  gd = 1e+10  
+gen = 480  gd = 1e+10  
+gen = 500  gd = 1e+10  
+ Outcome of the 1th run:  distance= 1e+10 nfes = 150000
+Instances: pf shape 31  - distance 1, - ps shape 32 
+ gen = 20  gd = 0.491994  
+gen = 40  gd = 0.468465  
+gen = 60  gd = 0.920161  
+gen = 80  gd = 1.07204  
+gen = 100  gd = 1.18102  
+gen = 120  gd = 1.28961  
+gen = 140  gd = 1.31498  
+gen = 160  gd = 1.33875  
+gen = 180  gd = 1.33478  
+gen = 200  gd = 1.35509  
+gen = 220  gd = 1.35037  
+gen = 240  gd = 1.33818  
+gen = 260  gd = 1.33773  
+gen = 280  gd = 1.34819  
+gen = 300  gd = 1.34154  
+gen = 320  gd = 1.33046  
+gen = 340  gd = 1.34392  
+gen = 360  gd = 1.34303  
+gen = 380  gd = 1.34282  
+gen = 400  gd = 1.33837  
+gen = 420  gd = 1.328  
+gen = 440  gd = 1.3385  
+gen = 460  gd = 1.34921  
+gen = 480  gd = 1.35102  
+gen = 500  gd = 1.35848  
+ Outcome of the 1th run:  distance= 1.35848 nfes = 297500
+Instances: pf shape 21  - distance 3, - ps shape 21 
+ gen = 20  gd = 1e+10  
+gen = 40  gd = 1e+10  
+gen = 60  gd = 1e+10  
+gen = 80  gd = 1e+10  
+gen = 100  gd = 1e+10  
+gen = 120  gd = 1e+10  
+gen = 140  gd = 1e+10  
+gen = 160  gd = 1e+10  
+gen = 180  gd = 1e+10  
+gen = 200  gd = 1e+10  
+gen = 220  gd = 1e+10  
+gen = 240  gd = 1e+10  
+gen = 260  gd = 1e+10  
+gen = 280  gd = 1e+10  
+gen = 300  gd = 1e+10  
+gen = 320  gd = 1e+10  
+gen = 340  gd = 1e+10  
+gen = 360  gd = 1e+10  
+gen = 380  gd = 1e+10  
+gen = 400  gd = 1e+10  
+gen = 420  gd = 1e+10  
+gen = 440  gd = 1e+10  
+gen = 460  gd = 1e+10  
+gen = 480  gd = 1e+10  
+gen = 500  gd = 1e+10  
+ Outcome of the 1th run:  distance= 1e+10 nfes = 150000
+Instances: pf shape 21  - distance 4, - ps shape 21 
+ gen = 20  gd = 1e+10  
+gen = 40  gd = 1e+10  
+gen = 60  gd = 1e+10  
+gen = 80  gd = 1e+10  
+gen = 100  gd = 1e+10  
+gen = 120  gd = 1e+10  
+gen = 140  gd = 1e+10  
+gen = 160  gd = 1e+10  
+gen = 180  gd = 1e+10  
+gen = 200  gd = 1e+10  
+gen = 220  gd = 1e+10  
+gen = 240  gd = 1e+10  
+gen = 260  gd = 1e+10  
+gen = 280  gd = 1e+10  
+gen = 300  gd = 1e+10  
+gen = 320  gd = 1e+10  
+gen = 340  gd = 1e+10  
+gen = 360  gd = 1e+10  
+gen = 380  gd = 1e+10  
+gen = 400  gd = 1e+10  
+gen = 420  gd = 1e+10  
+gen = 440  gd = 1e+10  
+gen = 460  gd = 1e+10  
+gen = 480  gd = 1e+10  
+gen = 500  gd = 1e+10  
+ Outcome of the 1th run:  distance= 1e+10 nfes = 150000
+Instances: pf shape 22  - distance 1, - ps shape 22 
+ gen = 20  gd = 2.55539  
+gen = 40  gd = 45.761  
+gen = 60  gd = 60.3384  
+gen = 80  gd = 62.4158  
+gen = 100  gd = 63.2545  
+gen = 120  gd = 63.7964  
+gen = 140  gd = 62.6752  
+gen = 160  gd = 63.9935  
+gen = 180  gd = 62.9158  
+gen = 200  gd = 64.1016  
+gen = 220  gd = 64.1871  
+gen = 240  gd = 64.2271  
+gen = 260  gd = 64.2  
+gen = 280  gd = 64.2302  
+gen = 300  gd = 64.2141  
+gen = 320  gd = 64.2295  
+gen = 340  gd = 64.1996  
+gen = 360  gd = 64.2302  
+gen = 380  gd = 64.2307  
+gen = 400  gd = 64.2307  
+gen = 420  gd = 64.2305  
+gen = 440  gd = 64.2308  
+gen = 460  gd = 64.2307  
+gen = 480  gd = 64.2298  
+gen = 500  gd = 64.2308  
+ Outcome of the 1th run:  distance= 64.2308 nfes = 150000
