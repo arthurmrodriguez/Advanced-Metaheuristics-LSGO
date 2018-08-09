@@ -181,29 +181,30 @@ pdfproducer = {pdflatex}
 \mainmatter
 \setlength{\parskip}{5pt}
 
-%Introduccion del Trabajo Fin de Grado
-\input{capitulos/Introduccion}
-%
-%\input{capitulos/02_EspecificacionRequisitos}
-%
-%\input{capitulos/03_Planificacion}
-%
-%\input{capitulos/04_Analisis}
-%
-%\input{capitulos/05_Diseno}
-%
-%\input{capitulos/06_Implementacion}
-%
-%\input{capitulos/07_Pruebas}
-%
-%\input{capitulos/08_Conclusiones}
-%
-%%\chapter{Conclusiones y Trabajos Futuros}
-%
-%
-%%\nocite{*}
-%\bibliography{bibliografia/bibliografia}\addcontentsline{toc}{chapter}{Bibliografía}
-%\bibliographystyle{miunsrturl}
+%Introduccion del Trabajo Fin de Grado y motivacion
+\input{capitulos/01_Introduccion}
+
+%\input{capitulos/02_EspecificacionRequisitos} %% estos dos pueden ser uno solo
+% Presupuesto: tareas y lo que voy a tardar y el precio por hora, HERCULES
+
+%\input{capitulos/02bis_Planificacion}
+
+%\input{capitulos/03_RevisionLiteratura} 	%revision literatura: los benchmarks
+
+%\input{capitulos/04_AnalisisAlgoritmos}
+%\input{capitulos/04bis_ImplementacionPseudocodigo}
+
+%\input{capitulos/05_DisenioExperimental}
+
+%\input{capitulos/06_PruebasYResultados} %parte experimental
+
+%\input{capitulos/07_Conclusiones}
+
+%%\chapter{capitulos/08_TrabajosFuturos}
+
+\nocite{*}
+\bibliography{bibliografia/bibliografia}\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{unsrt}
 %
 %\appendix
 %\input{apendices/manual_usuario/manual_usuario}
