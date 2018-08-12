@@ -1,6 +1,6 @@
 \chapter{Introducción}
 
-Desde sus inicios, la computación evolutiva ha sido capaz proponer soluciones efectivas a una gran cantidad de problemas de optimización a través de algoritmos bio-inspirados, aquellos que se basan en comportamientos o procesos puramente naturales. Algoritmos Evolutivos (EA, Evolutionary Algorithms), de Nubes de Partículas (PSO, Particle Swarm Optimization), de Evolución Diferencial (DE, Differential Evolution) de Colonias de Hormigas (ACO, Ant Colony Optimization), responden de manera satisfactoria al ser aplicados a problemas de escalas pequeñas-medianas.
+Desde sus inicios, la computación evolutiva ha sido capaz de proponer soluciones efectivas a una gran cantidad de problemas de optimización a través de algoritmos bio-inspirados, aquellos que se basan en comportamientos o procesos puramente naturales. Algoritmos Evolutivos (EA, Evolutionary Algorithms), de Nubes de Partículas (PSO, Particle Swarm Optimization), de Evolución Diferencial (DE, Differential Evolution) y de Colonias de Hormigas (ACO, Ant Colony Optimization), responden de manera satisfactoria al ser aplicados a problemas de escalas pequeñas-medianas.
 
 Sin embargo, cuando el tamaño del problema se situa en el rango de los cientos o miles de variables, el espacio de soluciones aumenta de manera exponencial conforme crece el número de éstas, lo que repercute directamente en un aumento significativo de la complejidad del problema. Estas condiciones hacen que para una técnica, anteriormente considerada como efectiva, sea mucho más difícil el encontrar una solución óptima para el problema en cuestión.
 
@@ -8,9 +8,9 @@ Con miras a solventar estas dificultades, surge una nueva vertiente de propuesta
 
 \section{Motivación}
 
-Las propuestas disponibles actualmente muestran resultados satisfactorios al ser evaluadas en función de benchmarks preestablecidos y bien definidos. No obstante, su aplicación real normalmente no trasciende más allá de la propia competición para la que fueron diseñados. Este hecho supone la principal motivación de este trabajo: el estudio de la efectividad y eficiencia de estos algoritmos cuando son aplicados a un problema médico real como lo es, en este caso, \textbf{la optimización de los datos de un electroencefalograma}, EEG\cite{EEG} por sus siglas en inglés.
+Las propuestas disponibles actualmente muestran resultados satisfactorios al ser evaluadas en función de benchmarks preestablecidos y bien definidos. No obstante, su aplicación real normalmente no trasciende más allá de la propia competición para la que fueron diseñados. Este hecho supone la principal motivación de este trabajo: el estudio de la efectividad y eficiencia de estos algoritmos cuando son aplicados a un problema médico real como lo es, en este caso, \textbf{la optimización de los datos de un electroencefalograma}, EEG por sus siglas en inglés.
 
-Como se ha mencionado anteriormente, la optimización de un electroencefalograma es un problema que no guarda relación con ninguno de los benchmarks conocidos hasta la fecha, al ser un problema cuya \textbf{complejidad} es \textbf{superior tanto a nivel conceptual como en tiempo y en espacio}. Propuestas que conlleven la resolución de este problema de manera satisfactoria podrían reportar importantes avances en cuanto al diseño e implementación de \textbf{interfaces cerebro-ordenador} (BCI, \textit{brain-computer interfaces}) \cite{BCI} más potentes, fiables y eficientes.
+Como se ha mencionado anteriormente, la optimización de un electroencefalograma es un problema que no guarda relación con ninguno de los benchmarks conocidos hasta la fecha, al ser un problema cuya \textbf{complejidad} es \textbf{superior tanto a nivel conceptual como en tiempo y en espacio}. Propuestas que conlleven la resolución de este problema de manera satisfactoria podrían reportar importantes avances en cuanto al diseño e implementación de \textbf{interfaces cerebro-ordenador} (BCI, \textit{brain-computer interfaces}) más potentes, fiables y eficientes.
 
 Este tipo de dispositivos podría ser de ayuda en actividades y tareas del día a día donde la decodificación de un EEG cualitativo es crucial a la hora de reconocer estados cognitivos de orden superior, tales como emociones, memoria o planificación, aspectos que influyen directamente en la toma de decisiones críticas\cite{EvolutionaryBigOpt} en distintos entornos donde es necesaria una interacción y respuesta en tiempo real para garantizar el correcto desempeño de la actividad.
 
@@ -18,7 +18,7 @@ Este tipo de dispositivos podría ser de ayuda en actividades y tareas del día 
 
 El objetivo principal de este Trabajo de Fin de Grado consiste en realizar un estudio comparativo de los algoritmos dedicados a resolver problemas de optimización con miles de variables, problemas del tipo \textbf{LSGO}, de forma que se pueda plantear un posible curso de acción o propuesta que sea de utilidad para resolver el problema médico real de la optimización de un electroencefalograma (EEG).
 
-Los siguientes capítulos contendrán el estudio completo en cuestión: desde la definición y representación del problema hasta la selección de técnicas y procedimientos candidatas al estudio, así como del proceso de experimentación, la interpretación y valoración de los resultados obtenidos. Los objetivos principales se encuentran recogidos en los siguientes enunciados:
+Los siguientes capítulos contendrán el estudio completo en cuestión: desde la definición y representación del problema hasta la selección de posibles técnicas y procedimientos candidatas al estudio, así como del proceso de experimentación, la interpretación y valoración de los resultados obtenidos. Los objetivos principales se encuentran recogidos en los siguientes enunciados:
 
 \begin{itemize}
 	\item \textbf{Realizar la descripción y representación del problema del EEG en su totalidad.}
@@ -29,7 +29,34 @@ Los siguientes capítulos contendrán el estudio completo en cuestión: desde la
 
 Una vez enunciados los objetivos, obtener una perspectiva clara y concisa del problema del EEG es crucial para comprender la magnitud del estudio y todo lo que conlleva, dado que compone la base sobre la que se sustenta éste y es la que marca el curso de acción a tomar en función de los requisitos y necesidades que plantee su resolución. 
 
-\section{Descripción y representación del problema: Optimización de un EEG}
+\section{Problema: Optimización de los datos de un EEG}
+
+\subsection{Panorama actual}
+
+La optimización de los datos de un electroencefalograma, a partir de ahora EEG por sus siglas en inglés, está dentro de la categoría de problemas de Big Data, problemas donde no sólo el tamaño del mismo supone de por si una dificultad, sino que también influyen aspectos como el ruido en los datos, la no existencia de patrones fácilmente reconocibles o restricciones de tiempo inherentes al problema.
+
+En el año 2015 se presenta este problema como candidato a conformar la base del \textbf{Optimization of Big Data Competition, CEC 2015}\cite{EvolutionaryBigOpt} donde se realiza su estudio a través de dos algoritmos multiobjetivo considerados \textit{state-of-the-art}, cuyos resultados, a pesar de considerarse como satisfactorios, demostraron que era necesario disponer de mejores propuestas y métodos que aportasen un rendimiento superior en términos de tiempo y calidad de las soluciones.
+
+En ámbitos médicos como la neurociencia se utilizan dispositivos denominados BCI (Brain-computer Interfaces)\cite{BCI} que se encargan de \textbf{capturar la actividad cerebral} a través de electrodos, con el fin de analizar estos datos, procesarlos y traducirlos en acciones o estados cognitivos que puedan utilizarse para actuar en consecuencia ante una determinada situación.
+
+Los BCIs hacen uso principalmente de los \textbf{electroencefalogramas} (EEG), que son exploraciones neurofisiológicas que registran la actividad bioeléctrica cerebral, concretamente de las neuronas, a través de electrodos (componentes de los BCIs), con el objetivo de detectar o diagnosticar enfermedades o trastornos del sistema nervioso central\cite{EEG}, tales como epilepsia, daños cerebrales de distintos tipos, trastornos psiquiátricos, encefalopatías y demás afecciones\cite{EEG2}. 
+
+Dentro de los EEG existen los denominados \textbf{EEG Cuantitativos}, QEEG\cite{QEEG}, que por medio de una malla de electrodos registran de \textbf{forma simultánea} los impulsos eléctricos de múltiples partes del cerebro. Decodificar de forma efectiva estos QEEG en \textbf{estados cognitivos de orden superior}\cite{EvolutionaryBigOpt}, como pueden ser emociones, recuerdos, estados cerebrales, promovería la creación de BCIs más avanzados que sustenten el uso de estos sistemas tanto en el tratamiento de pacientes con distintos trastornos del sistema nervioso como para las actividades del día a día, sobre todo de aquellas que conlleven la toma de decisiones críticas en tiempo real.
+
+Sin embargo, el correcto funcionamiento de los BCIs se ve normalmente truncado por dos principales aspectos: la cantidad de \textbf{información cerebral \textit{real}} que es captada y la \textbf{distorsión que producen las señales eléctricas no cerebrales}, que quedan plasmadas en el QEEG, empañando los resultados obtenidos y elevando la complejidad del proceso de decodificación. Es aquí donde entran en juego técnicas como el \textbf{Análisis de Componentes Independientes, ICA}, y otras técnicas para \textbf{eliminar la correlación} de los datos reales del QEEG con aquellas interferencias que se denominan \textbf{artifacts}, para ser finalmente separados del QEEG y recomponer el EEG original, acción que al estar actualmente realizada por un ser humano, se vuelve \textbf{totalmente inviable} de cara a los procesos de obtención de QEEG actuales.
+
+\subsection{Representación del problema: QEEG}
+
+La propuesta recogida en\cite{EvolutionaryBigOpt} provee una forma simple de representar el problema de la decodificación de un QEEG, de forma que cualquier técnica, método o algoritmo preparado para el procesamiento de grandes cantidades de datos y la optimización global de miles de variables, pueda ser sometido a pruebas exhaustivas frente a este problema real, y finalmente sugerir, si cabe, un posible candidato que susituya el actual método de decodificación, descrito en el párrafo anterior, con el último fin de dar un salto importante en el diseño de sistemas BCIs para la mejora de la calidad de vida de todas aquellas personas que lo requieran.
+
+Como el estudio se basa completamente en la clara definición del problema en cuestión, los siguientes párrafos contendrán toda la información referente a éste, desde la representación elegida, pasando por las bases de datos disponibles y llegando hasta la definición de la función objetivo que marcará el camino a seguir en este estudio.
+
+
+
+
+
+
+
 
 
 
