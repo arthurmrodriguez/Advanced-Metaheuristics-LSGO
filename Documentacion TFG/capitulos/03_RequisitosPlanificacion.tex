@@ -1,0 +1,65 @@
+\chapter{Requisitos y Planificación del Trabajo}
+
+En este capítulo se propone el curso de acción para el desarrollo del trabajo. Este incluye los principales \textbf{requisitos a satisfacer} por el alumno en cuanto a los \textbf{objetivos} y la \textbf{propuesta}, así como la \textbf{planificación} del mismo, entendida como la previsión en relación a recursos necesarios, sus costes derivados, optimización del tiempo de proceso, necesidades de potencia y espacio a nivel computacional, la estructuración de la carga de trabajo y por último la \textbf{metodología} idónea para elaborar este análisis
+
+\section{Requisitos del proceso de investigación}
+
+La naturaleza investigativa de este trabajo implica el cumplimiento de una serie de requisitos de cara a establecer la base sobre la que se sustenta el mismo; estos requisitos se encuentran representados en los siguientes enunciados y \textbf{representan las tareas más fundamentales }a llevar a cabo para completar satisfactoriamente el estudio:
+
+\begin{enumerate}
+	\item \label{tarea1} \textbf{Realizar un estudio exhaustivo del problema del EEG}: \textbf{comprender} la naturaleza más primitiva de la proposición en todos los niveles, estudiar su \textbf{utilidad a escala real} y los \textbf{beneficios} que trae consigo su resolución para la sociedad. Este requisito se satisface a lo largo del la sección \ref{Section:QEEG} y del capítulo ??? (EXPERIMENTACION).
+	
+	\item \label{tarea2} \textbf{Seleccionar los principales algoritmos y técnicas a incluir en el trabajo}: teniendo en cuenta la revisión del estado del arte efectuada en capítulo anterior, junto con recomendaciones del tutor, se \textbf{eligen las tecnologías más prometedoras} de cara a solventar los inconvenientes descritos en el apartado \ref{Propuesta} de la propuesta. El siguiente capítulo será el encargado de efectuar esta tarea.
+	
+	\item  \label{tarea3}\textbf{Analizar las propuestas elegidas con el mayor nivel de detalle posible}: identificación de los \textbf{puntos fuertes de cada implementación} y de las técnicas empleadas, con el objetivo de construir \textbf{juicios preliminares} en relación a la satisfacción de la propuesta, que serán finalmente validados en el proceso de experimentación. Se recoge este análisis en el siguiente capítulo.
+	
+	\item \label{tarea4} \textbf{Adaptar las técnicas al problema del EEG}: dada la implementación particular de cada técnica y de las herramientas utlizadas en el proceso, es necesaria una \textbf{adaptación de la función objetivo} para que pueda ser procesada por los algoritmos de forma correcta. Una \textbf{configuración personalizada} será necesaria para acoplar esta función con las exigencias a nivel de código fuente de cada técnica. Se documenta brevemente esta tarea en el siguiente capítulo.
+	
+	\item  \label{tarea5}\textbf{Diseñar e implementar un proceso de experimentación completo}: para dotar de validez a las propuestas y obtener resultados representativos, se hace indispensable \textbf{planificar una fase de experimentación} robusta y \textbf{acotar la salida} que se quiere obtener para posteriormente evaluar y establecer conclusiones sólidas. Se desarrolla a lo largo de los capítulos 5 y 6.
+	
+	\item  \label{tarea6} \textbf{Evaluar los resultados obtenidos}: emitir \textbf{conclusiones firmes y objetivas} de acuerdo con las soluciones alcanzadas, utilizando todas las herramientas de representación de datos que sean necesarias para decretar un veredicto con el mayor grado de precisión posible. Esta tarea se recoge en el capítulo 6 y 7.
+	
+	\item  \label{tarea7} \textbf{Sugerir una propuesta para posibles futuros trabajos en la materia}: en base a la evaluación de resultados, \textbf{mostrar el panorama derivado del estudio} de cara a posteriores trabajos e investigaciones dentro de la actual disciplina. El capítulo 8 recoge estos enunciados finales.
+\end{enumerate}
+
+Una vez especificadas las tareas a desarrollar a lo largo del trabajo, el siguiente paso consiste en planificar el proceso de estudio de forma que se contemplen, aunque sea a priori, los recursos y necesidades indispensables a las que habrá que hacer frente a lo largo del desarrollo, para tener una primera perspectiva de lo que implica llevar a cabo la investigación actual.
+
+\section{Planificación del trabajo} 
+
+Los aspectos principales a considerar en este apartado están relacionados con los \textbf{recursos} disponibles y aquellos que son necesarios, así como la \textbf{distribución de la carga de trabajo} en términos, principalmente, de tiempo y potencia de cómputo. Considerar ambos factores implica realizar una \textbf{estimación de tiempos, costes y requerimientos} para la realización del trabajo.
+
+\subsection{Recursos disponibles y necesarios}
+
+El alumno hará uso de su propio ordenador portátil MacBook Pro del año 2012 con procesador Intel Core i7 a 2,9 GHz, con 16 GB de memoria RAM DDR3 y una tarjeta gráfica Intel HD Graphics de 1,5 GB. Este equipo será más que suficiente para afrontar las tareas derivadas de la \textbf{investigación y documentación}, para las cuales también será necesario tener acceso a una \textbf{red de internet} de banda ancha para consultar toda la bibliografía y documentación requerida, red de la que el alumno dispone en su domicilio particular.
+
+Acceder a \textbf{documentación, artículos científicos y libros}, ya sea a nivel de Internet o de bibliotecas virtuales, será posible gracias a los convenios que tiene la Universidad de Granada con bases de datos tales como Scopus\cite{SCOPUS} o IEEE, que proporcionan bibliografía fiable y contrastada, imprescindible en este trabajo. El alumno se valdrá también de una libreta donde documentará de forma escrita aquellas fases o hitos que considere necesarios.
+
+Para la \textbf{fase preliminar de experimentación}, donde se validará la adaptación de los algoritmos, bastará con el ordenador portátil disponible y las principales herramientas software como distintas IDEs, procesadores de texto y demás tecnologías, así como los recursos energéticos que proporciona el lugar donde reside el alumno, medios que serán igualmente suficientes para los \textbf{procesos finales de evaluación y conclusión}. 
+
+Sin embargo, dada la \textbf{dimensionalidad del problema y la complejidad de los experimentos}, será necesaria una mayor potencia de cómputo para llevar a cabo las pruebas pertinentes. Para ello, el alumno se servirá del \textbf{Clúster Hercules del CITIC de la UGR} \cite{HERCULES}, que \textit{``posee 46 nodos, cada uno de ellos equipado con un procesador Intel Core i7 930 a 2.8 GHz, 24 GB de RAM y HDD SATA2 de 1TB"}. Funciona a través de un sistema de colas SLURM\cite{SLURM} que facilita la creación y ejecución de trabajos en el clúster.
+
+El alumno por tanto asumirá únicamente los costes derivados de la investigación cuando utilice los \textbf{recursos propios} y las herramientas de las que dispone, por lo que no se tienen en consideración aquellos que asume la propia Universidad, como cuando se utiliza el Cluster Hércules. No es posible asignar una cantidad realista al coste estimado total del trabajo, pero al tratarse de un trabajo investigativo, podría considerarse una cantidad igual o ligeramente superior a los ingresos de un Ingeniero Informático con contrato a jornada laboral completa.
+
+\subsection{Distribución de la carga de trabajo: estimaciones}
+
+Se estima un total de, al menos, \textbf{seis meses} en llevar a cabo el trabajo, donde serán las tareas de documentación las que en un principio requerirán mayor tiempo, sobre todo las relacionadas con las \textbf{tareas \ref{tarea1}, \ref{tarea2} y \ref{tarea3}}, dado que son las que sustentan toda la base del estudio y requieren ser precisadas de forma exhaustiva para descartar la existencia de cualquier tipo de incongruencia o error.
+
+El proceso de \textbf{adaptación de las técnicas} al problema del EGG (tarea \ref{tarea4}) está subordinado a las particularidades de cada implementación y puede complicarse por situaciones que actualmente escapan al conocimiento del alumno, pero es evidente que resolver la tarea \ref{tarea3} despeja el camino a seguir y una vez realizada la adaptación sobre uno de los candidatos, se asume que el proceso será similar para los algoritmos restantes. Como cada adaptación requiere de sus pruebas de validación previas a la experimentación, no se espera que este proceso se extienda más de \textbf{cuatro semanas}. 
+
+El \textbf{diseño e implementación experimental} quizá sea la tarea con mayor incertidumbre en cuanto a estimaciones, dado que está ligada de forma directa a los \textbf{procesos de validación previos} donde se evaluarán principalmente los tiempos de ejecución de los algoritmos. Cuando finalmente sean sometidos a test, estos tiempos supondrán la gran parte del tiempo total que se empleará en esta fase. Al contar con recursos como el Clúster Hércules, los tiempos de respuesta de los algoritmos frente a los experimentos no deberían suponer un gran problema, independientemente de lo que se tarde en ellos, por lo que se estima un tiempo de \textbf{una a dos semanas} en llevar a cabo esta fase.
+
+Para las fases finales, la \textbf{evaluación de resultados y propuesta de solución}, se estima un tiempo similar a la fase anterior, unas \textbf{dos semanas}, dado que la agrupación de los datos y la representación de los mismos no debería suponer excesivo trabajo, mientras que las conclusiones y recomendaciones estarán guiadas por el trabajo previo desarrollado.
+
+Para terminar, destacar que el desarrollo de esta documentación será un proceso incremental que se irá desarrollando en paralelo con las demás tareas, empleando distintas herramientas para complementar el proceso. Esta fase, por tanto, comienza y termina a la vez que lo hace el propio trabajo.
+
+\subsection{Metodología}
+
+La metodología a seguir para el desarrollo del trabajo será la \textbf{metodología ágil} donde, una vez especificados los requisitos, se seguirá un proceso iterativo e incremental donde cada ciclo estará formado por un procedimiento similar, donde la especificación de requisitos se realizará \textbf{a nivel de cada una de las tareas} que se esten desarrollando, el \textbf{diseño} se limitará a la \textbf{fase experimental}, el proceso de creación, modificación y adaptación de \textbf{código fuente} se realizará en las etapas que lo requieran y la \textbf{documentación estará intimamente ligada a cada uno de los procesos}.
+
+A lo largo de todo el proceso de desarrollo de la investigación, la \textbf{comunicación directa con el tutor} del trabajo será vital si se quiere consultar y/o validar cada una de las iteraciones realizadas y llevar un seguimiento del desarrollo del trabajo. Dada las situaciones particulares tanto del alumno como del tutor, se primará el uso del \textbf{correo electrónico} para el seguimiento del trabajo, siendo indispensables al menos \textbf{dos o tres reuniones más}, sin contar la primera, de cara a la culminación del proyecto.
+
+Sin más aspectos que añadir en esta fase, en el capítulo siguiente se procederá al análisis exhaustivo de cada una de las propuesta seleccionadas, donde se prestará especial atención a las razones que derivan en las elecciones realizadas.
+
+
+
+
