@@ -1,0 +1,167 @@
+\chapter{Análisis de las Propuestas: Algoritmos LSGO}
+
+La finalidad de esta sección consiste en dar respuesta a las tareas \ref{tarea3} y \ref{tarea4} planteadas en el capítulo anterior donde se propone, principalmente, analizar de forma exhaustiva los distintos algoritmos seleccionados como fuente de estudio en este trabajo. 
+
+El análisis está organizado de forma que se expongan todos los aspectos relevantes del algoritmo en cuestión tales como la \textbf{representación matemática} de su composición, \textbf{estructura interna} de la técnica, \textbf{elementos esenciales}, características particulares de la \textbf{implementación}, así como de la motivación para su \textbf{elección}, que estará basada esencialmente en los elementos anteriores, y en general, cualquier detalle significativo que aporte información relevante para este trabajo.
+
+Posteriormente, el proceso de \textbf{adaptación de las técnicas} al problema del EEG será cubierto tanto a \textbf{nivel global}, donde se repasarán \textbf{aspectos fundamentales de la propuesta de problema} relacionados con la representación e implementación en código fuente, como a \textbf{nivel local} donde se recogen las singularidades que implica realizar cada adaptación por separado.
+
+Al término de este capítulo se habrán completado las tareas necesarias para iniciar el proceso de experimentación que finalmente conduzca a la generación de resultados, que serán en última instancia evaluados e interpretados y conformarán la base de las conclusiones pertinentes.
+
+\section{Algoritmos LSGO: MOS 2011}
+
+La primera propuesta elegida para este estudio es la conocida como \textbf{MOS2010}, dado que fue formulada en ese año y utilizada en la posterior competición del CEC 2011\cite{ComprehensiveComparison}. La publicación en la revista Springer Verlag llega bajo el nombre de \textbf{\textit{A MOS-based dynamic memetic differential evolution algorithm for continuous optimization: a scalability test}} \cite{MOS2010}.
+
+A grandes rasgos, en la publicación se propone un innovador \textbf{algoritmo memético híbrido} que a través del framework MOS (Multiple Offspring Sampling) \textbf{combina distintas estrategias de búsqueda} con el objetivo de alcanzar un balance exploración-explotación óptimo, en concreto, dos técnicas heurísticas que aplicadas por separado han mostrado resultados altamente competitivos. Una descripción detallada de todo el algoritmo se expone a continuación.
+
+\subsection{Propuesta del algoritmo: Multiple Offspring Sampling}
+
+El algoritmo enunciado propone dar solución al inconveninete que surge del aumento de la dimensionalidad sobre un problema, incluso cuando la naturaleza del mismo no cambia. Es aquí donde entra en juego el framework MOS, que permite combinar dos potentes técnicas: un algoritmo de e\textbf{volución diferencial (DE)} y la primra de las \textbf{búsquedas locales} (LS) del algoritmo MTS, la conocida como \textbf{MTS-LS1}\cite{MTS-LSGO}.
+
+Este framework permite combinar distintas metaheurísticas siguiendo distintos tipos de enfoque, donde ha sido el \textbf{HRH} (High-level Relay Hybrid) el que se ha elegido; mediante esta perspectiva en particular, se \textbf{ajusta de forma dinámica} el número de \textbf{evaluaciones de la función objetivo} que cada algoritmo puede realizar. Para comprender la naturaleza de este enfoque es imprescindible conocer el origen de la terminología y de los demás enfoques.
+
+En el artículo \textit{A taxonomy of hybrid metaheuristics (2002)}\cite{TaxonomyEAs} se propone una taxonomía de los algortimos híbridos, con el fin de establecer una terminología común a estos mecanismos, donde se combinan los esquemas \textbf{jerárquicos}, para reducir la cantidad de clases, y \textbf{planos}, para cuando las clases que definen cada algoritmo se eligen de forma arbitraria. De esta taxonomía surgen 4 tipos de estrategias principales que detallamos a continuación:
+
+\begin{enumerate}
+	\item \textbf{LRH - Low-level Relay Hybrid}: una técnica metaheurística se incrusta en otra de \textbf{una sola solución}. Algoritmos de Simmulated Annealing (SA) combinados con LS son ejemplos de este enfoque.
+	
+	\item \textbf{LTH - Low-level Teamwork Hybrid}: la técnica es \textbf{incrustada en otra metaheuristica basada en poblaciones}. Un claro ejemplo de este tipo de enfoques es un algoritmo memético básico: GA con una LS.
+	
+	\item \textbf{HRH - High-level Relay Hybrid}: este enfoque ejecuta las metaheurísticas de \textbf{forma secuencial}, una continuación de la otra. Es el enfoque elegido en esta propuesta.
+	
+	\item \textbf{HTH - High-level Teamwork Hybrid}: distintas técnicas son ejecutadas en paralelo, donde cada una se sirve de la información de las demás, cooperando en conjunto para encontrar soluciones óptimas.
+\end{enumerate}
+
+La técnica que se propone en esta publicación se basa en la hibridación de distintas técnicas a lo largo de los últimos años, donde los algoritmos de evolución diferencial (DE) han sido los más utilizados. De forma complementaria, el algoritmo MTS\cite{MTS-LSGO} fue capaz de resolver problemas de hasta 1000 variables en el CEC 2008, razón por la cual se presenta como candidato en esta propuesta en particular. Así, el algoritmo DE dejaría lugar a que la LS encontrase regiones mas prometedoras a la vez que se reducen las evaluaciones a la función objetivo y por otra parte, la propia búsqueda local intentaría paliar los efectos del estancamiento en este tipo de algoritmos.
+
+En esta propuesta en particular, el término \textbf{técnica de descendencia} hace referencia a \textbf{cualquier mecanismo para crear soluciones candidatas}, donde además son necesarios otros cuatro elementos: un modelo de algoritmo evolutivo en particular, una codificación de las soluciones, operadores específicos y parámetros necesarios. 
+
+Esta característica implica que se pueden utilizar de \textbf{forma simultánea} varias técnicas para generar descendientes, lo que a su vez conlleva la existencia de un mecanismo que controle el uso de estas. El framework MOS propone dos grupos de funciones para solventar este inconveniente, lo que le permite \textbf{ajustar de forma dinámica el grado de participación de cada técnica} durante el proceso de búsqueda:
+
+\begin{itemize}
+	\item \textbf{Funciones de Calidad}: evalúan el fitness de los individuos en función de alguna característica deseable
+	\item \textbf{Funciones de Participación}: asigna la cantidad de descendientes que genera cada técnica en función de la calidad de las soluciones.
+\end{itemize}
+
+El autor de la propuesta considera dos tipos de algoritmos según la taxonomía formulada en \cite{TaxonomyEAs}, estos son, HTH y HRH, sin embargo, se opta finalmente por el algoritmo de tipo \textbf{HRH}. En este tipo de algoritmos, las técnicas elegidas, en nuestro caso DE y MTS-LS1, son aplicadas en secuencia una a continuación de la otra, y cada una de cierta forma reutiliza la población resultante de la anterior. Este enfoque es más adecuado debido a que se utiliza en este caso una técnica no poblacional, como lo es la búsqueda local en cuestión.
+
+El proceso de búsqueda se establece al principio de la ejecución, dividiendo el mismo en un \textbf{número fijo de pasos}. A cada paso se le asigna un número \textbf{fijo} de evaluaciones de la función objetivo, que son administradas de forma interna por cada técnica a través de la función de participación de la misma. De forma aclaratoria se expone el pseudocódigo de la propuesta HRH y se remite al lector a \cite{MOS2010} si se quiere profundizar en la propuesta HTH.
+
+\begin{algorithm}[H]
+	\begin{algorithmic}[1]
+		\STATE Crear población de soluciones candidatas $P_0$
+		\STATE Distribuir la participación uniformemente entre las $n$ tecnicas usadas $\rightarrow$ $\forall j \ \Pi_{0}^{(j)} = \frac{FE_{s_{0}}}{n}$. Cada tecnica produce un subconjunto de individuos de acuerdo con su participacion $ \Pi_{0}^{(j)}$
+		\STATE Evaluar $P_0$
+		\WHILE {no se supere el numero de pasos}
+		\STATE Actualizar la Calidad de la técnica $T^{(j)}$ como la media de la calidad de los individuos que ha creado en el paso anterior
+		\STATE Actualizar los ratios de participación en función de los valores de calidad del paso 5 $\rightarrow$ $\forall j \ \Pi_{i+1}^{(j)} = PF(Q_i^{(j)})$
+		\STATE Actualizar el número de evaluaciones de la función objetivo de cada técnica $\rightarrow$ $\forall j \ FE_{s_i}^{(j)} = \Pi_{i+1}^{(j)} \cdot FE_{s_i}$		
+		
+		\FOR {cada tecnica $T^{ (j) }$}
+			\WHILE{no se supere $FE_{s_i}^{ (j) }$ }
+				\STATE Evolucionar
+			\ENDWHILE
+		\ENDFOR
+		\ENDWHILE		
+	\end{algorithmic}
+	\caption{: HRH MOS }
+\end{algorithm}
+
+Como se puede observar, la participación de cada técnica depende de una función de calidad que toma en consideración dos características necesarias: el \textbf{incremento medio del fitness} de los individuos tras la evaluación y el número de veces que se ha producido esta mejora. Se representa en la siguiente ecuación:
+
+\begin{equation}\label{eq:QF_MOS}
+	\begin{gathered}
+		Q_i^{(j)} = 
+						\begin{cases}
+							\Sigma_{i-1}^{(j)} \ \textbf{if}  \ \forall k,l \in [1,n]: \Sigma_{i-1}^{(k)} > \Sigma_{i-1}^{(l)} \implies \Gamma_{i-1}^{(k)} > \Gamma_{i-1}^{(l)} \\ \\
+							\Gamma_{i-1}^{(j)} \ \textbf{otherwise}
+						\end{cases}
+	\end{gathered}
+\end{equation}
+
+donde \\ \\
+$Q_i^{(j)} \equiv$ Calidad de la técnica $T^{(j)}$ en el paso $i$\\
+$\Sigma_i^{(j)} \equiv$ Incremento medio del fitness de $T^{(j)}$ en el paso $i$\\
+$\Gamma_i^{(j)} \equiv$ Num. de mejoras de fitness de $T^{(j)}$ en el paso $i$	
+
+En esta función de calidad $QF$ se utiliza $\Sigma_{i}^{(j)}$ si y sólo si hay consenso entre el incremento medio de fitness y el número de mejoras de una técnica a otra. En caso contrario se usa solo el número de incrementos del fitness. Esto es así debido a que una técnica que no este explorando el espacio de soluciones de forma adecuada, puede introducir grandes mejoras en el fitness, lo que puede no ser representativo. Estas acciones se penalizan en favor de comportamientos mas adecuados, tales como incrementos pequeños de buenos individuos de la población.
+
+Una función de participación dinámica utiliza estos $QFs$ para ajustar el número de evaluaciones de la función objetivo asignado a cada técnica en cada paso. La función de participación $PF$ calcula, para cada paso del algoritmo, un \textbf{factor de compensación} $\Delta_i^{(j)}$ para cada técnica, lo que representa el decrecimiento de participación para cada técnica excepto para la mejor. Cada técnica aumentará su participación en proporción al cociente $\frac{\Sigma \Delta_{i}^{(j)}}{nº tecnicas}$. La $PF$ se describe en la siguiente ecuación:
+
+\begin{equation}\label{eq:PF_MOS}
+	\begin{gathered}
+		PF_{dyn}(Q_i^{(j)} )= \begin{cases}
+			\Pi_{i-1}^{(j)} + \eta \ \textbf{if} \ j \in best \\ \\
+			\Pi_{i-1}^{(j)} - \Delta_i^{(j)} \ \textbf{otherwise}
+		\end{cases}
+	\end{gathered}
+\end{equation}
+
+$$
+\eta = \frac{\Sigma_{k\notin best}\Delta_i^{(k)}}{|best|}
+$$
+$$
+best = {l/Q_i^{(l)} \geq Q_i^{(m)} \forall l,m \in [1,n]}
+$$
+
+donde $\Pi_i^{(j)}$ es el \textbf{porcentaje de individuos que genera de la población actual}. El factor de compensación se calcula como se puede ver en la siguiente ecuación, donde $\xi$ es el ratio de transferencia de una técnica a otra, con valor 0,05.
+
+\begin{equation}\label{eq:RatioCompensacion}
+	\begin{gathered}
+		\Delta_i^{(j)} = \xi \cdot \frac{Q_i^{(best)} - Q_i^{(j)}} {Q_i^{(best)}} \cdot \Pi_{i-1}^{(j)} \ \forall j \in [1,n]/j \neq best
+	\end{gathered}
+\end{equation}
+
+De forma adicional, se propone un método de \textbf{reinicio de la población} aplicado mayoritariamente cuando las soluciones convergen en un óptimo local muy cercano al global. Se guarda la mejor de las soluciones obtenidas hasta el momento y el resto se reinicializan uniformemente. Queda así definido el algoritmo MOS2011 que utilizaremos en este estudio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
