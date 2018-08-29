@@ -1,6 +1,6 @@
 \chapter{Análisis de las Propuestas: Algoritmos LSGO}
 
-La finalidad de esta sección consiste en dar respuesta a las tareas \ref{tarea3} y \ref{tarea4} planteadas en el capítulo anterior donde se propone, principalmente, analizar de forma exhaustiva los distintos algoritmos seleccionados como fuente de estudio en este trabajo. 
+La finalidad de esta sección consiste en dar respuesta a las tareas \ref{tarea3} y \ref{tarea4} planteadas en el capítulo anterior donde se propone, principalmente, \textbf{analizar de forma exhaustiva los distintos algoritmo}s seleccionados como fuente de estudio en este trabajo. 
 
 El análisis está organizado de forma que se expongan todos los aspectos relevantes del algoritmo en cuestión tales como la \textbf{representación matemática} de su composición, \textbf{estructura interna} de la técnica, \textbf{elementos esenciales}, características particulares de la \textbf{implementación}, así como de la motivación para su \textbf{elección}, que estará basada esencialmente en los elementos anteriores, y en general, cualquier detalle significativo que aporte información relevante para este trabajo.
 
@@ -9,30 +9,35 @@ Posteriormente, el proceso de \textbf{adaptación de las técnicas} al problema 
 Al término de este capítulo se habrán completado las tareas necesarias para iniciar el proceso de experimentación que finalmente conduzca a la generación de resultados, que serán en última instancia evaluados e interpretados y conformarán la base de las conclusiones pertinentes.
 
 \section{Algoritmos LSGO: MOS 2011}
-
 La primera propuesta elegida para este estudio es la conocida como \textbf{MOS2010}, dado que fue formulada en ese año y utilizada en la posterior competición del CEC 2011\cite{ComprehensiveComparison}. La publicación en la revista Springer Verlag llega bajo el nombre de \textbf{\textit{A MOS-based dynamic memetic differential evolution algorithm for continuous optimization: a scalability test}} \cite{MOS2010}.
 
-A grandes rasgos, en la publicación se propone un innovador \textbf{algoritmo memético híbrido} que a través del framework MOS (Multiple Offspring Sampling) \textbf{combina distintas estrategias de búsqueda} con el objetivo de alcanzar un balance exploración-explotación óptimo, en concreto, dos técnicas heurísticas que aplicadas por separado han mostrado resultados altamente competitivos. Una descripción detallada de todo el algoritmo se expone a continuación.
+A grandes rasgos, en la publicación se propone un innovador \textbf{algoritmo memético híbrido} que a través del framework MOS (Multiple Offspring Sampling) \textbf{combina distintas estrategias de búsqueda} con el objetivo de alcanzar un balance exploración-explotación óptimo, en concreto, dos técnicas heurísticas que aplicadas por separado han mostrado resultados altamente competitivos.
+
+La elección de este algoritmo como primer candidato está motivada por las siguientes razones: es la \textbf{primera formulación de MOS} que se propone para la competición del SOCO 2011, donde su diseño es totalmente innovador y se rige por las exigencias típicas de problemas de Big Optimization, esto es, que contempla los casos extremos en cuanto a convergencia de la población como se revisará posteriormente. Además, fue la técnica ganadora de esta edición, superando a otras que a pesar de utilizar algoritmos de evolución diferencial (DE), no consiguieron superar el rendimiento de MOS, y dónde algunas de estas técnicas eran estructuralmente más complejas.
+
+La incorporación de la búsqueda local \textbf{MTS-LS1} ha sido otro de los principales motivos de su elección; tras la primera \textit{Special Session on Large-Scale Global Optimization} de 2008, el algoritmo MTS fue el que obtuvo mejores resultados para problemas de alta dimensionalidad, por lo que su uso en este algoritmo híbrido presenta una ventaja sustancial de partida frente a otras técnicas dada las capacidades de exploración que MTS añade durante el proceso de explotación.
+
+Finalmente, MOS2011 \textbf{sentó la base del algoritmo} que durante los últimos 5 años ha ostentado el título de \textit{state-of-the-art algorithm} en problemas LSGO, donde la formulación matemática subyacente relacionada con la \textbf{calidad de las soluciones} y la \textbf{participación} de cada técnica en el proceso tienen un rol fundamental, dado que estas contemplan dos tipos de mediciones que implican que cada técnica no solo debe mejorar sustancialmente las soluciones, sino además un buen porcentaje de éstas, lo que otorga más capacidad de respuesta ante el problema del estancamiento. Revisada la motivación de la elección, una descripción detallada de todo el algoritmo se expone a continuación.
 
 \subsection{Propuesta del algoritmo: Multiple Offspring Sampling}
 
-El algoritmo enunciado propone dar solución al inconveninete que surge del aumento de la dimensionalidad sobre un problema, incluso cuando la naturaleza del mismo no cambia. Es aquí donde entra en juego el framework MOS, que permite combinar dos potentes técnicas: un algoritmo de e\textbf{volución diferencial (DE)} y la primra de las \textbf{búsquedas locales} (LS) del algoritmo MTS, la conocida como \textbf{MTS-LS1}\cite{MTS-LSGO}.
+El algoritmo enunciado propone dar solución al inconveninete que surge del aumento de la dimensionalidad sobre un problema, incluso cuando la naturaleza del mismo no cambia. Es aquí donde entra en juego el framework MOS, que permite combinar dos potentes técnicas: un algoritmo de e\textbf{volución diferencial (DE)} y la primera de las \textbf{búsquedas locales} (LS) del algoritmo MTS, la conocida como \textbf{MTS-LS1}\cite{MTS-LSGO}.
 
 Este framework permite combinar distintas metaheurísticas siguiendo distintos tipos de enfoque, donde ha sido el \textbf{HRH} (High-level Relay Hybrid) el que se ha elegido; mediante esta perspectiva en particular, se \textbf{ajusta de forma dinámica} el número de \textbf{evaluaciones de la función objetivo} que cada algoritmo puede realizar. Para comprender la naturaleza de este enfoque es imprescindible conocer el origen de la terminología y de los demás enfoques.
 
-En el artículo \textit{A taxonomy of hybrid metaheuristics (2002)}\cite{TaxonomyEAs} se propone una taxonomía de los algortimos híbridos, con el fin de establecer una terminología común a estos mecanismos, donde se combinan los esquemas \textbf{jerárquicos}, para reducir la cantidad de clases, y \textbf{planos}, para cuando las clases que definen cada algoritmo se eligen de forma arbitraria. De esta taxonomía surgen 4 tipos de estrategias principales que detallamos a continuación:
+En el artículo \textbf{\textit{A taxonomy of hybrid metaheuristics (2002)}	}\cite{TaxonomyEAs} se propone una taxonomía de los algortimos híbridos, con el fin de establecer una terminología común a estos mecanismos, donde se combinan \textbf{esquemas jerárquicos}, para reducir la cantidad de clases, y \textbf{planos}, para cuando las clases que definen cada algoritmo se eligen de forma arbitraria. De esta taxonomía surgen 4 tipos de estrategias principales que detallamos a continuación:
 
 \begin{enumerate}
 	\item \textbf{LRH - Low-level Relay Hybrid}: una técnica metaheurística se incrusta en otra de \textbf{una sola solución}. Algoritmos de Simmulated Annealing (SA) combinados con LS son ejemplos de este enfoque.
 	
 	\item \textbf{LTH - Low-level Teamwork Hybrid}: la técnica es \textbf{incrustada en otra metaheuristica basada en poblaciones}. Un claro ejemplo de este tipo de enfoques es un algoritmo memético básico: GA con una LS.
 	
-	\item \textbf{HRH - High-level Relay Hybrid}: este enfoque ejecuta las metaheurísticas de \textbf{forma secuencial}, una continuación de la otra. Es el enfoque elegido en esta propuesta.
+	\item \textbf{HRH - High-level Relay Hybrid}: este enfoque ejecuta las metaheurísticas de \textbf{forma secuencial}, una a continuación de la otra. Es el enfoque elegido en esta propuesta.
 	
-	\item \textbf{HTH - High-level Teamwork Hybrid}: distintas técnicas son ejecutadas en paralelo, donde cada una se sirve de la información de las demás, cooperando en conjunto para encontrar soluciones óptimas.
+	\item \textbf{HTH - High-level Teamwork Hybrid}: distintas técnicas son ejecutadas en paralelo, donde cada una se sirve de la información de las demás, cooperando en conjunto para encontrar soluciones óptimas. Aquí se pueden mencionar las técnicas basadas en CC (Cooperative Co-evolution).
 \end{enumerate}
 
-La técnica que se propone en esta publicación se basa en la hibridación de distintas técnicas a lo largo de los últimos años, donde los algoritmos de evolución diferencial (DE) han sido los más utilizados. De forma complementaria, el algoritmo MTS\cite{MTS-LSGO} fue capaz de resolver problemas de hasta 1000 variables en el CEC 2008, razón por la cual se presenta como candidato en esta propuesta en particular. Así, el algoritmo DE dejaría lugar a que la LS encontrase regiones mas prometedoras a la vez que se reducen las evaluaciones a la función objetivo y por otra parte, la propia búsqueda local intentaría paliar los efectos del estancamiento en este tipo de algoritmos.
+La técnica que se propone en esta publicación se basa en la hibridación de distintas técnicas a lo largo de los últimos años, donde los algoritmos de evolución diferencial (DE) han sido los más utilizados. De forma complementaria, el algoritmo MTS\cite{MTS-LSGO} fue capaz de resolver problemas de hasta 1000 variables en el CEC 2008, razón por la cual se presenta como integrante de esta propuesta en particular. Así, el algoritmo DE dejaría lugar a que la LS encontrase regiones mas prometedoras a la vez que se reducen las evaluaciones a la función objetivo y por otra parte, la propia búsqueda local intentaría paliar los efectos del estancamiento en este tipo de algoritmos.
 
 En esta propuesta en particular, el término \textbf{técnica de descendencia} hace referencia a \textbf{cualquier mecanismo para crear soluciones candidatas}, donde además son necesarios otros cuatro elementos: un modelo de algoritmo evolutivo en particular, una codificación de las soluciones, operadores específicos y parámetros necesarios. 
 
@@ -45,7 +50,7 @@ Esta característica implica que se pueden utilizar de \textbf{forma simultánea
 
 El autor de la propuesta considera dos tipos de algoritmos según la taxonomía formulada en \cite{TaxonomyEAs}, estos son, HTH y HRH, sin embargo, se opta finalmente por el algoritmo de tipo \textbf{HRH}. En este tipo de algoritmos, las técnicas elegidas, en nuestro caso DE y MTS-LS1, son aplicadas en secuencia una a continuación de la otra, y cada una de cierta forma reutiliza la población resultante de la anterior. Este enfoque es más adecuado debido a que se utiliza en este caso una técnica no poblacional, como lo es la búsqueda local en cuestión.
 
-El proceso de búsqueda se establece al principio de la ejecución, dividiendo el mismo en un \textbf{número fijo de pasos}. A cada paso se le asigna un número \textbf{fijo} de evaluaciones de la función objetivo, que son administradas de forma interna por cada técnica a través de la función de participación de la misma. De forma aclaratoria se expone el pseudocódigo de la propuesta HRH y se remite al lector a \cite{MOS2010} si se quiere profundizar en la propuesta HTH.
+El proceso de búsqueda se establece al principio de la ejecución, dividiendo el mismo en un \textbf{número fijo de pasos}. A cada paso se le asigna un número \textbf{fijo} de evaluaciones de la función objetivo, que son administradas de forma interna por cada técnica a través de la \textbf{función de participación} de la misma. De forma aclaratoria se expone el pseudocódigo de la propuesta HRH y se remite al lector a \cite{MOS2010} si se quiere profundizar en la propuesta HTH.
 
 \begin{algorithm}[H]
 	\begin{algorithmic}[1]
@@ -64,10 +69,10 @@ El proceso de búsqueda se establece al principio de la ejecución, dividiendo e
 		\ENDFOR
 		\ENDWHILE		
 	\end{algorithmic}
-	\caption{: HRH MOS }
+	\caption{: HRH MOS } \label{Alg: MOS HRH}
 \end{algorithm}
 
-Como se puede observar, la participación de cada técnica depende de una función de calidad que toma en consideración dos características necesarias: el \textbf{incremento medio del fitness} de los individuos tras la evaluación y el número de veces que se ha producido esta mejora. Se representa en la siguiente ecuación:
+Como se puede observar, la participación de cada técnica depende de una función de calidad que toma en consideración dos características necesarias: el \textbf{incremento medio del fitness} de los individuos tras la evaluación y el \textbf{número de veces} que se ha producido esta mejora. Se representa en la siguiente ecuación:
 
 \begin{equation}\label{eq:QF_MOS}
 	\begin{gathered}
@@ -84,9 +89,9 @@ $Q_i^{(j)} \equiv$ Calidad de la técnica $T^{(j)}$ en el paso $i$\\
 $\Sigma_i^{(j)} \equiv$ Incremento medio del fitness de $T^{(j)}$ en el paso $i$\\
 $\Gamma_i^{(j)} \equiv$ Num. de mejoras de fitness de $T^{(j)}$ en el paso $i$	
 
-En esta función de calidad $QF$ se utiliza $\Sigma_{i}^{(j)}$ si y sólo si hay consenso entre el incremento medio de fitness y el número de mejoras de una técnica a otra. En caso contrario se usa solo el número de incrementos del fitness. Esto es así debido a que una técnica que no este explorando el espacio de soluciones de forma adecuada, puede introducir grandes mejoras en el fitness, lo que puede no ser representativo. Estas acciones se penalizan en favor de comportamientos mas adecuados, tales como incrementos pequeños de buenos individuos de la población.
+En esta función de calidad $QF$ se utiliza $\Sigma_{i}^{(j)}$ si y sólo si hay consenso entre el incremento medio de fitness y el número de mejoras de una técnica a otra. En caso contrario se usa solo el número de incrementos del fitness. Esto es así debido a que una técnica que no este explorando el espacio de soluciones de forma adecuada, puede introducir grandes mejoras en el fitness, lo que puede no ser representativo. Estas acciones se penalizan en favor de comportamientos más adecuados, tales como mejoras relativamente pequeñas sobre buenos individuos de la población.
 
-Una función de participación dinámica utiliza estos $QFs$ para ajustar el número de evaluaciones de la función objetivo asignado a cada técnica en cada paso. La función de participación $PF$ calcula, para cada paso del algoritmo, un \textbf{factor de compensación} $\Delta_i^{(j)}$ para cada técnica, lo que representa el decrecimiento de participación para cada técnica excepto para la mejor. Cada técnica aumentará su participación en proporción al cociente $\frac{\Sigma \Delta_{i}^{(j)}}{nº tecnicas}$. La $PF$ se describe en la siguiente ecuación:
+Una \textbf{función de participación dinámica} utiliza estos $QFs$ para ajustar el número de evaluaciones de la función objetivo asignado a cada técnica en cada paso. La función de participación $PF$ calcula, para cada paso del algoritmo, un \textbf{factor de compensación} $\Delta_i^{(j)}$ para cada técnica, lo que representa el decrecimiento de participación para cada técnica excepto para la mejor. Cada técnica aumentará su participación en proporción al cociente $\frac{\Sigma \Delta_{i}^{(j)}}{nº tecnicas}$. La $PF$ se describe en la siguiente ecuación:
 
 \begin{equation}\label{eq:PF_MOS}
 	\begin{gathered}
@@ -112,7 +117,142 @@ donde $\Pi_i^{(j)}$ es el \textbf{porcentaje de individuos que genera de la pobl
 	\end{gathered}
 \end{equation}
 
-De forma adicional, se propone un método de \textbf{reinicio de la población} aplicado mayoritariamente cuando las soluciones convergen en un óptimo local muy cercano al global. Se guarda la mejor de las soluciones obtenidas hasta el momento y el resto se reinicializan uniformemente. Queda así definido el algoritmo MOS2011 que utilizaremos en este estudio.
+En resumen, MOS2011 es una \textbf{técnica memética híbrida de clase HRH} que combina un DE y una búsqueda local MTS-LS1. Al ser HRH, una técnica es ejecutada tras la anterior y además, cada una de estas técnicas participa de forma distinta a las demás ya que ejecuta un número de evaluaciones de la función objetivo que cambia de forma dinámica según una función de participación, la cual basa sus cálculos en las mejoras del fitness que ha llevado a cabo esa técnica en el paso anterior. 
+
+Cabe destacar que se puede establecer un \textbf{ratio mínimo de participación} de forma que una técnica siempre contribuya a la convergencia del algoritmo. Si se diese el caso de que toda la población converge en un mismo punto del espacio de soluciones, la mejor de las soluciones se guarda y el resto de la población se reinicia de manera uniforme. Estas son las principales características \textbf{MOS2011}, primera técnica candidata de estudio en este trabajo.
+
+\section{Algoritmos LSGO: MOS2013}
+
+La segunda de las técnicas seleccionadas para estudiar en este trabajo se trata de una muy similar a la anterior pero con cambios lo suficientemente sustanciales como para superar en rendimiento a su antecesora. La propuesta publicada en el \textbf{2013 IEEE Congress on Evolutionary Computation} que lleva por nombre \textbf{\textit{Large Scale Global Optimization: Experimental Results with MOS-based Hybrid Algorithms} (2013)}\cite{MOS2013} está catalogado desde ese año como el \textbf{estado del arte} en cuanto a algoritmos de LSGO.
+
+Basado nuevamente en el framework MOS, la creación de este algoritmo memético híbrido pasa previamente por una etapa de estudio intensivo donde se ponen a prueba \textbf{ocho técnicas de optimización} sobre las que se realiza una estimación de parámetros lo más precisa posible, donde finalmente aquellas que mejores resultados arrojen serán las que se incluirán como agentes en esta propuesta.
+
+Las ocho técnicas de partida en este estudio suponen la principal razón que ha motivado la elección de este algoritmo para este trabajo, y son: un algoritmo genético (\textbf{GA}), un algoritmo de evolución diferencial (\textbf{DE}\cite{DE}), \textbf{SaDE}\cite{SaDE} (Self-Adaptive DE), \textbf{GODE}\cite{GODE} (Generalized Opposition-based DE), \textbf{SaGODE} (como combinación de las dos anteriores y propuesto únicamente para este estudio) y las búsquedas locales \textbf{Solis Wets}\cite{SolisWets}, MTS-LS1 y MTS-LS1-Reduced, estas dos últimas diseñadas a partir de \cite{MTS-LSGO} especificamente para este estudio. 
+
+Si se quiere conocer los parámetros de cada técnica en concreto y los valores de los mismos tras el proceso de estimación de parámetros, se remite al lector a \cite{MOS2013}. En esta propuesta en concreto, tras los pertinentes estudios de estimación de parámetros, han sido elegidas tres técnicas para formar el algoritmo memético híbrido basado en el framework MOS, nuevamente con taxonomía HRH\cite{TaxonomyEAs}: GA, Solis Wets y MTS-LS1-Reduced. 
+
+Elegir este algoritmo como candidato para el estudio \textbf{frente a otras alternativas} se hace indispensable debido al propio estudio que se realiza en la publicación, previo a la elección de los componentes del algoritmo, donde se \textbf{descartan las técnicas menos prometedoras} en función de un sistema de puntos que utiliza el autor. Por tanto, técnicas como SaDE o GaDE quedan descartadas por su bajo rendimiento en este trabajo, al igual que CC-CMA-ES puesto que no consigue acercarse a los resultados de MOS2013, o IHDELS, que aun tras quedar en segundo puesto en el CEC2015, no consiguió acercarse a los resultados que esta hibridación era capaz de ofrecer.
+
+Como ya ocurrió con MOS2011, una propuesta que permita \textbf{ejecutar varias técnicas en secuencia} a través del enfoque \textbf{MOS HRH}, obtiene \textbf{mejores resultados que las técnicas por separado}, por lo que cualquier otra que no haya sido finalmente utilizada para formar parte de esta hibridación memética, también se puede descartar sin pérdida alguna de generalidad. Esta idea se ve reforzada por el hecho de que esta propuesta, \textbf{MOS2013}, se ha mantenido en la cima desde los últimos cinco años, sin que ninguna técnica reciente o anterior haya conseguido superar su gran potencia y robustez.
+
+\subsection{Propuesta del Algoritmo: MOS 2013}
+
+A pesar de que la publicación no destaca importantes cambios con respecto a su predecesor en cuanto al funcionamiento interno, derivado de las funciones de calidad y participación, si que remarca algunos aspectos de implementación que, a primera vista, le otorgan un mejor balance exploración-explotación, y por ende un rendimiento superior frente a otras técnicas.
+
+La modificación que se realiza sobre la MTS-LS1, diseñada específicamente para este estudio, transforma la misma en lo que el autor denomina \textbf{MTS-LS1-Reduced}. Se dice \textit{reducida} porque intenta optimizar al máximo el número de evaluaciones que le corresponden. En vez de realizar la exploración sobre la totalidad de las dimensiones, lo que hace es optimizar \textbf{las regiones (variables) más prometedoras}. 
+
+Para ello, en cada paso del algoritmo se almacena, para cada dimensión, la \textbf{mejora de la calidad de la solución} conseguida al explorar esa variable. Esta información es la que guía el proceso de exploración en el siguiente paso, sirviéndose de dos variables porcentuales para determinar cúantas dimensiones serán exploradas en el siguiente paso: uno indica el porcentaje de \textbf{variables mejoradas a explorar} y otro, el porcentaje \textbf{mínimo del resto de variables} que serán seleccionadas de forma aleatoria para ser optimizadas, de forma que se eviten estancamientos o comportamientos que conduzcan a una sobreexplotación del espacio de soluciones.
+
+Nuevamente, cada uno de los algoritmos de la propuesta aporta sus soluciones particulares siguiendo una \textbf{función de participación}, que basa su funcionamiento en una \textbf{función de calidad}, tal y como lo hacía su sucesor MOS2011. En MOS2013, se han utilizado las mismas funciones, tanto de calidad como de participación, las cuales aparecen respectivamente en las ecuaciones \ref{eq:QF_MOS} y \ref{eq:PF_MOS}. El cálculo del factor de compensación en la función de participación sigue la misma ecuación descrita en \ref{eq:RatioCompensacion}.
+
+Finalmente, los algoritmos que forman parte de la propuesta de MOS 2013 se rigen por dos variables principales: el \textbf{ratio de participación mínimo} que se confiere a cada técnica, que es de un 20\%, lo que quiere decir que una técnica no puede ejecutar menos de ese \textbf{porcentaje de las evaluaciones} durante el paso \textit{i-ésimo}. La \textbf{cantidad de evaluaciones de cada paso}, la segunda variable, tiene un valor de 36000. 
+
+En el algoritmo \ref{Alg: MOS HRH} se detalla con claridad el pseudocódigo de la propuesta de algoritmo \textbf{MOS HRH}, donde se pueden ver, tras la explicación de la propuesta \textbf{MOS2013}, que los cambios introducidos frente a su antecesor incurren principalmente en la \textbf{variedad de técnicas} elegidas para ejecutarse de forma secuencial a través del enfoque HRH y las \textbf{variables} que rigen el tamaño de cada paso del algoritmo y la participación mínima.
+
+Este hecho refuerza la decisión de elegir este algoritmo para formar parte de este trabajo, dado que aparte de suponer el estado del arte durante los últimos cinco años, se requiere comprobar si realmente existe una \textbf{mejora sustancial} frente al algoritmo \textbf{MOS2011} que catapulte los resultados a nivel de eficacia y eficiencia de la actual propuesta. A continuación, se enuncia la tercera propuesta a estudiar en este trabajo.
+
+\section{Algoritmos LSGO: SHADEILS}
+
+La tercera propuesta elegida para estudiar en este trabajo se trata de un algoritmo muy reciente, presentado en la \textbf{IEEE WCCI 2018: Special Session and Competition on Large-Scale Global Optimization}\cite{WCCI-SHADEILS}, donde se busca dar una solución sencilla pero eficaz al problema de la dimensionalidad y al aumento de la complejidad del espacio de soluciones que esta produce. Así es \textbf{\textit{SHADE with Iterative Local Search for Large-Scale Global Optimization}}\cite{SHADEILS} (SHADEILS), el algoritmo que obtiene el título de \textbf{estado del arte} a partir de este año, arrebatándole el puesto a un MOS que llevaba ganando desde 2011 y considerado estado del arte desde 2013.
+
+Se trata de una evolución sustancialmente más sencilla y completa que su antecesor, propuesto para el CEC2015 \textbf{\textit{Iterative hybridization of DE with local search for the CEC'2015, special session on large scale global optimization}}\cite{IHDELS}. Este algoritmo entra en la categoría de \textbf{meméticos}, dado que combina de forma iterativa un algoritmo evolutivo como lo es el SHADE\cite{SHADE} y una búsqueda local de entre dos posibles candidatas, MTS-LS1\cite{MTS-LSGO} y L-BFGS-B\cite{LBFGSB}, que son además complementarias. Durante este proceso iterativo, a diferencia de otras técnicas de agrupación de variables, se exploran \textbf{todas las dimensiones a la vez}. Son tres las diferencias principales con su predecesor: el mecanismo mejorado de \textbf{selección de la búsqueda local} a aplicar, el renovado \textbf{mecanismo de reinicio de población} y la decisión de utilizar SHADE frente a SaDE\cite{SaDE}.
+
+El hecho de seleccionar esta reciente propuesta, diseñada y evaluada hace apenas unos pocos meses, se basa en gran medida en una recomendación explícita del tutor de este Trabajo Fin de Grado, quien es además uno de los autores de la propuesta, principalmente por la \textbf{imposibilidad de IHDELS de vencer a MOS} en 2015, por lo que se requeriría de una renovación más adecuada si se querría acabar con el reinado de MOS; por tanto, todo los algoritmos basados en SaDE serían \textbf{poco útiles} en este estudio, donde se busca una propuesta lo más robusta, eficaz y eficiente posible.
+
+Los elementos principales que se destacan al inicio de la propuesta hacen que aumente el interés por ésta de forma inmediata: el combinar dos búsqueda locales, una \textbf{rápida pero sensible a las rotaciones} del espacio de coordenadas y otra \textbf{más lenta pero muy robusta y sin sensibilidad alguna} a las rotaciones, y que además posee un mecanismo de selección de la más adecuada según la \textit{historia} reciente de la \textbf{mejora en la calidad de soluciones}, tiene gran capacidad para hacer frente a la complejidad del espacio de soluciones pero sobre todo para intentar sobreponerse a las necesidades de eficiencia que se busca en este trabajo. 
+
+Como añadido, el renovado mecanismo de \textbf{reinicio de la población} contempla un pequeño umbral de mejora tras el que se reinicia la población cuando no se consigue superar este umbral tras 3 iteraciones consecutivas, lo que permite que el algoritmo siga \textbf{avanzando aunque los pasos sean pequeños}. Pero no solo la población se reinicia, sino que también lo hacen los \textbf{parámetros que rigen la aplicación de la LS}, lo que atribuye una mayor capacidad de exploración para la siguiente iteración, lo que resulta crucial para resolver problemas de estancamiento. A continuación, se procede a introducir el esquema general del algoritmo, prestando atención a las tres diferencias principales con IHDELS.
+
+\subsection{Propuesta del Algoritmo: SHADEILS}
+
+En primera instancia se presenta el pseudocódigo general del algoritmo, donde se destacarán las tres partes principales a resaltar en este estudio, que serán posteriormente extendidas en favor de una mejor comprensión y para reforzar las ideas que han motivado la decisión de utilizar este algoritmo para el estudio conducido.
+
+\begin{algorithm}[H]
+	\begin{algorithmic}[1]
+		\STATE poblacion $\leftarrow$ rand(dimension, tam\_poblacion)
+		\STATE sol\_inicial  $\leftarrow$ (ub + lb)/2
+		\STATE mejor\_actual $\leftarrow$ LS(sol\_inicial)
+		\STATE mejor\_solucion $\leftarrow$ mejor\_actual
+		\WHILE {(totalevals $<$ maxevals)}
+			\STATE \textit{\textbf{mejor\_actual $\leftarrow$ SHADE(poblacion, mejor\_actual) [\ref{algSHADEILS:1}]}}
+			\STATE anterior $\leftarrow$ mejor\_actual \textbf{.} fitness 
+			\STATE mejora $\leftarrow$ anterior - mejor\_actual \textbf{.} fitness
+			\STATE \textit{\textbf{Elegir el método de LS a aplicar en esta iteracion [\ref{algoSHADEILS:2}]}}
+			\STATE mejor\_actual $\leftarrow$ LS(poblacion,mejor\_actual)
+			\STATE Actualizar probabilidad de aplicación de LS para la siguiente iteracion
+			\STATE // Actualizar la mejor solucion
+			\IF{ \textbf{mejor\_actual} es mejor que \textbf{mejor\_solucion}}
+				\STATE mejor\_solucion $\leftarrow$ mejor\_actual
+			\ENDIF
+			\STATE // Mecanismo de reinicio
+			\IF{ Es necesario reiniciar}
+				\STATE \textit{\textbf{Reiniciar y actualizar mejor\_actual [\ref{algSHADEILS:3}]}}
+			\ENDIF
+			
+		\ENDWHILE
+		
+	\end{algorithmic}
+	\caption{: SHADEILS} \label{Alg: SHADEILS}
+\end{algorithm}
+
+Se han resaltado las tres componentes principales del algoritmo, que serán detalladas a continuación.
+
+\begin{enumerate}
+	\item  \label{algSHADEILS:1} \textbf{Algoritmo de Exploracion SHADE}: este sencillo algoritmo de DE autoajusta sus parámetros (CR y F) \textbf{basándose en el concepto de \textit{historia}}\cite{SHADE}, manteniendo la población de una iteración a otra con lo que se \textbf{intensifica el proceso de exploración}, dejando lugar a las LS para ocupar la explotación. Con las versiones reducidas como L-SHADE, que reducen la población de forma lineal, se perdería la tan indispensable característica exploratoria del algoritmo.
+	
+	Cabe destacar las tres estrategias de SHADE, \textbf{mutación}, \textbf{cruce} y \textbf{selección}, donde cada una se desarrolla como sigue:
+	\begin{itemize}
+		\item \textbf{Mutación}: descrita por la ecuación
+		\begin{equation}\label{eq:MutationSH}
+			\begin{gathered}
+				u_i = x_i + F_i \cdot (x_{pbest} - x_i) + F_i \cdot (x_r - a_{r2})
+			\end{gathered}
+		\end{equation}
+		 
+		 donde $F_i$ se obtiene de forma aleatoria de una distribución normal de media $F_{meanK}$, $x_{pbest}$ es un individual aleatoriamente elegido de los $p$ mejores individuos, $x_{r1}$ es un individuo aleatorio de la población y $a_{r2}$ es un individuo aleatorio de la Poblacion $\cup$ A
+			
+		\item \textbf{Cruce}: donde la probabilidad de cruce \textit{CR} se obtiene al igual que F, de una distribución normal de media $CR_{meanK}$, siendo ésta una de las probabilidades de cruce \textit{alojadas en memoria} de forma interna por el algoritmo según un parámetro que se especifica al inicio del mismo, lo que añade más diversidad al algoritmo.
+		
+		\begin{equation}\label{eq:CrossoverSH}
+			\begin{gathered}
+				u_i= \begin{cases}
+					v_i \ \textbf{if} \ rand[0,1] < CR_i \\
+					x_i \ \textbf{otherwise}
+				\end{cases}
+			\end{gathered}
+		\end{equation}
+		
+		\item \textbf{Selección}: el gen que se selecciona es $u_i$ si mejora $x_i^t$, o el mismo en caso contrario.
+	\end{itemize}
+
+	\item \label{algoSHADEILS:2}\textbf{Selección de la búsqueda local a aplicar}: la elección de qué LS ejecutar se basa en una primera ejecución de \textbf{ambas búsquedas locales}, tras las cuales se calcula un \textbf{ratio de mejora} de cada una con respecto a la mejor solución encontrada hasta el momento sigueindo la ecuación:
+	
+	 \begin{equation}\label{eq:LS-Seleccion}
+	 	\begin{gathered}
+			Ratio_{LS_M} = \frac{Fitness_{antes_{LS}} - Fitness_{despues_{LS}}}{Fitness_{antes_{LS}}}
+		 \end{gathered}
+	 \end{equation}
+	 
+	 A partir de aquí, en cada iteración se aplicará la LS que \textbf{mayor ratio anterior} tenga. A diferencia de IHDELS, donde se selecciona la LS con \textbf{mejor valor medio tras las iteraciones}, elegir la LS con \textbf{mayor ratio es muy fácil y mucho más rápido} para detectar el bajo rendimiento de una técnica, dado que de la otra manera pueden pasar muchas iteraciones antes de descubrir que la técnica no optimiza de forma adecuada. Así, por ejemplo, si el espacio de soluciones sufre rotaciones, MTS-LS1 gastaría demasiadas iteraciones antes que el algoritmo se de cuenta de que \textbf{debería} aplicar L-BFGS-B.
+	 
+	 \item \label{algSHADEILS:3} \textbf{Mecanismo de reinicio de la población}: teniendo en cuenta los problemas de optimización continua, donde es común que un algoritmo mejore las soluciones de una iteración a otra aunque sea por \textbf{factores muy pequeños}, los mecanismos de reinicio habituales son aplicados cuando no se consigue \textbf{ninguna mejora} durante toda la iteración, hecho que no es muy frecuente que ocurra, lo que tampoco aporta superiores resultados.
+	 
+	 SHADEILS opta por un mecanismo que contemple estos casos, de forma que el reinicio se hará efectivo únicamente cuando transcurran \textbf{tres (3) iteraciones completas} donde el \textbf{ratio de mejora} tras aplicar DE y LS \textbf{no supere un 5\%}. Se selecciona una solución $sol$ aleatoriamente y se le introduce una \textbf{alteración aleatoria} a sus componentes con una media $\in [0, 0.1\cdot (b-a)]$, donde $(a,b)$ representa las cotas del espacio de búsqueda. Posteriormente se reinicia toda la población del DE y los parámetros de las LS vuelven a sus valores iniciales.
+	
+\end{enumerate}
+
+Queda descrito el algoritmo SHADEILS, con todas sus componentes principales y todos los aspectos relativos a su implementación. En el siguiente capítulo, cuando se proponga el diseño experimental, los valores utilizados en la experimentación referentes a cada algoritmo serán detallados con claridad para garantizar que los experimentos sean completos, claros y repetibles. Se procede a detallar el último algoritmo de tipo LSGO utilizado en este trabajo, y posteriormente se expondrá el algoritmo de descomposición de variables para verificar la naturaleza de la función y, en caso favorable, formar parte de la hibridación de cooperación co-evolutiva.
+
+\section{Algoritmos LSGO: SHADEILS}
+
+\section{Algoritmos LSGO: DG2}
+
+
+
+
+
+
+
 
 
 
