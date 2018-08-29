@@ -165,9 +165,9 @@ Como añadido, el renovado mecanismo de \textbf{reinicio de la población} conte
 
 \subsection{Propuesta del Algoritmo: SHADEILS}
 
-En primera instancia se presenta el pseudocódigo general del algoritmo, donde se destacarán las tres partes principales a resaltar en este estudio, que serán posteriormente extendidas en favor de una mejor comprensión y para reforzar las ideas que han motivado la decisión de utilizar este algoritmo para el estudio conducido.
+En este apartado se presenta el pseudocódigo general del algoritmo, donde se destacarán las tres partes principales que se resaltan en la publicación, que serán posteriormente extendidas en favor de una mejor comprensión y para reforzar las ideas que han motivado la decisión de utilizar este algoritmo para el estudio conducido.
 
-\begin{algorithm}[H]
+\begin{algorithm}[h]
 	\begin{algorithmic}[1]
 		\STATE poblacion $\leftarrow$ rand(dimension, tam\_poblacion)
 		\STATE sol\_inicial  $\leftarrow$ (ub + lb)/2
@@ -194,8 +194,6 @@ En primera instancia se presenta el pseudocódigo general del algoritmo, donde s
 	\end{algorithmic}
 	\caption{: SHADEILS} \label{Alg: SHADEILS}
 \end{algorithm}
-
-Se han resaltado las tres componentes principales del algoritmo, que serán detalladas a continuación.
 
 \begin{enumerate}
 	\item  \label{algSHADEILS:1} \textbf{Algoritmo de Exploracion SHADE}: este sencillo algoritmo de DE autoajusta sus parámetros (CR y F) \textbf{basándose en el concepto de \textit{historia}}\cite{SHADE}, manteniendo la población de una iteración a otra con lo que se \textbf{intensifica el proceso de exploración}, dejando lugar a las LS para ocupar la explotación. Con las versiones reducidas como L-SHADE, que reducen la población de forma lineal, se perdería la tan indispensable característica exploratoria del algoritmo.
@@ -243,11 +241,111 @@ Se han resaltado las tres componentes principales del algoritmo, que serán deta
 
 Queda descrito el algoritmo SHADEILS, con todas sus componentes principales y todos los aspectos relativos a su implementación. En el siguiente capítulo, cuando se proponga el diseño experimental, los valores utilizados en la experimentación referentes a cada algoritmo serán detallados con claridad para garantizar que los experimentos sean completos, claros y repetibles. Se procede a detallar el último algoritmo de tipo LSGO utilizado en este trabajo, y posteriormente se expondrá el algoritmo de descomposición de variables para verificar la naturaleza de la función y, en caso favorable, formar parte de la hibridación de cooperación co-evolutiva.
 
-\section{Algoritmos LSGO: SHADEILS}
+%\section{Algoritmos LSGO: MLSHADE-SPA}
 
-\section{Algoritmos LSGO: DG2}
+\section{Algoritmos LSGO: Differential Grouping 2}
+
+La quinta y última propuesta de algoritmo sometida a estudio en este trabajo se trata de una técnica particularmente distinta a las anteriores. Esta técnica denominada \textbf{\textit{DG2: A Faster and More Accurate Differential Grouping for Large-Scale Black-Box Optimization}}\cite{DG2} es una versión mejorada del algoritmo de descomposición de variables \textbf{DG} de la publicación \textbf{\textit{Cooperative Co-Evolution With Differential Grouping for Large Scale Optimization}} \cite{DG}, donde se intenta solventar una serie problemas relacionados con la forma en la que se aborda el problema de la \textbf{dimensionalidad} y de la \textbf{interacción de variables}, inconventientes típicos de los problemas de \textit{large-scale global optimization}.
+
+La optimalidad de las soluciones que un algoritmo obtiene están intimamente relacionadas con la \textbf{interacción de las variables en el problema}. Es por esta razón que surgen este tipo de técnicas, donde se pretende identificar las variables con interacción a través de un estudio exhaustivo de \textbf{pares de variables} que es incluso capaz de detectar \textbf{componentes solapadas} de una función objetivo (representación de un problema de optimización), para que un enfoque de tipo \textbf{divide y vencerás} pueda resolver de la mejor forma posible el problema, centrándose en aquellas conjuntos de variables que, de cierta forma, aportan más a la \textbf{calidad del fitness} que otras.
+
+Elegir esta última propuesta se justifica debido a la posibilidad que ofrece de atacar el \textbf{problema de la dimensionalidad} con una herramienta distinta a las anteriores meteheurísticas. Descomponer el problema en subproblemas más pequeños que son optimizados de forma iterativa disminuye considerablemente la \textbf{complejidad del espacio de soluciones}. A través de la \textbf{cooperación co-evolutiva}, una descomposición óptima del problema que se aplica de forma iterativa a una metaheurística potente puede arrojar resultados mucho más competitivos que de forma individual.
+
+Este tipo de técnica en particular, dados sus orígenes y la familia de algoritmos a la que pertenece, se encuentra actualmente en la cúspide debido a que no sólo es capaz de descomponer \textbf{problemas de dimensionalidad superior a 1000} con bastante precisión sino que además \textbf{resuelve todos los inconvenientes y vulnerabilidades de su generación}: tiene un mecanismo \textbf{renovado para identificar la interacción} que requiere un número considerablemente menor de evaluaciones de la función objetivo que sus predecesores y además es completamente \textit{parameter-free}, ya que el único \textbf{parámetro} que necesita \textbf{especificación previa} en otras propuestas de su familia y que es decisivo para una descomposición óptima, DG2 lo calcula de forma \textbf{automática e independiente para cada variable}, lo que naturalmente, aumenta la efectividad y permite un ajuste más adecuado a cualquier tipo de problema.
+
+Partiendo de estos preceptos se procede a especificar el algoritmo en su totalidad y detallar sus componentes principales, destacando los aspectos relevantes que respaldan la elección de esta técnica. Al término de esta ilustración se precisarán ciertas condiciones a cumplir con el algoritmo que a su vez determinarán el grado de implicación de éste a lo largo del proceso de experimentación.
+
+\subsection{Propuesta del algoritmo: DG2}
+
+DG2, como técnica de tipo \textbf{divide y vencerás}, descompone el problema en una serie de subproblemas más pequeños y simples, con el objetivo de optimizarlos de forma iterativa mediante un algoritmo de co-evolución cooperativa. Para llevar a cabo esta tarea, una función objetivo $f$ se debe descomponer de tal forma que se \textbf{minimice la interacción entre las componentes resultantes}; esto es una tarea realmente compleja para funciones de tipo black-box, donde no se tiene \textbf{información acerca de la interacción de variables}.
+
+La propuesta elegida está destinada a solventar los inconvenientes que tenía su predecesora DG, principalmente: alto coste computacional para funciones separables, incapacidad de detectar componentes solapadas, sensibilidad a errores de redondeo y dependencia de un parámetro umbral. DG2 \textbf{mejora la eficiencia}, requiriendo de tan sólo la \textbf{mitad de las evaluaciones de la función objetivo que DG} para funciones separables, que es el caso que más consume. Además, aumenta la capacidad de agrupamiento debido a la \textbf{estimación automática del umbral para cada variable}, lo que otorga mayor sensibilidad frente a interacciones débiles.
+
+Para que la descomposición de variables sea óptima, se requiere \textbf{minimizar la interacción entre las componentes resultantes}, donde el grado de separabilidad de la función juega un papel fundamental. Se dice que una variable $x_i$ es \textbf{separable} o que \textbf{no interactúa} con ninguna otra variable\cite{DG} sí y sólo si:
+
+\begin{equation}\label{eq:separable}
+	\begin{gathered}
+	arg \ minf(x_1,...\ ,x_n) = (arg \ min f(x_1,...), \ . \ . \ . \ arg \ min f(...,x_n))
+	\end{gathered}
+\end{equation}
+ 
+Por tanto, una función será \textbf{separable} si es posible alcanzar su óptimo global únicamente optimizando \textbf{una dimensión a la vez}, independientemente del valor que tomen las demás variables. A partir de esta definición surgen otras definiciones de separabilidad: una función se dice \textbf{parciamente separable} con $m$ componentes independientes sí y sólo si:
+
+\begin{equation}\label{eq:partSeparable}
+	\begin{gathered}
+		arg \ minf(x) = (arg \ min f(x_1,...), \ . \ . \ . \ arg \ min f(...,x_m))
+	\end{gathered}
+\end{equation}
+
+donde $\textbf{x}=(x_1,...,x_n)^T$, $x_1,...,x_m$ son vectores solución de \textbf{x} y $2 \leq m \leq n$
+
+Finalmente se define una función parcialmente aditivamente separable como sigue:
+
+\begin{equation}\label{eq:addPartSeparable}
+	\begin{gathered}
+		f(x) = \sum_{i=1}^{m} f_i(x_i), m > 1
+	\end{gathered}
+\end{equation}
+
+donde $f_i(\cdot)$ es una subfunción no-separable y $m$ el número de subcomponentes independientes de $f$ como se describe en la ecuación \ref{eq:partSeparable}.
+
+Partiendo de estas definiciones se proponen distintos tipos de algoritmos de descomposición que mezclan diversas heurísticas para llevar a cabo la agrupación, sin embargo obtienen bajos índices de agrupación. Dentro de estos algoritmos está DG, la base de DG2, donde su rendimiento de agrupación es muy superior a las demás propuestas, y esto se debe al teorema enunciado a continuación\cite{DG}.
+
+\textbf{Teorema 1}: sea $f(x)$ una función parcialmente aditivamente separable (ecuación \ref{eq:addPartSeparable}). $\forall a, \ b_1 \neq b_2, \ \delta \neq 0$, las variables $x_p$ y $x_q$ interactúan si se cumple la siguiente condición:
+
+\begin{equation}\label{eq:interactionAddPartSep}
+	\begin{gathered}
+		\Delta_{\delta,x_p} [f](x) \mid_{x_p = a,x_q=b_1} \neq \Delta_{\delta,x_p} [f](x) \mid_{x_p = a,x_q=b_2}
+	\end{gathered}
+\end{equation}
+
+donde $\Delta_{\delta,x_p} [f](x)= f(...,x_p+\delta,...) -  f(...,x_p,...)$ hace referencia a la \textit{forward difference}\cite{DG} de $f$ con respecto a $x_p$ y un intervalo $\delta$. Si se evalúa la ecuación \ref{eq:interactionAddPartSep} con dos valores distintos de $x_q$ dando distintos resultados, entonces se dice que \textbf{$x_p$ y $x_q$ interactúan}. Se denota a la parte izquierda de la ecuación anterior como $\Delta^{(1) }$ y a la derecha como $\Delta^{(2)} $, con el único objetivo de abreviar.
+
+Sin embargo, la comprobación $\Delta^{(1)} \neq \Delta^{(2)} \implies \mid \Delta^{(1)} - \Delta^{(2)}\mid \neq 0 $ es prácticamente imposible de realizar a nivel computacional debido a la precisión de los número expresados en coma flotante. Por esta razón se introduce un término $\epsilon$ para restringir estos errores, quedando finalmente la ecuación: $\lambda = \ \mid \Delta^{(1)} - \Delta^{(2)}\mid \ > \ \epsilon$. Es este el parámetro que DG2 calcula de forma automática para cada par de variables y que sus antecesores DG definen de forma global para todas las variables. Para diferenciar DG2 de sus predecesores se muestra el pseudocódigo del algoritmo, donde las tres partes principales se discuten seguidamente.
+
+\begin{enumerate}
+	\item \textbf{Formación de \textit{raw interaction structure matrix}}: la matriz $\Lambda$ contiene la cantidad $\mid \Delta^{(1)} - \Delta^{(2)}\mid$ para cada par de variables y es computada en la función \textbf{ISM}. Aquí es imprescindible prestar atención a la \textbf{formulación del algoritmo \textit{ISM}} que se puede ver en \cite{DG2}, dado que para una función \textit{n-dimensional} el número total de interacciónes es $n \choose 2$.
+	
+	Según el teorema 1, se requieren de 4 evaluaciones de la función objetivo, lo que implica un total de  $4\cdot$ $n \choose 2$ $= 2n(n-1)$ evaluaciones de la función objetivo. Para reducir de forma considerable el número de evaluaciones de la función objetivo y por consiguiente el tiempo de respuesta, se realiza una \textbf{agrupación de los 4 puntos necesarios} para el cálculo de $\mid \Delta^{(1)} - \Delta^{(2)}\mid$ mediante un proceso de \textbf{generalización para cualquier número de variables}, lo que finalmente, tras eliminar las evaluaciones redundantes de la interacción $x_i - x_j$ descrita en \cite{DG2}, resulta en un número inferior de evaluaciones: $\frac{n(n+1)}{2}+1$.
+	
+	\begin{algorithm}[h]
+		\begin{algorithmic}[1]
+			\STATE $(\Lambda, F , \hat{f}, f_{base}, \Gamma) = ISM(f,n,  \overline{x}, \underline{x})$
+			\STATE $\Theta = DSM(\Lambda, F , \hat{f}, f_{base}, \Gamma)$
+			\STATE $(k, y_1,...,y_k)=ConnComp(\Theta)$
+			\STATE $x_{sep} = {}$ , $g = 0$
+			\FOR{$i=1 \rightarrow k$}
+			\IF{$|y_i| = 1$}
+			\STATE $x_{sep} = x_{sep} \cup y_i$
+			\ELSE
+			\STATE $g = g +1$; $x_g = y_i$
+			\ENDIF
+			\ENDFOR
+		\end{algorithmic}
+		\caption{: (g,$x_1,...,x_g$, $x_{sep},\Gamma$) = $DG2(f, n, \overline{x}, \underline{x})$} \label{Alg: DG2}
+	\end{algorithm}
+	
+	\item \textbf{Determinación del parámetro $\epsilon$}: parámetro para transformar $\Lambda$ en $\Theta$, la \textit{design structure matrix} donde $\Theta = 1 \iff \Lambda_{i,j} > \epsilon$, 0 en otro caso. El cálculo de $\epsilon$ es informado: se obtiene a partir de estimar la magnitud de la función $f$ y de los valores de $\Lambda$.
+	
+	Establecer con exactitud el parámetro $\epsilon$ es complejo: si se establece a 0, cualquier diferencia positiva entre $\Delta^{(1)}$ y $\Delta^{(2)}$ implicaría interacción, pero asumir esto no es correcto debido a los \textbf{errores de redondeo y de escala} de la representación de los puntos flotantes, que pueden arrojar valores $\lambda$ que indiquen interacción en variables separables, lo cual no es deseable.
+	
+	Se estiman por tanto dos cotas $(e_{inf})$,la cota inferior más grande, y $(e_{sup})$ - la cota superior más pequeña -  de $\epsilon$ para cada par de variables, nuevamente utilizando la información de $\lambda = \ \mid \Delta^{(1)} - \Delta^{(2)}\mid$, por lo que ahora se considera \textbf{interacción} si $\lambda > e_{sup}$ y \textbf{separable} si $\lambda < e_{inf}$.
+	
+	El algoritmo se suple del error de representación de un número \textit{x} a través de una función $f(x) =x(1+\delta)$, que indica que el error de representación crece con x, de los errores que acarrean por las operaciones en coma flotante y la cantidad de éstas para calcular las cotas anteriormente mencionada
+	
+	El cálculo de $(e_{inf})$ estará guiado por los \textbf{errores que se cometen al aplicar DG} en el cálculo de la diferencia $\lambda = \ \mid \Delta^{(1)} - \Delta^{(2)}\mid$, siguiendo la ecuación descrita en \cite{DG2}, que será obviada para no extender innecesariamente este documento. La mínima cota superior $(e_{sup})$, se calcula a partir del error que acarrean las \textbf{operaciones de coma flotante y el número de éstas}, estimando este último parámetro asumiendo \textbf{complejidad lineal en el número de operaciones de \textit{coma flotante}}, asegurando un ajuste más estricto para esta cota. Se remite al lector nuevamente a \cite{DG2} si se quiere conocer en profundidad las ecuaciones utilizadas para el cálculo de las cotas. 
+	\\
+	\item \textbf{Descomposición de variables en grupos no-separables}: identificar las componentes conexas del grafo a través de la matriz $\Theta$ de adyacencia.
+\end{enumerate}
+
+Las implementaciones concretas de los algoritmos \textbf{ISM} y \textbf{DSM} se recogen en la publicación anteriormente mencionada \cite{DG2} y se remite al lector a ésta para evitar engrosar esta descripción sin necesidad alguna. Queda por tanto detallada la última propuesta de algoritmo perteneciente a este estudio. En el siguiente capítulo se propone el diseño experimental que permitirá emitir las conclusiones adecuadas tras obtener los resultados de la experimentacion, resaltando aquellas propuestas que exhiban un mejor rendimiento.
 
 
+
+
+
+
+ 
 
 
 
