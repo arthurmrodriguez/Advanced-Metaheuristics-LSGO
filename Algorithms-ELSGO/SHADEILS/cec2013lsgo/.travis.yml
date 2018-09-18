@@ -1,0 +1,18 @@
+language: python
+language: c
+env:
+- PYTHON=python PYSUF='' PYVER=2.7
+- PYTHON=python3 PYSUF='3' PYVER=3.2
+install:
+- sudo apt-get update
+- sudo apt-get install $PYTHON-dev
+- sudo apt-get install $PYTHON-setuptools
+- sudo apt-get install $PYTHON-numpy
+- sudo easy_install$PYSUF pip
+- sudo pip install cython
+- sudo pip install pytest
+- sudo $PYTHON setup.py install
+- sudo $PYTHON setup.py sdist
+- sudo pip install dist/*.tar.gz
+script:
+    - py.test

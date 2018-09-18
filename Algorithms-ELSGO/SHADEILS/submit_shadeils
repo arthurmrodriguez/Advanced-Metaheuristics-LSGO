@@ -1,0 +1,23 @@
+#!/bin/bash
+#$ -N shadeils
+#$ -q media
+#$ -o out_shadeils.txt
+#$ -e err_shadeils.txt
+#$ -cwd
+#$ -t 1-15
+PARAMS[1]='-f 1 -s 2 -r 25'
+PARAMS[2]='-f 2 -s 2 -r 25'
+PARAMS[3]='-f 3 -s 2 -r 25'
+PARAMS[4]='-f 4 -s 2 -r 25'
+PARAMS[5]='-f 5 -s 2 -r 25'
+PARAMS[6]='-f 6 -s 2 -r 25'
+PARAMS[7]='-f 7 -s 2 -r 25'
+PARAMS[8]='-f 8 -s 2 -r 25'
+PARAMS[9]='-f 9 -s 2 -r 25'
+PARAMS[10]='-f 10 -s 2 -r 25'
+PARAMS[11]='-f 11 -s 2 -r 25'
+PARAMS[12]='-f 12 -s 2 -r 25'
+PARAMS[13]='-f 13 -s 2 -r 25'
+PARAMS[14]='-f 14 -s 2 -r 25'
+PARAMS[15]='-f 15 -s 2 -r 25'
+./shadeils.py ${PARAMS[$SGE_TASK_ID]}
