@@ -1,0 +1,1 @@
+mpicxx  -dynamiclib -Wl,-headerpad_max_install_names  -o libeeg_problem.so -install_name /Users/Arthur18/Documents/UGR-GII/4toCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS_CEC2013/src/problems/soco2010/libeeg_problem.so CMakeFiles/eeg_problem.dir/eeg_problem.cc.o ../../gaeda/libgaeda.so 

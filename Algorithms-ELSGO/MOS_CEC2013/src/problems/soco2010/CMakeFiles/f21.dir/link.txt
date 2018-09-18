@@ -1,0 +1,1 @@
+mpicxx   -dynamiclib -Wl,-headerpad_max_install_names  -o libf21.so -install_name /Users/Arthur18/Documents/UGR-GII/4toCurso/TFG-AdvancedMetaheuristicsForBigOpt/UGR-GII-TFG/Algorithms-ELSGO/MOS_CEC2013/src/problems/soco2010/libf21.so CMakeFiles/f21.dir/f21.cc.o CMakeFiles/f21.dir/aux.cc.o ../../gaeda/libgaeda.so 

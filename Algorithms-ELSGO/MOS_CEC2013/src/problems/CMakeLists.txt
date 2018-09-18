@@ -1,0 +1,72 @@
+set (COMPILE_BASIC_PROBLEMS OFF CACHE BOOL "Compile Basic (Well-Known) Optimization Problems")
+
+if (COMPILE_BASIC_PROBLEMS)
+  include_directories(${LIBCONFIG_INCLUDE} ${GAEDA_INCLUDE})
+
+  link_directories (${CMAKE_CURRENT_SOURCE_DIR})
+
+  set (PROBLEMS_SRCS SATnew branin deceptive-real griewank maxbitreal rastrigin royalroad schwefel shekel tsp fssmessy)
+
+  execute_process (COMMAND uname "-m" OUTPUT_VARIABLE PROC_ARCH)
+
+  foreach (PROBLEM ${PROBLEMS_SRCS})
+    add_library (${PROBLEM} SHARED ${PROBLEM}.cc )
+    target_link_libraries (${PROBLEM} ${GAEDA_LIBRARY} ${LIBCONFIG})
+    set_target_properties (${PROBLEM} PROPERTIES SUFFIX ".so")
+  endforeach (PROBLEM)
+
+  if (CMAKE_SYSTEM_NAME MATCHES "Darwin")
+    if (${PROC_ARCH} MATCHES "i386" OR ${PROC_ARCH} MATCHES "i686")
+      set (SAT4b_LIB SAT4b_darwin_ia32)
+      message ("-- MacOS X detected. Using SAT library: ${SAT4b_LIB}")
+    elseif (${PROC_ARCH} MATCHES "x86_64")
+      set (SAT4b_LIB SAT4b_darwin_x86_64)
+      message ("-- MacOS X detected. Using SAT library: ${SAT4b_LIB}")
+    else (${PROC_ARCH} MATCHES "i386" OR ${PROC_ARCH} MATCHES "i686")
+      message (FATAL_ERROR "-- Error: Unsupported Processor Architecture: ${CMAKE_SYSTEM_PROCESSOR}")
+    endif (${PROC_ARCH} MATCHES "i386" OR ${PROC_ARCH} MATCHES "i686")
+  elseif (CMAKE_SYSTEM_NAME MATCHES "Linux")
+    if (CMAKE_SYSTEM_PROCESSOR MATCHES "i386" OR CMAKE_SYSTEM_PROCESSOR MATCHES "i686")
+      set (SAT4b_LIB SAT4b_linux_ia32)
+      message ("-- Linux x86 detected. Using SAT library: ${SAT4b_LIB}")
+    elseif (CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
+      set (SAT4b_LIB SAT4b_linux_x86_64)
+      message ("-- Linux x86_64 detected. Using SAT library: ${SAT4b_LIB}")
+    elseif (CMAKE_SYSTEM_PROCESSOR MATCHES "ppc64")
+      set (SAT4b_LIB SAT4b_linux_ppc64)
+      message ("-- Linux ppc64 detected. Using SAT library: ${SAT4b_LIB}")
+    else (CMAKE_SYSTEM_PROCESSOR MATCHES "i386" OR CMAKE_SYSTEM_PROCESSOR MATCHES "i686")
+      message (FATAL_ERROR "-- Error: Unsupported Processor Architecture: ${CMAKE_SYSTEM_PROCESSOR}")
+    endif (CMAKE_SYSTEM_PROCESSOR MATCHES "i386" OR CMAKE_SYSTEM_PROCESSOR MATCHES "i686")
+  else (CMAKE_SYSTEM_NAME MATCHES "Darwin")
+    message (FATAL_ERROR "-- Error: Unsupported OS: ${CMAKE_SYSTEM_NAME}")
+  endif (CMAKE_SYSTEM_NAME MATCHES "Darwin")
+
+  add_library (SAT4b SHARED SAT.cc)
+  target_link_libraries (SAT4b ${GAEDA_LIBRARY} ${SAT4b_LIB})
+  set_target_properties (SAT4b PROPERTIES SUFFIX ".so")
+
+  add_library (fullydeceptivef2 SHARED fullydeceptive.cc)
+  target_link_libraries (fullydeceptivef2 ${GAEDA_LIBRARY})
+  set_target_properties (fullydeceptivef2 PROPERTIES SUFFIX ".so" COMPILE_FLAGS -DTYPE_F2)
+
+  add_library (fullydeceptivef3 SHARED fullydeceptive.cc)
+  target_link_libraries (fullydeceptivef3 ${GAEDA_LIBRARY})
+  set_target_properties (fullydeceptivef3 PROPERTIES SUFFIX ".so" COMPILE_FLAGS -DTYPE_F3)
+endif (COMPILE_BASIC_PROBLEMS)
+
+# Compile EEG_Problem only
+add_subdirectory (EEG_BigOpt)
+
+
+#add_subdirectory (bbob2010)
+#add_subdirectory (bbp)
+#add_subdirectory (cec2005)
+#add_subdirectory (cec2008)
+#add_subdirectory (cec2011)
+#add_subdirectory (cec2012)
+#add_subdirectory (cec2013_lsgo)
+#add_subdirectory (darp)
+#add_subdirectory (neuralsources)
+#add_subdirectory (isda2009)
+#add_subdirectory (Scheduling)

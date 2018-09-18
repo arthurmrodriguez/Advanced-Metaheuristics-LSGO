@@ -1,0 +1,1 @@
+mpicxx   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/gaedaexec.dir/main.cc.o  -o gaedaexec ../gaeda/libgaeda.so /usr/local/lib/libconfig++.dylib 

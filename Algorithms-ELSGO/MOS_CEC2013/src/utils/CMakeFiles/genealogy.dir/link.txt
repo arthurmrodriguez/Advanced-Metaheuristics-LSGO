@@ -1,0 +1,1 @@
+mpicxx   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/genealogy.dir/genealogy.cc.o  -o genealogy 
