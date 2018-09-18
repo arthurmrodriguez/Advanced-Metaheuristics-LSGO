@@ -2,7 +2,10 @@
 %\documentclass[a4paper,twoside,11pt,titlepage]{book}
 \usepackage{listings}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amsmath}
+\usepackage{esvect}
+
 
 % \usepackage[style=list, number=none]{glossary} %
 %\usepackage{titlesec}
@@ -25,26 +28,26 @@
 
 \usepackage{longtable}
 
-\usepackage[pdfborder={000}]{hyperref} %referencia
+\usepackage[pdfborder={0 0 0}]{hyperref} %referencia
 
 % ********************************************************************
 % Re-usable information
 % ********************************************************************
-\newcommand{\myTitle}{Comparación de metaheurísticas avanzadas aplicadas a un
+\newcommand{\myTitle}{Comparación de metaheurísticas avanzadas aplicadas sobre un
 	problema médico real de optimización de miles de variables}
-\newcommand{\myTitleEng}{Comparison of advanced metaheuristics applied to a real medical optimization problem of thousands of variables }
+\newcommand{\myTitleEng}{Advanced metaheuristics comparison applied to a real medical optimization problem with thousands of variables }
 \newcommand{\myDegree}{Grado en Ingeniería Informática }
 \newcommand{\myName}{Arthur Rodríguez Nesterenko }
 \newcommand{\myProf}{Daniel Molina Cabrera }
 \newcommand{\myFaculty}{Escuela Técnica Superior de Ingenierías Informática y de
-Telecomunicación}
+Telecomunicación }
 \newcommand{\myFacultyShort}{E.T.S. de Ingenierías Informática y de
-Telecomunicación}
-\newcommand{\myDepartment}{Departamento de Ciencias de la Computación e Inteligencia Artificial}
-\newcommand{\myUni}{\protect{Universidad de Granada}}
-\newcommand{\myLocation}{Granada}
+Telecomunicación }
+\newcommand{\myDepartment}{Departamento de Ciencias de la Computación e Inteligencia Artificial }
+\newcommand{\myUni}{\protect{Universidad de Granada }}
+\newcommand{\myLocation}{Granada }
 \newcommand{\myTime}{\today}
-\newcommand{\myVersion}{Version 0.1}
+\newcommand{\myVersion}{Version 0.1 }
 
 \hypersetup{
 pdfauthor = {\myName (email (en) ugr (punto) es)},
@@ -52,7 +55,8 @@ pdftitle = {\myTitle},
 pdfsubject = {},
 pdfkeywords = {palabra_clave1, palabra_clave2, palabra_clave3, ...},
 pdfcreator = {LaTeX con el paquete ....},
-pdfproducer = {pdflatex}
+pdfproducer = {pdflatex},
+urlcolor=blue
 }
 
 %\hyphenation{}
@@ -63,7 +67,22 @@ pdfproducer = {pdflatex}
 \usepackage{url}
 \usepackage{colortbl,longtable}
 \usepackage[stable]{footmisc}
+% Para los pseudocodigos
+\usepackage{algorithm}
+\usepackage{algorithmic}
 %\usepackage{index}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Para tablas
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabulary}
+\usepackage{multirow}
+%\usepackage{refcheck}
+
 
 %\makeindex
 %\usepackage[style=long, cols=2,border=plain,toc=true,number=none]{glossary}
@@ -119,7 +138,7 @@ pdfproducer = {pdflatex}
      breaklines=true,
    }
  
-% minimizar fragmentado de listados
+% minimizar fragmentado de ados
 \lstnewenvironment{listing}[1][]
    {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
 
@@ -171,8 +190,12 @@ pdfproducer = {pdflatex}
 
 \usepackage{pdfpages}
 \begin{document}
+	
+%Portada del trabajo	
 \input{portada/portada}
 \input{prefacios/prefacio}
+
+
 \frontmatter
 \tableofcontents
 \listoffigures
@@ -183,31 +206,22 @@ pdfproducer = {pdflatex}
 
 %Introduccion del Trabajo Fin de Grado y motivacion
 \input{capitulos/01_Introduccion}
-%\input{capitulos/02_EspecificacionRequisitos} %% estos dos pueden ser uno solo
-%\input{capitulos/02_EspecificacionRequisitos} %% estos dos pueden ser uno solo
-% Presupuesto: tareas y lo que voy a tardar y el precio por hora, HERCULES
+\input{capitulos/02_RequisitosPlanificacion}
+\input{capitulos/03_IntroduccionEEG}
+\input{capitulos/04_RevisionLiteratura} 
+\input{capitulos/05_AnalisisAlgoritmos}
+\input{capitulos/06_Implementacion}
+\input{capitulos/07_DisenioExperimental}
+\input{capitulos/08_PruebasYResultados} %parte experimental
+\input{capitulos/09_ConclusionesYExtensiones}
 
-%\input{capitulos/02bis_Planificacion}
-
-%\input{capitulos/03_RevisionLiteratura} 	%revision literatura: los benchmarks
-
-%\input{capitulos/04_AnalisisAlgoritmos}
-%\input{capitulos/04bis_ImplementacionPseudocodigo}
-
-%\input{capitulos/05_DisenioExperimental}
-
-%\input{capitulos/06_PruebasYResultados} %parte experimental
-
-%\input{capitulos/07_Conclusiones}
-
-%%\chapter{capitulos/08_TrabajosFuturos}
 
 \nocite{*}
 \bibliography{bibliografia/bibliografia}\addcontentsline{toc}{chapter}{Bibliografía}
 \bibliographystyle{unsrt}
 %
-%\appendix
-%\input{apendices/manual_usuario/manual_usuario}
+\appendix
+\input{apendices/anexoConvergencia}
 %%\input{apendices/paper/paper}
 %\input{glosario/entradas_glosario}
 % \addcontentsline{toc}{chapter}{Glosario}
