@@ -1,0 +1,196 @@
+\chapter{Implementación: adaptación al problema EEG}\label{cap:Implementacion}
+
+Las tareas que componen este capítulo incluyen la obtención de las \textbf{implementaciones de las propuestas elegidas}, derivadas de las necesidades anteriormente expuestas: garantías de implementaciones \textit{seamless} (sin fisuras), optimizadas lo mejor posible y probadas en distintos entornos frente a una gran variedad de problemas. El proceso de implementación que da nombre a este capítulo hace referencia a la \textbf{adaptación de los algoritmos}, tarea indispensable para que estos sean capaces de procesar y trabajar con la función objetivo del problema del EEG.
+
+La primera sección de este capítulo detalla la especificación a nivel de pseudocódigo de la función objetivo del problema del EEG. Conocer la especificación de la misma permitirá una adaptación más precisa con cada algoritmo, dado que se tienen en cuenta las operaciones necesarias a realizar y se puede ajustar más adecuadamente a cada implementación en particular.
+
+En la segunda sección, se mostrará el \textbf{proceso principal de adaptación} de la función objetivo a una implementación en concreto. Esta adaptación ocurre en \textbf{dos vertientes}, donde una \textbf{primera adaptación completa} se realiza en el \textbf{ordenador portátil del alumno} para comprobar su \textbf{estado de funcionamiento} y descartar la existencia de errores derivados del proceso.
+
+La segunda vertiente, de extensión previsiblemente más reducida, comprende los procedimientos llevados a cabo para acondicionar aquellas propuestas que lo requieran de cara al proceso experimental que será conducido en los nodos del \textbf{Cluster Hércules}, donde la arquitectura del clúster puede ser determinante en cuanto a la facilidad de incrustar las implementaciones en el mismo y que funcionen correctamente. Se detallan a continuación ambas vertientes en una única sección.
+
+\section{Función objetivo del problema EEG}
+
+La función objetivo del problema propuesto se detalla a continuación, y será el capítulo siguiente donde se discutan las diferencias esenciales entre las funciones que normalmente incluyen los benchmarks de LSGO y la función objetivo de este problema, en aras de facilitar la especificación del proceso experimental que se detallará también en el siguiente capítulo.
+
+Se detallan, en este orden, el cálculo del \textbf{coeficiente de correlación de Pearson} de la ecuación \ref{eq:covar} y de la función $f_1$ representada por la ecuación \ref{eq:function1}. Estos pseudocódigos incluyen las operaciones básicas derivadas de las ecuaciones anteriores, operaciones que no es posible identificar a simple vista a partir de las ecuaciones, por lo que el autor del benchmark proporciona el código fuente en C++ en \cite{CompetitionBigOpt} de una implementación particular de esta función y que será en la que se base todo el proceso de adaptación de los algoritmos.
+
+\begin{algorithm}[h]
+	\begin{algorithmic}[1]
+		\STATE $partial = null$ , $COR = null$
+		\FOR{cada elemento $A_i$ de $A$}
+		\FOR{cada elemento $B_i$ de $B$}
+		\STATE $A1 \leftarrow [mean(A_i), stdev(A_i)]$ ; $B1 \leftarrow [mean(B_i), stdev(B_i)]$
+		\STATE $sum = 0$ ; $\sigma = A1(1) \cdot B1(1)$
+		
+		\IF{$\sigma > 0.00001$}
+		
+		\FOR{cada elemento $i$ de $A$}
+		\STATE $temp1 = A(i) -  A1(0)$ ; $temp2 = B(i) -  B1(0)$
+		\STATE $sum = sum + (temp1 \cdot temp2)$					
+		\ENDFOR
+		
+		\STATE $sum = \frac{sum}{size(A_i) \cdot \sigma}$ ; $partial \leftarrow push(sum)$
+		\ELSE
+		\STATE $partial \leftarrow push(0)$
+		\ENDIF	
+		\ENDFOR
+		\STATE $COR \leftarrow push(partial)$ , $partial = null$
+		\ENDFOR
+		\STATE $return$ $COR$
+	\end{algorithmic}
+	\caption{: $COR = Covar(A, B)$  } \label{Alg: COVAR}
+\end{algorithm}
+
+
+\begin{algorithm}[h]
+	\begin{algorithmic}[1]
+		\STATE $diag = noDiag = 0$
+		\FOR{$\forall i \mid i < size(COR)$} 
+		\FOR{$\forall j \mid j < size(COR)$}
+		\IF{$i == j$}
+		\STATE $diag = diag+ (1-C_{ii})^2$
+		\ELSE
+		\STATE $noDiag= noDiag + (C_{ij})^2$
+		\ENDIF
+		\ENDFOR
+		\ENDFOR
+		\STATE $f1 = (diag/ size(COR)) +  (noDiag/size(COR)/size(COR)-1)$
+		\STATE return $f1$
+		
+	\end{algorithmic}
+	\caption{: $f1 = Diagonals(COR)$  } \label{Alg: Function1-EEG}
+\end{algorithm}
+
+Finalmente, la función objetivo del algoritmo \ref{Alg: FObj-EEG} se vale de estos cálculos intermedios para efectuar el cálculo de la función conjunta $f1 + f2$ de la ecuación \ref{eq:FObj}.
+
+\begin{algorithm}[H]
+	\begin{algorithmic}[1]
+		\STATE  // Sea $X_i$ un vector solución de tamaño $(n \times m)$,  donde $n$ es el número 
+		\STATE // de series de tiempo (fuentes de entrada)y $m$ el tamaño de cada serie.
+		\STATE $S1 = matrix(X_i) \mid size(X_i) = n\times m$ y $dim(S1) =n\times m $
+		\STATE $X1 = A \times S1$ $\mid A $ es la matriz de combinación de la ecuación \ref{eq:problem1}
+		\STATE $COR1 = Covar(X1, X)  \mid X$ es la matriz combinada de señales de \ref{eq:problem1}
+		\STATE $f2 = \sum_{i}^{} \sum_{j}^{}(S_{ij}- S1_{ij})^2 \mid S$ es la matriz de señales original 
+		\STATE $fitness = Diagonals(COR1) + (f2/N \times M)$
+	\end{algorithmic}
+	\caption{: $fitness = EEG\_Objective(X_i)$ } \label{Alg: FObj-EEG}
+\end{algorithm}
+
+Representada la función objetivo, la siguiente sección se encarga de la adaptación de los algoritmos al procesamiento de esta función, según las particularidades propias del diseño elegida.
+
+\section{Adaptación de los algoritmos}
+
+Esta sección contiene toda la información relevante acerca de la \textbf{adaptación} llevada a cabo para cada uno de los algoritmos seleccionados para este estudio. Se destacan únicamente los elementos de implementación que aportan información del proceso a alto nivel de abstracción, donde detalles como pueden ser las órdenes de configuración específicas o la creación y/o modificación de ficheros varios y su contenido explícito se descartan porque, a efectos prácticos, no aportan información adicional en cuanto a lo que se desarrolla en esta sección.
+
+Naturalmente, el proceso de adaptación tiene que considerarse superado con éxito antes de realizar cualquier tipo de experimento. Para garantizar la correcta adaptación de los algoritmos, el alumno se vale de una herramienta que autodenomina \textbf{Validador}, que no es más que la \textbf{función objetivo pura}, sin ningun tipo de capa ni utilizando librerías externas, incrustada en un pequeño programa en C++ que permite comprobar que la solución ofrecida por el algoritmo en cuestión tras el proceso de adaptación, es realmente correcta en términos de \textbf{fitness}. Por tanto, cuando se enuncie que una adaptación ha sido \textbf{validada}, implicará que ha superado satisfactoriamente el \textbf{Validador}. Se indica a continuación el proceso de adaptación de cada algoritmo.
+
+\begin{enumerate}
+	%---------------------------------------------------------------------------------------------------------
+	\item \textbf{Multiple Offspring Sampling (2011):}
+	
+	La implementación del algoritmo \textbf{MOS2011}\cite{MOS2010,MOS-Algorithms} está basada en el framework de \textbf{Multiple Offspring Sampling} (MOS)\cite{MOS-Framework} y la librería C++ para componentes de Algoritmos Genéticos \textbf{GAlib}\cite{GALib}. Este algoritmo fue propuesto para el \textit{2011 Special Issue of the Soft Computing Journal} y la implementación disponible está preparada para procesar distintos benchmarks, como los del SOCO2010, CEC2012 o CEC2013. La copia de esta implementación corresponde a un repositorio\cite{MOS-Algorithms} al que tiene acceso el tutor de este trabajo y que ha compartido con el alumno, con el consentimiento previo del autor de la propuesta.
+	
+	A continuación se describe el proceso de adaptación seguido para este algoritmo en particular.
+	
+	\begin{enumerate}
+		\item La estructura de directorios sobre la que se sustenta el proyecto contiene por separado los ficheros del conjunto de problemas de tipo \textbf{benchmark} y los referentes a la implementación \textbf{MOS$+$GAlib}. Los ficheros de funciones están divididos en ficheros fuente (\textbf{.cc}) y ficheros de cabeceras (\textbf{.h}), siendo el fichero de cabeceras donde se \textbf{implementa} el código de la función objetivo, ya que el fichero \textbf{.cc} contiene una estructura particular derivada de GAlib que actúa como intermediario entre la función objetivo del fichero \textbf{(.h)} y el framework MOS.
+		
+		\item Conocida la implementación particular, se crean sendos ficheros \textbf{eeg\_problem} con extensión \textbf{.h} y \textbf{.cc}. El fichero \textbf{eeg\_problem.h} contiene la implementación de los algoritmos \ref{Alg: COVAR}, \ref{Alg: Function1-EEG} y \ref{Alg: FObj-EEG} y además incluye otro fichero de cabeceras donde se implementa la carga de los ficheros de texto que contienen las matrices \textbf{A, S y X}, necesarios para la evaluación de un vector solución, así como de una matriz \textbf{S1} proporcionada por el autor como \textit{baseline} que sirve como criterio de parada, aunque en esta propuesta no es utilizada a efectos prácticos. La implementación de la función objetivo sigue todos los estándares que exige GAlib, prestando especial cuidado a los tipos de datos utilizados para no incurrir en problemas de compatibilidad con la implementación.
+		
+		\item El fichero \textbf{eeg\_problem.cc} envuelve la función objetivo a través de la definición de una función \textbf{\textit{objective}} con la sintaxis particular que precisa GAlib, en especial atendiendo a la definición particular de \textbf{individuo}, modelizado a través de un tipo de dato concreto propio de \textbf{GAlib}. Posee además una función que \textbf{define el problema}, donde se indican los valores de cotas del espacio de soluciones, así como la especificación completa del problema en términos de dimensión, función objetivo y elementos poblacionales como el tamaño de la misma y otros factores que se obtienen principalmente de un \textbf{fichero de configuración} especificado al lanzar el algoritmo.
+		
+		\item Solventados los problemas derivados de la implementación particular de la propuesta se procede a compilar el proyecto. Se utiliza la herramienta \textbf{CMake} para generar los \textbf{Makefile} de forma automática, por lo que es preciso añadir los ficheros fuente y de cabeceras al fichero de objetivos \textbf{CMakeLists.txt}. Para evitar sobrecargas no deseadas, se compila únicamente el problema del EEG como si fuese parte del benchmark de SOCO2010, pero sin ninguno de los demás problemas de este. Previa a esta compilación se precisa resolver un pequeño porcentaje de errores de la implementación particular, concretamente generados a partir de conflictos con una \textbf{sobrecarga} de operadores.
+		
+		\item Compilada la función objetivo y enlazada a la implementación de MOS2011, el siguiente paso consiste en comprobar que el algoritmo es realmente capaz de ejecutar un proceso de optimización guiada por la función objetivo. El alumno se vale de un \textbf{script bash} que incluye el autor para lanzar las diferentes ejecuciones. Ajustando la dimensión de cada problema, se comprueba que es posible ejecutar el algoritmo frente al problema del EEG, por lo que el último paso consiste en generar tantos scripts como problemas distintos se tenga, esto es, uno para cada dimensión del problema tanto con ruido como sin este, haciendo un total de 6 scripts, que serán útiles de cara a la fase experimental.
+	\end{enumerate}
+	
+	Finalmente, algunas librerías como \textbf{Boost}, \textbf{OpenMPI} o \textbf{Libconfig} precisan de instalación para una ejecución exitosa. A partir de este momento y tras comprobar que se obtiene un resultado sensato y validado, se considera a \textbf{MOS2011} preparado para la segunda fase de adaptación. No obstante, se quiere dejar plasmada la circunstancia de que el proceso de adaptación de este algoritmo en particular ha sido sumamente complicado y los pasos que aquí se reflejan tan solo denotan las acciones llevadas a cabo a gran escala, sin entrar en los detalles que son donde han surgido la mayor parte de complicaciones.
+	
+	%---------------------------------------------------------------------------------------------------------
+	\item \textbf{Multiple Offspring Sampling (2013)}
+	
+	La propuesta e implementación de \textbf{MOS2013}\cite{MOS2013,MOS-Algorithms} vuelve a estar nuevamente basada en el framework MOS\cite{MOS-Framework} y la librería GAlib\cite{GALib}. La implementación utilizada en este estudio está disponible en el mismo repositorio que la anterior, por lo que se puede consultar en \cite{MOS-Algorithms}. La estructura de la implementación es muy similar a la de su predecesor, por lo que se precisan de los siguientes pasos para llevar a cabo su adaptación.
+	
+	\begin{enumerate}
+		\item Se comprueba si existen los mismos errores de implementación que en la versión anterior, para resolverlos si es preciso. Una vez solucionados, se generan nuevamente los ficheros \textbf{eeg\_problem} esta vez en un directorio propio y separado del conjunto de demás benchmarks. Dada la implementación particular (aunque similar a la anterior), la única diferencia con su predecesor radica en la utilización del tipo de dato \textbf{double} frente al \textbf{long double} del \textbf{MOS2011}, manteniendo el resto de componentes intactas, esto es, tal y como fueron propuestas para la adaptación del algoritmo \textbf{MOS2011}.
+		
+		\item Generados los ficheros del problema EEG, se crea el fichero de objetivos \textbf{CMakeLists.txt} para compilar y enlazar la especificación del problema con el algoritmo MOS. Es preciso especificar la versión mínima de \textbf{CMake} requerida para evitar errores de compilación o enlazado; se establece a la versión 2.8. Con esta última directiva se consigue compilar con éxito el algoritmo y todas sus componentes. 
+		
+		\item El penúltimo paso es generar los \textbf{scripts bash} que se encargarán posteriormente de llevar a cabo la fase experimental en su totalidad, ajustando los parámetros indispensables para la ejecución de cada tipo de problema. Finalmente, el validador ratifica los resultados preliminares obtenidos por el algoritmo, por lo que se considera finalizada la primera fase de adaptación de \textbf{MOS2013}.
+	\end{enumerate}
+
+	%---------------------------------------------------------------------------------------------------------
+	\item \textbf{SHADEILS}
+	
+	El tercer prospecto de estudio es \textbf{SHADEILS}\cite{SHADEILS,SHADEILS-Conf}, una implementación  donde la totalidad del algoritmo está desarrollada en \textbf{Python} y el conjunto de problemas benchmark que ejecuta se encuentra implementado en \textbf{C++} pero con \textbf{wrappers de Python}, lo que permite casar ambas implementaciones sin ningún tipo de fuga. El código fuente utilizado se encuentra disponible en la página web de la competición del \textbf{WCCI CEC 2018}\cite{WCCI-SHADEILS}. Los paquetes, módulos y aspectos relevantes de la implementación se describen en el proceso de adaptación que se detalla seguidamente:
+	
+	\begin{enumerate}
+		\item El proyecto en su totalidad está preparado para ejecutar una serie de comandos de un script \textbf{install.sh}, donde se crea inicialmente un \textbf{entorno virtual} donde se instalarán todos los paquetes y dependencias que el proyecto necesita para funcionar. Esto incluye descargar una versión del software de gestión de paquetes de Python llamado \textbf{Pip}\cite{PyIP}. Posteriormente se instalan a través de este gestor los paquetes de \textit{data science} que utiliza el proyecto, tales como \textbf{Numpy} o \textbf{Scipy}; otro de los requeridos es \textbf{Cython}\cite{Cython}, una herramienta que sirve para escribir extensiones del lenguaje \textbf{C} o \textbf{C++} que sean soportadas por Python, concretamente para el uso de las funciones benchmark.
+		
+		\item Tras comprobar que la versión actual de Python y la del paquete de creación de entornos virtuales \textbf{venv} de la que dispone el alumno en su portátil es la adecuada, se procede a instalar todas las dependencias y poner en marcha el entorno virtual para poder ejecutar los scripts de Python correctamente. Debido a errores de incompatibilidad de librerías entre Windows, Linux y MacOS, se requiere modificar el script que \textbf{compila las funciones bencmark} indicando que la librería estándar que debe utilizar en este proceso es \textbf{libc++} (MacOS) en vez de \textbf{libstdc++} (Windows y Linux).
+		
+		\item Como inciso, remarcar que esta incompatibilidad afecta directamente a la puesta en marcha del algoritmo en sistemas operativos MacOS. Por ello, se ha eliminado el paquete de funciones benchmark del CEC2013-LSGO de la lista de \textbf{paquetes requeridos} por la implementación, ya que al ejecutar el script de instalación, no se contempla el sistema operativo y surgen errores de compilación. Por esta razón, se ha optado por descargar manualmente el paquete y modificar el script como se indica en el paso anterior, para garantizar la compilación del conjunto de problemas.
+		
+		\item Resueltos una serie de pequeños errores de sintaxis se procede a realizar la adaptación requerida de la función objetivo. El script principal (\textbf{shadeils.py}) se duplicará en otro fichero denominado \textbf{main\_eeg\_problem.py} para añadir al mismo los parámetros particulares del problema del EEG, como la dimensionalidad, la existencia de ruido, el total de funciones del problema y el número de evaluaciones a ejecutar. 
+		
+		\item El siguiente y último paso consiste en la adaptación de la función objetivo como tal. Para ello, se generan dos ficheros \textbf{EEGProblem}, uno de cabecera y el otro fuente. El fichero de cabeceras contiene la definición de las funciones intermedias que se corresponden con los algoritmos \ref{Alg: COVAR} y \ref{Alg: Function1-EEG}, así como la de la función objetivo del algoritmo \ref{Alg: FObj-EEG} y las que permiten cargar los ficheros de datos, y esta vez con la sintaxis nativa de C++ y sus tipos de datos y librerías estándar, sin valerse de ninguna otra librería como GAlib. El fichero fuente implementa las funciones en cuestión y define las restricciones de umbrales superior e inferior, necesarias para acotar el espacio de búsqueda.
+		
+		\item Finalmente, se modifica el formato del fichero donde se redirige la salida del algoritmo, lo que incluye el  proceso de convergencia, solución, fitness y la marca de tiempo. Para comprobar que la adaptación ha resultado efectiva, se comprueba con el \textbf{validador}, obteniendo un resultado favorable que permite concluir con esta primera fase de adaptación.
+	\end{enumerate}
+
+	%---------------------------------------------------------------------------------------------------------
+	
+	\item \textbf{MLSHADE-SPA}
+	
+	La técnica \textbf{MLSHADE-SPA}\cite{ML-SHADE-SPA,SHADEILS-Conf} es la cuarta propuesta de estudio en este trabajo. Los autores de la misma publican su implementación en el lenguaje \textbf{MATLAB}, disponible también en la web del WCCI 2018\cite{WCCI-SHADEILS}, por lo que el alumno hace uso de una licencia de prueba para poder realizar la adaptación pertinente. En este caso concreto, la adaptación requiere implementar la función objetivo en este lenguaje, buscando aprovechar al máximo la representación de los tipos de datos como matrices y las operaciones matriciales. El proceso se describe a continuación.
+	
+	\begin{enumerate}
+		\item La adaptación del algoritmo al problema del EEG requiere generar la función objetivo en un \textbf{fichero por separado} y que a la vez se acople con la definición del conjunto de funciones benchmarks de la implementación del algoritmo. Lo primero que se requiere es establecer un \textbf{código numérico} para hacer referencia a la función objetivo, donde se elige \textbf{256} - frecuencia de muestreo de las señales - para este indicador. El código servirá para hacer efectiva la llamada a la función objetivo entre las demás del benchmark. Recordar que MATLAB, al ser un lenguaje interpretado, no requiere de compilación, por lo que \textbf{mantener el resto de funciones benchmark} no supone sobrecarga alguna.
+		
+		\item Se añade el código necesario dentro del script que controla la ejecución de las distintas funciones benchmark para que procese el código asignado a la función del EEG y se procede con la implementación del código de la función objetivo. En esta adaptación, el alumno ha intentando aprovechar toda la \textbf{potencia} que ofrece MATLAB para el procesamiento eficiente de datos mediante su representación matricial; la implementación es ligeramente distinta a las realizadas con el lenguaje C++ precisamente debido a este factor.
+		
+		\item El último paso es el mismo que en los anteriores algoritmos, donde se comprueba que la solución obtenida casa con la del \textbf{validador}. Completar este proceso lleva a la última adaptación que se realizará en esta fase inicial, previo a poner en marcha el clúster Hércules para lanzar los experimentos finales.
+	\end{enumerate}
+	
+	%---------------------------------------------------------------------------------------------------------
+	
+	\item \textbf{Differential Grouping 2:}
+	
+	El algoritmo de descomposición de variables DG2\cite{DG2,DG2-Algorithm} es la última propuesta sometida a estudio en este trabajo. La implementación en este caso se encuentra tanto en \textbf{C++} como en \textbf{MATLAB} y está disponible en el repositorio del autor \cite{DG2-Algorithm}. Se opta por la implementación de \textbf{C++} al no estar la de MATLAB completamente testada, pero para la evaluación de los resultados obtenidos por el algoritmo, se emplea el código MATLAB proporcionado por el autor para este fin. El proceso de adaptación, dada la particular implementación del algoritmo, ha sido muy natural y sin complicaciones reseñables.
+	
+	El único paso llevado a cabo en esta adaptación consiste en implementar la función objetivo a través de un fichero de cabeceras \textbf{EEG.h} y otro fuente \textbf{EEG.cpp} con una estructura a nivel de implementación similar las anteriores, para que pase a formar parte finalmente del conjunto de problemas benchmark total donde, naturalmente, solo se compilará este de cara a los procedimientos experimentales. 
+	
+	La única modificación destacable consiste en una alteración de la clase \textbf{wrapper} del benchmark de forma que, según el tipo de función, se pueda crear un \textbf{tipo de dato adecuado con los parámetros que requiere el problema del EEG}, tal y como lo son la dimensión y la existencia de ruido. El fichero \textbf{main.cpp} también precisa de modificación para incorporar la actual adaptación, optando por duplicar el mismo y utilizar uno distinto expresamente para este fin.
+	
+	Dado que el algoritmo no produce directamente un resultado en forma de \textbf{vector solución} como los anteriores, en la \textbf{fase experimental} se explicarán las consecuencias derivadas de aplicar este algoritmo frente a la función objetivo del EEG, consecuencias que determinarán en gran medida los pasos efectuados en lo largo de la misma. Finalizado esta subsección, se detallan brevemente los procedimientos de adaptación que sufren los algoritmos de cara a la experimentación en el clúster que, a efectos prácticos, se considera común para todas las técnicas elegidas en este estudio.
+	
+\end{enumerate}
+
+
+Para esta fase, se requiere que la adaptación conducida anteriormente permita a los algoritmos funcionar correctamente en el clúster Hércules. Debido a la cualidad privativa de MATLAB, que precisa de una licencia para poder utilizarse, los experimentos con este algoritmo \textbf{no podrán ser ejecutados en el clúster}, razón por la cual el alumno opta por utilizar su propio ordenador portátil; esta condición será expuesta con detalle en el siguiente capítulo. Esta fase afecta por tanto a las implementaciones de \textbf{MOS2011} y \textbf{2013}, como \textbf{SHADEILS} y \textbf{DG2}. Se detallan a continuación los procedimientos llevados a cabos en esta parte de la adaptación de forma general y sin profundizar en detalles sin importancia.
+
+\begin{enumerate}
+	\item El primer inconveniente a resolver en esta adaptación está relacionado con lo \textbf{limitada} que está la \textbf{imagen del SO de los nodos del cluster}, donde se tienen únicamente los componentes indispensables para funcionar. Algunos elementos como compiladores C y C++, y algunas librerías básicas de estos lenguajes si están disponibles, pero la mayoría de aquellas herramientas y aplicaciones que precisan las implementaciones no están presentes, por lo que es preciso instalarlas en el \textbf{directorio raíz} de la cuenta local que tiene el alumno. 
+	
+	\item En total, se ha requerido de una serie de herramientas, librerías y aplicaciones para poner en marcha todos los algoritmos. La distribución \textbf{Anaconda3} permite ejecutar el código Python de \textbf{SHADEILS} sin incurrir en ningún error de compatibilidad con las versiones disponibles en el nodo cabecera. Otras herramientas y librerías como \textbf{Bison, Boost, CMake, flex y libcofig} son indispensables para poner en marcha las dos versiones de MOS; \textbf{OpenMPI}, otra librería indispensable para ejecutar estos algoritmos sí se encuentra disponible en el nodo cabecera. Todas estas herramientas han sido instaladas en un directorio \textbf{bin} en el directorio raíz local.
+	
+	\item La necesidad de instalar toda esta gama de herramientas, librerías y aplicaciones hace que para cada algoritmo en particular, los procesos de compilación y/o ejecución requieran acceder a las direcciones donde se encuentran las mismas, incidiendo muchas veces en \textbf{conflictos} derivados de una \textbf{incorrecta definición} de la variable de entorno \textbf{\$PATH}, la cual necesita poseer de toda la información relativa a la ubicación de estas librerías y herramientas en la cuenta local.
+	
+	\item Otro tipo de \textit{path} que precisa especificación previa es el de la ubicación de los \textbf{ficheros de datos} \textbf{DATAin} que la función objetivo exige para poder evaluar una solución. Para evitar replicar innecesariamente estos datos, se proporciona un \textbf{directorio común} donde accederán todos los algoritmos para recuperar esta información, evitando así problemas locales de la ubicación de cada algoritmo en el árbol de directorios al ser este un \textbf{path} absoluto.
+	
+	\item En particular, para ambas implementaciones de MOS, se requiere especificar ciertas líneas de comandos en los ficheros de \textbf{CMakeLists.txt} que generan los \textbf{makefiles} respectivos. Estos comandos están relacionados con el \textbf{enlazado de las bibliotecas estáticas}, que se han instalado en local, que se requieren en tiempo de compilación, principalmente las librerías de Boost y OpenMPI. Este es el último compendio de pasos requeridos para conseguir una ejecución exitosa del\textbf{ proceso experimental}, ya que tanto SHADEILS como DG2 han sido acoplados al clúster sin más incidencias reseñables.
+\end{enumerate}
+
+En el siguiente capítulo se muestra el diseño experimental conducido por el alumno para obtener resultados representativos que puedan ser interpretados y analizados en profundidad para extraer las conclusiones pertinentes. 
+
+
+
+
+
+
+
+
+
+
+
+

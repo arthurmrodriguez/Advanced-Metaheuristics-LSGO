@@ -1,0 +1,194 @@
+\chapter{Diseño experimental}\label{cap:DisenioExp}
+
+La finalidad de este capítulo consiste en recoger todos los detalles referentes al \textbf{diseño experimental} en su totalidad. Este procedimiento está compuesto por una serie de tareas que el alumno ha de desarrollar de acuerdo a la planificación del capítulo \ref{cap:Requisitos}. Estas tareas tienen como objetivo final permitir al alumno \textbf{obtener los resultados} que serán la base de los procesos de evaluación y conclusión posteriores, por lo que resultará fundamental desarrollar esta tarea con alto grado de precisión.
+
+Con respecto al proceso experimental, se realizará en primera instancia un \textbf{estudio de escalabilidad} que permita comprobar el comportamiento de los algoritmos de forma preliminar, donde su mayor implicación será la de tomar decisiones que determinen la continuidad de su utilización de cara a la \textbf{experimentación completa}, que será la que ofrezca los resultados definitivos con los que se trabajará en la interpretación y el análisis de los mismos.
+
+La estructura de este capítulo comprende dos secciones, donde la primera se centra en una \textbf{comparativa a nivel de complejidad} entre las funciones que conforman los benchmarks utilizados en el campo de LSGO actualmente y la proposición de benchmark particular que recoge la definición del problema del EEG a través de la función objetivo, cuyo pseudocódigo se incluye también en esta parte. 
+
+La segunda sección estará dedicada a mostrar la configuración de parámetros que se utilizarán tanto en el \textbf{estudio de escalabilidad} como en la \textbf{experimentación completa}, ya que algunos de los parámetros utilizados en esta última dependerán en gran medida de los resultados de la primera. A continuación, se procede con la comparativa de benchmarks.
+ 
+\section{Diseño experimental: benchmarks y EEG}
+
+Los propuestas elegidas para formar parte de este estudio han sido seleccionadas por el alumno siguiendo unos determinados criterios. La información relativa a las mismas se encuentra disponible a lo largo y ancho de todas las bases de datos de publicaciones científicas más importantes del mundo, como Scopus\cite{SCOPUS} o IEEE Explorer\cite{IEEECEC}, que han sido utilizadas directamente para los procesos de documentación.
+
+Una vez han sido elegidas las técnicas, el siguiente paso más adecuado en esta situación en particular consiste en obtener una copia original de las implementaciones de los algoritmos elegidos, tarea que se detalla en el capítulo anterior. Sin embargo, estas propuestas están normalmente preparadas para ejecutar un conjunto de funciones que sirven para evaluar el rendimiento de estas propuestas. Este conjunto de funciones se agrupan en \textbf{benchmarks}, que ya han sido introducidos en el capítulo \ref{cap: EstadoArte}, y se procede a precisar una visión de conjunto del estado actual, tomando como referencia las propuestas elegidas.
+
+Atendiendo a la definición de \cite{ELSGOI}, las funciones benchmark se agrupan formando distintas clases según el \textbf{grado de interacción de las variables}; así tenemos, principalmente, grupos de funciones \textbf{separables}, \textbf{parcialmente separables}, funciones con \textbf{subcomponentes solapadas} y funciones \textbf{completamente no separables}. Como ya se describe en el capítulo \ref{cap:Analisis}, la \textbf{interacción de las variables} de un problema juega un papel fundamental a la hora de llevar a cabo una optimización efectiva, sobre todo en problemas de alta dimensionalidad, dado que ésta determina el \textbf{potencial o la capacidad} que tiene una variable para  \textbf{influir en el efecto de otra u otras variables} y por tanto ser determinante en la calidad de la solución obtenida.  
+
+Los benchmarks propuestos para las distintas competiciones de LSGO llevadas a cabo desde el año 2008 contienen habitualmente \textbf{entre 15 y 20 funciones} de distinto tipo como las funciones \textbf{Shifted Elliptic, Shifted Sphere, Rastrigin, Schwefel, Rosenbrock}, funciones híbridas variadas y otros tipos de problemas de elevada complejidad\cite{ComprehensiveComparison}. La dimensionalidad de estos problemas ronda las 1000 variables, por lo que supone un punto de partida robusto en cuanto a evaluación de las capacidades  de un algoritmo se refiere.
+
+Actualmente, los benchmarks que sirven como principal referencia para los algoritmos dedicados a LSGO son los propuestos en las competiciones del \textbf{CEC 2010} y, mayoritariamente, los del \textbf{CEC 2013}\cite{CEC2013}, utilizados en la más reciente competición del WCCI 2018\cite{WCCI-SHADEILS}. No obstante, como ya se menciona en la revisión de la literatura del capítulo \ref{cap: EstadoArte}, las actuales funciones benchmark \textbf{no tienen similitud alguna} con el benchmark que se estudia este trabajo, el cual contiene una formulación de un problema real como lo es el del EEG.
+
+Como se puede apreciar en los algoritmos \ref{Alg: COVAR} y \ref{Alg: Function1-EEG} que describen las componentes (operaciones) de la función objetivo del algoritmo \ref{Alg: FObj-EEG}, la complejidad de la misma es muy alta debido a la cantidad de operaciones de multiplicación que realiza cada vez que requiere evaluar un vector solución. La complejidad algorítmica también aumenta conforme lo hace la dimensión del problema, como se expresa en el capítulo \ref{cap:QEEG}. Además, este tipo de funciones se puede catalogar dentro del tipo de funciones \textbf{black-box}, funciones donde no se tiene conocimiento acerca de la interacción de sus variables, información de la que \textbf{si se dispone} para las funciones de los benchmarks de LSGO utilizados en las competiciones del CEC, lo que ratifica aún más la complejidad que tiene ofrecer una solución escalable y eficiente para el problema del EEG. 
+
+Es por ello que se opta por realizar un \textbf{estudio de escalabilidad} previo a la experimentación completa, dado que esto permitirá descartar aquellas técnicas que, dado su diseño y/o su implementación particular, no ofrezcan resultados lo suficientemente competitivos como para ser considerados en el posterior análisis. En la siguiente sección por tanto se detalla la \textbf{configuración de parámetros} que se utilizarán a lo largo del proceso experimental, así como los principales objetivos que se quieren alcanzar mediante este proceso, que serán detallados en profundidad en el siguiente capítulo, donde se analizarán los resultados obtenidos tanto del estudio de escalabilidad como del estudio completo.
+
+
+
+\section{Parámetros de la experimentación}
+
+ En esta sección se detallan los \textbf{ajustes paramétricos} del proceso experimental, donde se explicará la \textbf{naturaleza} de cada experimento, el objetivo a conseguir y, naturalmente, los parámetros experimentales de cada algoritmo para garantizar la repetibilidad de los experimentos.
+
+El \textbf{estudio de escalabilidad}  está destinado a obtener una primera impresión de los algoritmos y técnicas elegidas. Se procederá a ejecutar cada algoritmo con su configuración \textbf{de fábrica}, esto es, con la especificación de parámetros que por defecto definen los autores en su implementación, con el objetivo de comprobar las capacidades de \textbf{generalización}, desde el punto de vista de un problema benchmark completamente distinto a cualquiera de los anteriores, y de \textbf{especificación}, en cuanto a capacidad de convergencia.
+
+Para ello, cada algoritmo dispondrá de \textbf{cien mil (100000) o 100K} evaluaciones de la función objetivo. De esta manera se busca comprobar cómo responde el algoritmo cuando la función objetivo es compleja, requiere de mucho cómputo y además está limitado en cuanto a sus capacidades de exploración y explotación. Se analizarán los comportamientos de \textbf{convergencia} del algoritmo, prestando especial atención al problema del estancamiento de cara a calibrar la siguiente fase experimental
+
+Estos parámetros de experimentación sólo afectan a las 4 primeras técnicas, siendo \textbf{DG2} la técnica que sufrirá un proceso experimental distinto. Debido a las necesidades de\textbf{ reducir la dimensionalidad}, obtener descomposiciones óptimas - aquellas que \textbf{minimicen la interacción} entre componentes - resulta crucial en problemas de alta dimensionalidad. Las descomposiciones dependen de la naturaleza de la función objetivo, por lo que mediante este experimento se busca \textbf{descartar el peor escenario posible}: una función no-separable.
+
+El algoritmo DG2 será puesto a prueba con la función objetivo frente a los problemas \textbf{D4, D4N y D12} para comprobar si existe algún tipo de descomposición que pueda derivar en una hibridación de DG2 con el mejor de los algoritmos del estudio experimental completo. Sin embargo, DG2 no seguirá las mismas condiciones que los demás algoritmos en cuanto a evaluaciones de la función objetivo, sino que según la dimensión del problema el algoritmo calcula internamente la cantidad de evaluaciones que necesita realizar para identificar la interacción de las variables (ver capítulo \ref{cap:Analisis}).
+
+DG2 por tanto no sigue las mismas reglas que los demás algoritmos, pero en el análisis del estudio de escalabilidad se comprobará si esta propuesta cumple con las condiciones necesarias (que serán detalladas en el propio análisis) para continuar con la experimentación completa. Si estas condiciones \textbf{no se cumpliesen}, no se podría realizar esta hibridación, y los resultados de DG2 quedarán limitados a este estudio de escalabildad. 
+
+Los resultados del estudio de escalabilidad serán detallados y analizados en la sección \ref{sect:FE1} del capítulo siguiente, por lo que a continuación se procede a especificar la \textbf{batería de parámetros} de cada algoritmo según las implementaciones correspondientes. Recordar la condición \textit{parameter-free} de DG2, por lo que no se mostrará ninguna tabla con respecto a esta técnica.
+
+\begin{enumerate}
+	\item \textbf{Multiple Offspring Sampling (2011)}: los parámetros de la técnica MTS-LS1 son los utilizados originalmente en el paper \cite{MTS-LSGO}, por lo que se enumeran los del algoritmo en cuestión. Estos parámetros se especifican en dos ficheros de configuración distintos donde el principal contiene aquellos parámetros \textbf{comunes} al algoritmo en su totalidad y el segundo los parámetros \textbf{particulares} de cada una de las técnicas que lo componen.
+	
+	\begin{table}[H]
+		\centering
+		\resizebox{\textwidth}{!}{
+			$\begin{tabular}{ *{4}{c} }
+			\toprule
+			\textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor}\\
+			\midrule
+			\textbf{Tam. Pobl.} & 15 & \textbf{DE CR} & 0.5\\
+			\textbf{DE F} & 0.5 & \textbf{DE op. cruce} & Exponencial\\
+			\textbf{DE op. selección} & Torneo 2 & \textbf{DE Modelo} & Clasico\\
+			\textbf{Ratio min. part}. & 5\% &\textbf{Tam. paso} & 35715\\
+			\bottomrule
+			\end{tabular}$
+		}
+		\caption{Parámetros de MOS 2011} \label{tabla:MOS2011Params}
+	\end{table}
+		
+	\item \textbf{Multiple Offspring Sampling (2013)}: se muestran los parámetros globales del algoritmo MOS2013 así como los de sus algoritmos componentes. Aquí ocurre algo similar con el anterior algoritmo, disponiendo de dos ficheros de configuración para detallar los valores que toma cada parámetro.
+	
+		\begin{table}[H]
+			\centering
+			\resizebox{\textwidth}{!}{
+				$\begin{tabular}{ *{6}{c} }
+				\toprule
+				\textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor}\\
+				\midrule
+				\textbf{Tam. Pobl} & 400 &\textbf{Op. selección} & Torneo 2 & \textbf{pcx}  & 0.9\\ 
+				\textbf{pmut} & 0.01 & \textbf{Min. part.} & 20\% &\textbf{Tam.paso} & 36000\\ 	
+			\bottomrule
+			\end{tabular}$
+		}
+		\caption{Parámetros de MOS 2013} \label{tabla:MOS2013Params}
+		\end{table}
+	
+	\begin{table}[H]
+		\centering
+		\resizebox{\textwidth}{!}{
+			$\begin{tabular}{ *{6}{c} }
+			\toprule
+			\textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor}\\
+			\midrule
+				\textbf{maxSuccess} & 5 &\textbf{maxfailed} & 5 &\textbf{adjustSuccess} & 4	\\
+				\textbf{adjustFailed} & 0.75 &\textbf{delta} & 2.4 \\ 
+			\bottomrule
+			\end{tabular}$
+		}
+		\caption{Parámetros de MOS 2013 - Solis Wets LS} \label{tabla:MOS2013Params1}
+	\end{table}
+	
+	\begin{table}[H]
+		\centering
+		\resizebox{\textwidth}{!}{
+			$\begin{tabular}{ *{6}{c} }
+			\toprule
+			\textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor}\\
+			\midrule
+				\textbf{adjustFailed} & 2 & \textbf{adjustMin} & 10 & \textbf{moveLeft} & 0.25\\
+				\textbf{moveRight} & 0.5 & \textbf{searchProb} & 0.9 & \textbf{minProb} & 0.025 \\
+			\bottomrule
+			\end{tabular}$
+		}
+		\caption{Parámetros de MOS 2013: MTS-LS1-Reduced)} \label{tabla:MOS2013Params-MTSLS1}
+	\end{table}
+	
+	\item \textbf{SHADEILS}: los parámetros  que propone el autor de esta implementación son los que se muestran a continuación. Estos parámetros, aunque modificables a través de la posibilidad de que el usuario introduzca los valores de cada uno, toman una serie de \textbf{valores por defecto} en caso de que no se indique ninguno en específico, y son estos los que se muestran en la siguiente tabla.
+	
+	\begin{table}[H]
+		\centering
+		\resizebox{\textwidth}{!}{
+			$\begin{tabular}{ *{2}{c}| *{2}{c} }
+			\toprule
+			\textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor} \\
+			\midrule
+					\textbf{Tam. Pobl.} &  100 &	\textbf{Evals. DE }& 25000\\ 
+					\textbf{Evals. LS } & 25000 & \textbf{MTS Step} & 20 \\ 
+					\textbf{Umbral} & 0.001 & \textbf{SHADE Tam. Historia} & 3 \\ 
+					\textbf{Reinicio pobl. fallido} & 3 & \textbf{Min. ratio mejora} & 5\% \\ 
+				\bottomrule
+				\end{tabular}$
+			}
+			\caption{Parámetros de SHADEILS}\label{tabla:SHADEILSParams}
+	\end{table}
+	
+	
+	\item \textbf{MLSHADE-SPA}: se muestran los parámetros globales del algoritmo, pero debido a la gran cantidad de parámetros de los demás algoritmos componentes, se describirán únicamente los más importantes, remitiendo al lector a \cite{EADE,ANDE} para los de cada pool de valores \textbf{CR} de los algoritmos EADE y ANDE.
+	
+	\begin{table}[H]
+		\centering
+		\resizebox{\textwidth}{!}{
+			$\begin{tabular}{ *{2}{c}| *{2}{c} }
+			\toprule
+			\textbf{Param}. & \textbf{Valor} & \textbf{Param}. & \textbf{Valor} \\
+			\midrule
+					\textbf{Tam. Pobl.} &  250 &	\textbf{Min. Poblacion} & 20\\ 
+					\textbf{Evals. CC}  & Evals/50 & \textbf{Tam. memoria} & 5 \\ 
+					\textbf{Pos. Mem. inicial} & 1 &\textbf{Ratio PBest} & 0.1 \\ 
+				\bottomrule
+				\end{tabular}$
+			}\caption{Parámetros de MLSHADE-SPA}\label{tabla:MLSHADESPArameters}
+	\end{table}
+	
+	
+\end{enumerate}
+
+El objetivo del \textbf{estudio experimental completo} es comprobar la \textbf{capacidad de convergencia} de las técnicas sin sobrepasar las restricciones temporales implícitas en la dimensionalidad del problema, debido a que, como se expresa anteriormente, el objetivo es proponer una solución lo \textbf{más factible posible} de cara a una implementación en el mundo real. Se tienen que considerar otros factores, como la especificación de semillas, que permitirán llevar a cabo un proceso repetible y comprobable, siempre que se den las mismas condiciones.
+
+Para el estudio completo, en cuanto a los cuatro primeros algoritmos se utilizarán nuevamente los parámetros especificados en las \textbf{tablas anteriores}. Con el fin de obtener \textbf{mediciones más representativas} de las capacidades de cada técnica, cada algoritmo se ejecutará \textbf{10 veces} sobre cada uno de los \textbf{6 problemas} D4, D4N, D12, D12N, D19 y D19N. Para garantizar que los experimentos sean repetibles, se utilizará un conjunto de \textbf{10 valores de semillas aleatorias} que fijarán, para cada algoritmo y problema, un punto de partida distinto entre ejecuciones de un mismo problema. 
+
+La utilización de DG2 en esta fase de experimentación está supeditada a los resultados del estudio de escalabilidad, por lo que de ser satisfactorios, se procederá a realizar una hibridación de esta técnica con el mejor de los algoritmos de la experimentación completa. Se mostrarán sus resultados en los mismos términos con los que se detallan en el estudio de escalabiliadad, para que el posterior análisis de los resultados de esta fase sean comparables con los del estudio de escalabilidad anterior.
+
+Cabe destacar que para los cuartro algoritmos, \textbf{MOS2011}, \textbf{MOS2013}, \textbf{SHADEILS} y \textbf{DG2}, la experimentación se realizará utilizando el clúster \textbf{Hercules}, que tiene la configuración expresada en la tabla \ref{tabla:Hercules}, mientras que para el algorimto \textbf{MLSHADE-SPA}, se utilizará el portátil del alumno, que posee unas características similares al del clúster en cuanto a recursos; se detallan sus especificaciones en la tabla \ref{tabla:PortatilAlumno}.
+
+\begin{table}[H]
+	\centering
+	\resizebox{\textwidth}{!}{
+		$\begin{tabular}{ *{2}{c}| *{2}{c} }
+		\toprule
+		\textbf{Especificaciones}. & \textbf{Valor} & \textbf{Especificaciones}. & \textbf{Valor} \\
+		\midrule
+		\textbf{Nodos} &  46 &	\textbf{S.O} & Ubuntu 18.04.1 LTS\\ 
+		 \textbf{Procesador} & Intel Core i7 930 2.8 GHz  & \textbf{RAM} & 24GB \\ 
+		\bottomrule
+		\end{tabular}$
+	}\caption{Especificaciones del Clúster Hercules}\label{tabla:Hercules}
+\end{table}
+
+	\begin{table}[H]
+		\centering
+		\resizebox{\textwidth}{!}{
+			$\begin{tabular}{ *{2}{c}| *{2}{c} }
+			\toprule
+			\textbf{Especificaciones}. & \textbf{Valor} & \textbf{Especificaciones}. & \textbf{Valor} \\
+			\midrule
+			\textbf{Nodo} &  MacBook Pro (2012)  &	\textbf{S.O} & MacOS HighSierra 10.13.6 \\ 
+			\textbf{Procesador} & Intel Core i7 2.9 GHz  & \textbf{RAM} & 16GB \\ 
+			\bottomrule
+			\end{tabular}$
+		}\caption{Especificaciones del portátil del alumno}\label{tabla:PortatilAlumno}
+	\end{table}
+
+Finalmente, se realizará un acopio de todos estos datos y se presentarán en forma de tablas que incluyan mediciones relevantes como los valores \textbf{mínimos} y \textbf{máximos} de fitness obtenido, así como una media de los 10 experimentos para cada problema y, naturalmente, el \textbf{tiempo medio} empleado para resolver el mismo. También se proporcionarán \textbf{gráficas de convergencia} que permitan identificar hasta qué punto cada técnica es capaz de responder con suficiente precisión sin dejar de lado las restricciones temporales inherentes al problema.
+
+
+
+
+
+

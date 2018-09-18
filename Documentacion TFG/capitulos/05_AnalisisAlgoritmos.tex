@@ -1,43 +1,40 @@
-\chapter{Análisis de las Propuestas: Algoritmos LSGO}\label{Analisis}
+\chapter{Análisis de las Propuestas: Algoritmos LSGO}\label{cap:Analisis}
 
-La finalidad de esta sección consiste en dar respuesta a las tareas \ref{tarea3} y \ref{tarea4} planteadas en el capítulo anterior donde se propone, principalmente, \textbf{analizar de forma exhaustiva los distintos algoritmo}s seleccionados como fuente de estudio en este trabajo. 
+La finalidad de esta sección consiste en dar respuesta a las tareas \ref{tarea3} y \ref{tarea4} planteadas en el capítulo \ref{cap:Requisitos} donde se propone, principalmente, \textbf{analizar de forma exhaustiva los distintos algoritmos} seleccionados como fuente de estudio en este trabajo. 
 
 El análisis está organizado de forma que se expongan todos los aspectos relevantes del algoritmo en cuestión tales como la \textbf{representación matemática} de su composición, \textbf{estructura interna} de la técnica, \textbf{elementos esenciales}, características particulares de la \textbf{implementación}, así como de la motivación para su \textbf{elección}, que estará basada esencialmente en los elementos anteriores, y en general, cualquier detalle significativo que aporte información relevante para este trabajo.
 
-Posteriormente, el proceso de \textbf{adaptación de las técnicas} al problema del EEG será cubierto tanto a \textbf{nivel global}, donde se repasarán \textbf{aspectos fundamentales de la propuesta de problema} relacionados con la representación e implementación en código fuente, como a \textbf{nivel local} donde se recogen las singularidades que implica realizar cada adaptación por separado.
+Al término de este capítulo se habrán completado las tareas necesarias para iniciar el proceso de \textbf{adaptación de las técnicas} al problema del EEG, donde se repasarán \textbf{aspectos fundamentales de la propuesta de problema} relacionados con la representación e implementación en código fuente y que sentará las bases del  \textbf{proceso experimental} que finalmente conduzca a la generación de resultados, que serán en última instancia evaluados e interpretados y conformarán la base de las conclusiones pertinentes.
 
-Al término de este capítulo se habrán completado las tareas necesarias para iniciar el proceso de experimentación que finalmente conduzca a la generación de resultados, que serán en última instancia evaluados e interpretados y conformarán la base de las conclusiones pertinentes.
+\section{Multiple Offspring Sampling (2011)}
 
-\section{Algoritmos LSGO: MOS 2011}
-La primera propuesta elegida para este estudio es la conocida como \textbf{MOS2010}, dado que fue formulada en ese año y utilizada en la posterior competición del CEC 2011\cite{ComprehensiveComparison}. La publicación en la revista Springer Verlag llega bajo el nombre de \textbf{\textit{A MOS-based dynamic memetic differential evolution algorithm for continuous optimization: a scalability test}} \cite{MOS2010}.
+La primera propuesta elegida para este estudio es la conocida como \textbf{MOS2010}, dado que fue formulada en ese año y utilizada en la posterior competición del CEC 2011\cite{ComprehensiveComparison}. La publicación llega bajo el nombre de \textbf{\textit{A MOS-based dynamic memetic differential evolution algorithm for continuous optimization: a scalability test}} \cite{MOS2010}.
 
-A grandes rasgos, en la publicación se propone un innovador \textbf{algoritmo memético híbrido} que a través del framework MOS (Multiple Offspring Sampling) \textbf{combina distintas estrategias de búsqueda} con el objetivo de alcanzar un balance exploración-explotación óptimo, en concreto, dos técnicas heurísticas que aplicadas por separado han mostrado resultados altamente competitivos.
+A grandes rasgos, en la publicación se propone un innovador \textbf{algoritmo memético híbrido} que a través del framework MOS (Multiple Offspring Sampling)\cite{MOS-Framework} \textbf{combina distintas estrategias de búsqueda} con el objetivo de alcanzar un balance exploración-explotación óptimo, en concreto, dos técnicas heurísticas que aplicadas por separado han mostrado resultados altamente competitivos.
 
-La elección de este algoritmo como primer candidato está motivada por las siguientes razones: es la \textbf{primera formulación de MOS} que se propone para la competición del SOCO 2011, donde su diseño es totalmente innovador y se rige por las exigencias típicas de problemas de Big Optimization, esto es, que contempla los casos extremos en cuanto a convergencia de la población como se revisará posteriormente. Además, fue la técnica ganadora de esta edición, superando a otras que a pesar de utilizar algoritmos de evolución diferencial (DE), no consiguieron superar el rendimiento de MOS, y dónde algunas de estas técnicas eran estructuralmente más complejas.
+La elección de este algoritmo como primer candidato está motivada por las siguientes razones: es la \textbf{primera formulación de MOS} que se propone para la conferencia del \textbf{SOCO 2011}, donde su diseño totalmente innovador se rige por las exigencias típicas de problemas de Big Optimization. Además, fue la técnica ganadora de esta edición, superando a otras que a pesar de utilizar algoritmos de evolución diferencial (DE), no consiguieron superar el rendimiento de MOS, y dónde algunas de estas técnicas eran estructuralmente más complejas.
 
-La incorporación de la búsqueda local \textbf{MTS-LS1} ha sido otro de los principales motivos de su elección; tras la primera \textit{Special Session on Large-Scale Global Optimization} de 2008, el algoritmo MTS fue el que obtuvo mejores resultados para problemas de alta dimensionalidad, por lo que su uso en este algoritmo híbrido presenta una ventaja sustancial de partida frente a otras técnicas dada las capacidades de exploración que MTS añade durante el proceso de explotación.
+La incorporación de la búsqueda local \textbf{MTS-LS1} de \cite{MTS-LSGO} ha sido otro de los principales motivos de su elección; tras la primera \textit{Special Session on Large-Scale Global Optimization} de 2008, el algoritmo MTS fue el que obtuvo mejores resultados para problemas de alta dimensionalidad, por lo que su uso en este algoritmo híbrido presenta una ventaja sustancial de partida frente a otras técnicas dada las capacidades de exploración que MTS añade durante el proceso de explotación.
 
-Finalmente, MOS2011 \textbf{sentó la base del algoritmo} que durante los últimos 5 años ha ostentado el título de \textit{state-of-the-art algorithm} en problemas LSGO, donde la formulación matemática subyacente relacionada con la \textbf{calidad de las soluciones} y la \textbf{participación} de cada técnica en el proceso tienen un rol fundamental, dado que estas contemplan dos tipos de mediciones que implican que cada técnica no solo debe mejorar sustancialmente las soluciones, sino además un buen porcentaje de éstas, lo que otorga más capacidad de respuesta ante el problema del estancamiento. Revisada la motivación de la elección, una descripción detallada de todo el algoritmo se expone a continuación.
+Finalmente, MOS2011 \textbf{sentó la base del algoritmo} que durante los últimos 5 años ha sido considerado como \textit{state-of-the-art} en problemas LSGO, donde la formulación matemática subyacente relacionada con la \textbf{calidad de las soluciones} y la \textbf{participación} de cada técnica en el proceso tienen un rol fundamental, dado que estas contemplan dos tipos de mediciones que implican que cada técnica no solo debe mejorar sustancialmente las soluciones, sino además un buen porcentaje de éstas, lo que otorga más capacidad de respuesta ante el problema del estancamiento. Revisada la motivación de la elección, una descripción detallada de todo el algoritmo se expone a continuación.
 
-\subsection{Propuesta del algoritmo: Multiple Offspring Sampling}
-
-El algoritmo enunciado propone dar solución al inconveninete que surge del aumento de la dimensionalidad sobre un problema, incluso cuando la naturaleza del mismo no cambia. Es aquí donde entra en juego el framework MOS, que permite combinar dos potentes técnicas: un algoritmo de e\textbf{volución diferencial (DE)} y la primera de las \textbf{búsquedas locales} (LS) del algoritmo MTS, la conocida como \textbf{MTS-LS1}\cite{MTS-LSGO}.
+El algoritmo enunciado propone dar solución al inconveniente que surge del aumento de la dimensionalidad sobre un problema, incluso cuando la naturaleza del mismo no cambia. Es aquí donde entra en juego el framework MOS, que permite combinar dos potentes técnicas: un algoritmo de \textbf{evolución diferencial (DE)} y la primera de las \textbf{búsquedas locales} (LS) del algoritmo MTS, la conocida como \textbf{MTS-LS1}\cite{MTS-LSGO}.
 
 Este framework permite combinar distintas metaheurísticas siguiendo distintos tipos de enfoque, donde ha sido el \textbf{HRH} (High-level Relay Hybrid) el que se ha elegido; mediante esta perspectiva en particular, se \textbf{ajusta de forma dinámica} el número de \textbf{evaluaciones de la función objetivo} que cada algoritmo puede realizar. Para comprender la naturaleza de este enfoque es imprescindible conocer el origen de la terminología y de los demás enfoques.
 
-En el artículo \textbf{\textit{A taxonomy of hybrid metaheuristics (2002)}	}\cite{TaxonomyEAs} se propone una taxonomía de los algortimos híbridos, con el fin de establecer una terminología común a estos mecanismos, donde se combinan \textbf{esquemas jerárquicos}, para reducir la cantidad de clases, y \textbf{planos}, para cuando las clases que definen cada algoritmo se eligen de forma arbitraria. De esta taxonomía surgen 4 tipos de estrategias principales que detallamos a continuación:
+En el artículo \textbf{\textit{A taxonomy of hybrid metaheuristics (2002)}	}\cite{TaxonomyEAs} se propone una taxonomía de los algoritmos híbridos, con el fin de establecer una terminología común a estos mecanismos, donde se combinan \textbf{esquemas jerárquicos}, para reducir la cantidad de clases, y \textbf{planos}, para cuando las clases que definen cada algoritmo se eligen de forma arbitraria. De esta taxonomía surgen 4 tipos de estrategias principales que detallamos a continuación:
 
 \begin{enumerate}
 	\item \textbf{LRH - Low-level Relay Hybrid}: una técnica metaheurística se incrusta en otra de \textbf{una sola solución}. Algoritmos de Simmulated Annealing (SA) combinados con LS son ejemplos de este enfoque.
 	
-	\item \textbf{LTH - Low-level Teamwork Hybrid}: la técnica es \textbf{incrustada en otra metaheuristica basada en poblaciones}. Un claro ejemplo de este tipo de enfoques es un algoritmo memético básico: GA con una LS.
+	\item \textbf{LTH - Low-level Teamwork Hybrid}: la técnica es \textbf{incrustada en otra metaheuristica basada en poblaciones}. Un claro ejemplo de este tipo de enfoques es un algoritmo genético \textbf{GA} cuyo operador de mutación o cruce introduzca comportamientos que aumenten la capacidad de explotación del algoritmo.
 	
-	\item \textbf{HRH - High-level Relay Hybrid}: este enfoque ejecuta las metaheurísticas de \textbf{forma secuencial}, una a continuación de la otra. Es el enfoque elegido en esta propuesta.
+	\item \textbf{HRH - High-level Relay Hybrid}: este enfoque ejecuta las metaheurísticas de \textbf{forma secuencial}, una a continuación de la otra. Es el enfoque elegido en esta propuesta, por lo que se requiere un mecanismo de control para organizar las técnicas y su ejecución.
 	
 	\item \textbf{HTH - High-level Teamwork Hybrid}: distintas técnicas son ejecutadas en paralelo, donde cada una se sirve de la información de las demás, cooperando en conjunto para encontrar soluciones óptimas. Aquí se pueden mencionar las técnicas basadas en CC (Cooperative Co-evolution).
 \end{enumerate}
 
-La técnica que se propone en esta publicación se basa en la hibridación de distintas técnicas a lo largo de los últimos años, donde los algoritmos de evolución diferencial (DE) han sido los más utilizados. De forma complementaria, el algoritmo MTS\cite{MTS-LSGO} fue capaz de resolver problemas de hasta 1000 variables en el CEC 2008, razón por la cual se presenta como integrante de esta propuesta en particular. Así, el algoritmo DE dejaría lugar a que la LS encontrase regiones mas prometedoras a la vez que se reducen las evaluaciones a la función objetivo y por otra parte, la propia búsqueda local intentaría paliar los efectos del estancamiento en este tipo de algoritmos.
+La técnica que se propone en esta publicación se basa en la hibridación de distintas técnicas, donde los algoritmos de evolución diferencial (DE) han sido los más utilizados a lo largo de los años. De forma complementaria, el algoritmo MTS\cite{MTS-LSGO} fue capaz de resolver problemas de hasta 1000 variables en el CEC 2008, valiéndose de \textbf{tres poderosas búsqueda locales}, razón por la cual se presenta como integrante de esta propuesta en particular. Así, el algoritmo DE dejaría lugar a que la LS encontrase regiones mas prometedoras a la vez que se reducen las evaluaciones a la función objetivo y por otra parte, la propia búsqueda local intentaría paliar los efectos del estancamiento en este tipo de algoritmos.
 
 En esta propuesta en particular, el término \textbf{técnica de descendencia} hace referencia a \textbf{cualquier mecanismo para crear soluciones candidatas}, donde además son necesarios otros cuatro elementos: un modelo de algoritmo evolutivo en particular, una codificación de las soluciones, operadores específicos y parámetros necesarios. 
 
@@ -48,7 +45,7 @@ Esta característica implica que se pueden utilizar de \textbf{forma simultánea
 	\item \textbf{Funciones de Participación}: asigna la cantidad de descendientes que genera cada técnica en función de la calidad de las soluciones.
 \end{itemize}
 
-El autor de la propuesta considera dos tipos de algoritmos según la taxonomía formulada en \cite{TaxonomyEAs}, estos son, HTH y HRH, sin embargo, se opta finalmente por el algoritmo de tipo \textbf{HRH}. En este tipo de algoritmos, las técnicas elegidas, en nuestro caso DE y MTS-LS1, son aplicadas en secuencia una a continuación de la otra, y cada una de cierta forma reutiliza la población resultante de la anterior. Este enfoque es más adecuado debido a que se utiliza en este caso una técnica no poblacional, como lo es la búsqueda local en cuestión.
+El autor de la propuesta considera dos tipos de algoritmos según la taxonomía formulada en \cite{TaxonomyEAs}, estos son, HTH y HRH, sin embargo, se opta finalmente por el algoritmo de tipo \textbf{HRH}. En este tipo de algoritmos, las técnicas elegidas, en nuestro caso DE y MTS-LS1, son aplicadas en secuencia una a continuación de la otra, y cada una de cierta forma reutiliza la población resultante de la anterior. Este enfoque es más adecuado debido a que se utiliza en este caso una técnica no poblacional, como es la búsqueda local en cuestión.
 
 El proceso de búsqueda se establece al principio de la ejecución, dividiendo el mismo en un \textbf{número fijo de pasos}. A cada paso se le asigna un número \textbf{fijo} de evaluaciones de la función objetivo, que son administradas de forma interna por cada técnica a través de la \textbf{función de participación} de la misma. De forma aclaratoria se expone el pseudocódigo de la propuesta HRH y se remite al lector a \cite{MOS2010} si se quiere profundizar en la propuesta HTH.
 
@@ -72,7 +69,7 @@ El proceso de búsqueda se establece al principio de la ejecución, dividiendo e
 	\caption{: HRH MOS } \label{Alg: MOS HRH}
 \end{algorithm}
 
-Como se puede observar, la participación de cada técnica depende de una función de calidad que toma en consideración dos características necesarias: el \textbf{incremento medio del fitness} de los individuos tras la evaluación y el \textbf{número de veces} que se ha producido esta mejora. Se representa en la siguiente ecuación:
+Como se puede observar, la participación de cada técnica depende de una función de calidad $Q$ que toma en consideración dos características: el \textbf{incremento medio del fitness} de los individuos tras la evaluación y el \textbf{número de veces} que se ha producido esta mejora. Se representa en la siguiente ecuación:
 
 \begin{equation}\label{eq:QF_MOS}
 	\begin{gathered}
@@ -89,9 +86,9 @@ $Q_i^{(j)} \equiv$ Calidad de la técnica $T^{(j)}$ en el paso $i$\\
 $\Sigma_i^{(j)} \equiv$ Incremento medio del fitness de $T^{(j)}$ en el paso $i$\\
 $\Gamma_i^{(j)} \equiv$ Num. de mejoras de fitness de $T^{(j)}$ en el paso $i$	
 
-En esta función de calidad $QF$ se utiliza $\Sigma_{i}^{(j)}$ si y sólo si hay consenso entre el incremento medio de fitness y el número de mejoras de una técnica a otra. En caso contrario se usa solo el número de incrementos del fitness. Esto es así debido a que una técnica que no este explorando el espacio de soluciones de forma adecuada, puede introducir grandes mejoras en el fitness, lo que puede no ser representativo. Estas acciones se penalizan en favor de comportamientos más adecuados, tales como mejoras relativamente pequeñas sobre buenos individuos de la población.
+En esta función de calidad $Q$ se utiliza $\Sigma_{i}^{(j)}$ si y sólo si hay consenso entre el incremento medio de fitness y el número de mejoras de una técnica a otra. En caso contrario se usa solo el número de incrementos del fitness. Esto es así debido a que una técnica que no este explorando el espacio de soluciones de forma adecuada, puede introducir grandes mejoras en el fitness, lo que puede no ser representativo. Estas acciones se penalizan en favor de comportamientos más adecuados, tales como mejoras relativamente pequeñas sobre buenos individuos de la población.
 
-Una \textbf{función de participación dinámica} utiliza estos $QFs$ para ajustar el número de evaluaciones de la función objetivo asignado a cada técnica en cada paso. La función de participación $PF$ calcula, para cada paso del algoritmo, un \textbf{factor de compensación} $\Delta_i^{(j)}$ para cada técnica, lo que representa el decrecimiento de participación para cada técnica excepto para la mejor. Cada técnica aumentará su participación en proporción al cociente $\frac{\Sigma \Delta_{i}^{(j)}}{nº tecnicas}$. La $PF$ se describe en la siguiente ecuación:
+Una \textbf{función de participación dinámica} utiliza estos valores de $Q$ para ajustar el número de evaluaciones de la función objetivo asignado a cada técnica en cada paso. La función de participación $PF$ calcula, para cada paso del algoritmo, un \textbf{factor de compensación} $\Delta_i^{(j)}$ para cada técnica, lo que representa el decrecimiento de participación para cada técnica excepto para la mejor. Cada una aumentará su participación en proporción al cociente $\frac{\Sigma \Delta_{i}^{(j)}}{nº tecnicas}$. La $PF$ se describe en la siguiente ecuación:
 
 \begin{equation}\label{eq:PF_MOS}
 	\begin{gathered}
@@ -121,51 +118,47 @@ En resumen, MOS2011 es una \textbf{técnica memética híbrida de clase HRH} que
 
 Cabe destacar que se puede establecer un \textbf{ratio mínimo de participación} de forma que una técnica siempre contribuya a la convergencia del algoritmo. Si se diese el caso de que toda la población converge en un mismo punto del espacio de soluciones, la mejor de las soluciones se guarda y el resto de la población se reinicia de manera uniforme. Estas son las principales características \textbf{MOS2011}, primera técnica candidata de estudio en este trabajo.
 
-\section{Algoritmos LSGO: MOS2013}
+\section{Multiple Offspring Sampling (2013)}
 
-La segunda de las técnicas seleccionadas para estudiar en este trabajo se trata de una muy similar a la anterior pero con cambios lo suficientemente sustanciales como para superar en rendimiento a su antecesora. La propuesta publicada en el \textbf{2013 IEEE Congress on Evolutionary Computation} que lleva por nombre \textbf{\textit{Large Scale Global Optimization: Experimental Results with MOS-based Hybrid Algorithms} (2013)}\cite{MOS2013} está catalogado desde ese año como el \textbf{estado del arte} en cuanto a algoritmos de LSGO.
+La segunda de las técnicas seleccionadas para estudiar en este trabajo se trata de una muy similar a la anterior pero con cambios lo suficientemente sustanciales como para superar en rendimiento a su antecesora. La propuesta publicada en el \textbf{2013 IEEE Congress on Evolutionary Computation} que lleva por nombre \textbf{\textit{Large Scale Global Optimization: Experimental Results with MOS-based Hybrid Algorithms} (2013)}\cite{MOS2013} ha sido considerado desde ese año como el estado del arte en cuanto a algoritmos de LSGO.
 
 Basado nuevamente en el framework MOS, la creación de este algoritmo memético híbrido pasa previamente por una etapa de estudio intensivo donde se ponen a prueba \textbf{ocho técnicas de optimización} sobre las que se realiza una estimación de parámetros lo más precisa posible, donde finalmente aquellas que mejores resultados arrojen serán las que se incluirán como agentes en esta propuesta.
 
-Las ocho técnicas de partida en este estudio suponen la principal razón que ha motivado la elección de este algoritmo para este trabajo, y son: un algoritmo genético (\textbf{GA}), un algoritmo de evolución diferencial (\textbf{DE}\cite{DE}), \textbf{SaDE}\cite{SaDE} (Self-Adaptive DE), \textbf{GODE}\cite{GODE} (Generalized Opposition-based DE), \textbf{SaGODE} (como combinación de las dos anteriores y propuesto únicamente para este estudio) y las búsquedas locales \textbf{Solis Wets}\cite{SolisWets}, MTS-LS1 y MTS-LS1-Reduced, estas dos últimas diseñadas a partir de \cite{MTS-LSGO} especificamente para este estudio. 
+Las ocho técnicas de partida en este estudio suponen la principal razón que ha motivado la elección de este algoritmo para este trabajo, y son: un algoritmo genético (\textbf{GA}), un algoritmo de evolución diferencial (\textbf{DE}\cite{DE}), \textbf{SaDE}\cite{SaDE} (Self-Adaptive DE), \textbf{GODE}\cite{GODE} (Generalized Opposition-based DE), \textbf{SaGODE} (como combinación de las dos anteriores y propuesto únicamente para este estudio) y las búsquedas locales \textbf{Solis Wets}\cite{SolisWets}, MTS-LS1 y MTS-LS1-Reduced, estas dos últimas diseñadas a partir de \cite{MTS-LSGO} específicamente para este estudio. 
 
 Si se quiere conocer los parámetros de cada técnica en concreto y los valores de los mismos tras el proceso de estimación de parámetros, se remite al lector a \cite{MOS2013}. En esta propuesta en concreto, tras los pertinentes estudios de estimación de parámetros, han sido elegidas tres técnicas para formar el algoritmo memético híbrido basado en el framework MOS, nuevamente con taxonomía HRH\cite{TaxonomyEAs}: GA, Solis Wets y MTS-LS1-Reduced. 
 
 Elegir este algoritmo como candidato para el estudio \textbf{frente a otras alternativas} se hace indispensable debido al propio estudio que se realiza en la publicación, previo a la elección de los componentes del algoritmo, donde se \textbf{descartan las técnicas menos prometedoras} en función de un sistema de puntos que utiliza el autor. Por tanto, técnicas como SaDE o GaDE quedan descartadas por su bajo rendimiento en este trabajo, al igual que CC-CMA-ES puesto que no consigue acercarse a los resultados de MOS2013, o IHDELS, que aun tras quedar en segundo puesto en el CEC2015, no consiguió acercarse a los resultados que esta hibridación era capaz de ofrecer.
 
-Como ya ocurrió con MOS2011, una propuesta que permita \textbf{ejecutar varias técnicas en secuencia} a través del enfoque \textbf{MOS HRH}, obtiene \textbf{mejores resultados que las técnicas por separado}, por lo que cualquier otra que no haya sido finalmente utilizada para formar parte de esta hibridación memética, también se puede descartar sin pérdida alguna de generalidad. Esta idea se ve reforzada por el hecho de que esta propuesta, \textbf{MOS2013}, se ha mantenido en la cima desde los últimos cinco años, sin que ninguna técnica reciente o anterior haya conseguido superar su gran potencia y robustez.
-
-\subsection{Propuesta del Algoritmo: MOS 2013}
+Como ya ocurrió con MOS2011, una propuesta que permita \textbf{ejecutar varias técnicas en secuencia} a través del enfoque \textbf{MOS HRH}, obtiene \textbf{mejores resultados que las técnicas por separado}, por lo que cualquier otra que no haya sido finalmente utilizada para formar parte de esta hibridación memética, también se puede descartar sin pérdida alguna de generalidad. Esta idea se ve reforzada por el hecho de que esta propuesta, \textbf{MOS2013}, se ha mantenido en la cima desde los últimos cinco años, sin que ninguna técnica de años anteriores haya conseguido superar su gran potencia y robustez.
 
 A pesar de que la publicación no destaca importantes cambios con respecto a su predecesor en cuanto al funcionamiento interno, derivado de las funciones de calidad y participación, si que remarca algunos aspectos de implementación que, a primera vista, le otorgan un mejor balance exploración-explotación, y por ende un rendimiento superior frente a otras técnicas.
 
 La modificación que se realiza sobre la MTS-LS1, diseñada específicamente para este estudio, transforma la misma en lo que el autor denomina \textbf{MTS-LS1-Reduced}. Se dice \textit{reducida} porque intenta optimizar al máximo el número de evaluaciones que le corresponden. En vez de realizar la exploración sobre la totalidad de las dimensiones, lo que hace es optimizar \textbf{las regiones (variables) más prometedoras}. 
 
-Para ello, en cada paso del algoritmo se almacena, para cada dimensión, la \textbf{mejora de la calidad de la solución} conseguida al explorar esa variable. Esta información es la que guía el proceso de exploración en el siguiente paso, sirviéndose de dos variables porcentuales para determinar cúantas dimensiones serán exploradas en el siguiente paso: uno indica el porcentaje de \textbf{variables mejoradas a explorar} y otro, el porcentaje \textbf{mínimo del resto de variables} que serán seleccionadas de forma aleatoria para ser optimizadas, de forma que se eviten estancamientos o comportamientos que conduzcan a una sobreexplotación del espacio de soluciones.
+Para ello, en cada paso del algoritmo se almacena, para cada dimensión, la \textbf{mejora de la calidad de la solución} conseguida al explorar esa variable. Esta información es la que guía el proceso de exploración en el siguiente paso, sirviéndose de dos variables porcentuales para determinar cuántas dimensiones serán exploradas en el siguiente paso: uno indica el porcentaje de \textbf{variables mejoradas a explorar} y otro, el porcentaje \textbf{mínimo del resto de variables} que serán seleccionadas de forma aleatoria para ser optimizadas, de forma que se eviten estancamientos o comportamientos que conduzcan a una sobreexplotación del espacio de soluciones.
 
 Nuevamente, cada uno de los algoritmos de la propuesta aporta sus soluciones particulares siguiendo una \textbf{función de participación}, que basa su funcionamiento en una \textbf{función de calidad}, tal y como lo hacía su sucesor MOS2011. En MOS2013, se han utilizado las mismas funciones, tanto de calidad como de participación, las cuales aparecen respectivamente en las ecuaciones \ref{eq:QF_MOS} y \ref{eq:PF_MOS}. El cálculo del factor de compensación en la función de participación sigue la misma ecuación descrita en \ref{eq:RatioCompensacion}.
 
 Finalmente, los algoritmos que forman parte de la propuesta de MOS 2013 se rigen por dos variables principales: el \textbf{ratio de participación mínimo} que se confiere a cada técnica, que es de un 20\%, lo que quiere decir que una técnica no puede ejecutar menos de ese \textbf{porcentaje de las evaluaciones} durante el paso \textit{i-ésimo}. La \textbf{cantidad de evaluaciones de cada paso}, la segunda variable, tiene un valor de 36000. 
 
-En el algoritmo \ref{Alg: MOS HRH} se detalla con claridad el pseudocódigo de la propuesta de algoritmo \textbf{MOS HRH}, donde se pueden ver, tras la explicación de la propuesta \textbf{MOS2013}, que los cambios introducidos frente a su antecesor incurren principalmente en la \textbf{variedad de técnicas} elegidas para ejecutarse de forma secuencial a través del enfoque HRH y las \textbf{variables} que rigen el tamaño de cada paso del algoritmo y la participación mínima.
+En el algoritmo \ref{Alg: MOS HRH} se detalla con claridad el pseudocódigo de la propuesta de algoritmo \textbf{MOS HRH}, donde se pueden ver, tras la explicación de la propuesta \textbf{MOS2013}, que los cambios introducidos frente a su antecesor incurren principalmente en la \textbf{variedad de técnicas} elegidas para ejecutarse de forma secuencial a través del enfoque HRH y las \textbf{variables} que rigen el tamaño de cada paso del algoritmo, así como la participación mínima de cada subtécnica en el proceso de optimización.
 
-Este hecho refuerza la decisión de elegir este algoritmo para formar parte de este trabajo, dado que aparte de suponer el estado del arte durante los últimos cinco años, se requiere comprobar si realmente existe una \textbf{mejora sustancial} frente al algoritmo \textbf{MOS2011} que catapulte los resultados a nivel de eficacia y eficiencia de la actual propuesta. A continuación, se enuncia la tercera propuesta a estudiar en este trabajo.
+Este hecho refuerza la decisión de elegir este algoritmo para formar parte de este trabajo, dado que aparte de mantenerse en la cima durante los últimos cinco años, se requiere comprobar si realmente existe una \textbf{mejora sustancial} frente al algoritmo \textbf{MOS2011} que catapulte los resultados a nivel de eficacia y eficiencia de la actual propuesta. A continuación, se enuncia la tercera propuesta a estudiar en este trabajo.
 
-\section{Algoritmos LSGO: SHADEILS}
+\section{SHADEILS}
 
-La tercera propuesta elegida para estudiar en este trabajo se trata de un algoritmo muy reciente, presentado en la \textbf{IEEE WCCI 2018: Special Session and Competition on Large-Scale Global Optimization}\cite{WCCI-SHADEILS}, donde se busca dar una solución sencilla pero eficaz al problema de la dimensionalidad y al aumento de la complejidad del espacio de soluciones que esta produce. Así es \textbf{\textit{SHADE with Iterative Local Search for Large-Scale Global Optimization}}\cite{SHADEILS} (SHADEILS), el algoritmo que obtiene el título de \textbf{estado del arte} a partir de este año, arrebatándole el puesto a un MOS que llevaba ganando desde 2011 y considerado estado del arte desde 2013.
+La tercera propuesta elegida para estudiar en este trabajo se trata de un algoritmo muy reciente, presentado en la \textbf{IEEE WCCI 2018: Special Session and Competition on Large-Scale Global Optimization}\cite{WCCI-SHADEILS}, donde se busca dar una solución sencilla pero eficaz al problema de la dimensionalidad y al aumento de la complejidad del espacio de soluciones que esta produce. Así es \textbf{\textit{SHADE with Iterative Local Search for Large-Scale Global Optimization}}\cite{SHADEILS} (SHADEILS), el algoritmo que se puede considerar actualmente como el \textbf{estado del arte} a partir de este año, arrebatándole el puesto a un MOS que llevaba ganando desde 2011 y considerado estado del arte desde 2013.
 
-Se trata de una evolución sustancialmente más sencilla y completa que su antecesor, propuesto para el CEC2015 \textbf{\textit{Iterative hybridization of DE with local search for the CEC'2015, special session on large scale global optimization}}\cite{IHDELS}. Este algoritmo entra en la categoría de \textbf{meméticos}, dado que combina de forma iterativa un algoritmo evolutivo como lo es el SHADE\cite{SHADE} y una búsqueda local de entre dos posibles candidatas, MTS-LS1\cite{MTS-LSGO} y L-BFGS-B\cite{LBFGSB}, que son además complementarias. Durante este proceso iterativo, a diferencia de otras técnicas de agrupación de variables, se exploran \textbf{todas las dimensiones a la vez}. Son tres las diferencias principales con su predecesor: el mecanismo mejorado de \textbf{selección de la búsqueda local} a aplicar, el renovado \textbf{mecanismo de reinicio de población} y la decisión de utilizar SHADE frente a SaDE\cite{SaDE}.
+Se trata de una evolución sustancialmente más sencilla y completa que su antecesor, propuesto para el CEC2015 \textbf{\textit{Iterative hybridization of DE with local search for the CEC'2015, special session on large scale global optimization}}(IHDELS)\cite{IHDELS}. Este algoritmo entra en la categoría de \textbf{meméticos}, dado que combina de forma iterativa un algoritmo evolutivo como lo es el SHADE\cite{SHADE} y una búsqueda local de entre dos posibles candidatas, MTS-LS1\cite{MTS-LSGO} y L-BFGS-B\cite{LBFGSB}, que son además complementarias. Durante este proceso iterativo, a diferencia de otras técnicas de agrupación de variables, se exploran \textbf{todas las dimensiones a la vez}. Son tres las diferencias principales con su predecesor: el mecanismo mejorado de \textbf{selección de la búsqueda local} a aplicar, el renovado \textbf{mecanismo de reinicio de población} y la decisión de utilizar SHADE frente a SaDE\cite{SaDE}.
 
-El hecho de seleccionar esta reciente propuesta, diseñada y evaluada hace apenas unos pocos meses, se basa en gran medida en una recomendación explícita del tutor de este Trabajo Fin de Grado, quien es además uno de los autores de la propuesta, principalmente por la \textbf{imposibilidad de IHDELS de vencer a MOS} en 2015, por lo que se requeriría de una renovación más adecuada si se querría acabar con el reinado de MOS; por tanto, todo los algoritmos basados en SaDE serían \textbf{poco útiles} en este estudio, donde se busca una propuesta lo más robusta, eficaz y eficiente posible.
+El hecho de seleccionar esta reciente propuesta, diseñada y evaluada hace apenas unos pocos meses, esta motivada por una recomendación del tutor de este Trabajo Fin de Grado. Además, tras analizar la técnica predecesora, se hace latente la \textbf{imposibilidad de IHDELS de vencer a MOS} en 2015, por lo que se requeriría de una renovación más adecuada pero sobretodo con mejor capacidad de adaptación y, porque no, más sencilla. Por tanto, todos los algoritmos basados en SaDE serían \textbf{poco útiles} en este estudio, donde se busca una propuesta lo más robusta, eficaz y eficiente posible.
 
-Los elementos principales que se destacan al inicio de la propuesta hacen que aumente el interés por ésta de forma inmediata: el combinar dos búsqueda locales, una \textbf{rápida pero sensible a las rotaciones} del espacio de coordenadas y otra \textbf{más lenta pero muy robusta y sin sensibilidad alguna} a las rotaciones, y que además posee un mecanismo de selección de la más adecuada según la \textit{historia} reciente de la \textbf{mejora en la calidad de soluciones}, tiene gran capacidad para hacer frente a la complejidad del espacio de soluciones pero sobre todo para intentar sobreponerse a las necesidades de eficiencia que se busca en este trabajo. 
+Los elementos principales que se destacan al inicio de la propuesta hacen que aumente el interés por esta de forma inmediata: el combinar dos búsqueda locales, una \textbf{rápida pero sensible a las rotaciones} del espacio de coordenadas y otra \textbf{más lenta pero muy robusta y sin sensibilidad alguna} a las rotaciones, y que además posee un \textbf{mecanismo de selección} de la más adecuada según la \textit{historia} reciente de la \textbf{mejora en la calidad de soluciones}, le confieren gran capacidad para hacer frente a la complejidad del espacio de soluciones pero sobre todo para intentar sobreponerse a las necesidades de eficiencia que se busca en este trabajo. 
 
 Como añadido, el renovado mecanismo de \textbf{reinicio de la población} contempla un pequeño umbral de mejora tras el que se reinicia la población cuando no se consigue superar este umbral tras 3 iteraciones consecutivas, lo que permite que el algoritmo siga \textbf{avanzando aunque los pasos sean pequeños}. Pero no solo la población se reinicia, sino que también lo hacen los \textbf{parámetros que rigen la aplicación de la LS}, lo que atribuye una mayor capacidad de exploración para la siguiente iteración, lo que resulta crucial para resolver problemas de estancamiento. A continuación, se procede a introducir el esquema general del algoritmo, prestando atención a las tres diferencias principales con IHDELS.
 
-\subsection{Propuesta del Algoritmo: SHADEILS}
-
-En este apartado se presenta el pseudocódigo general del algoritmo, donde se destacarán las tres partes principales que se resaltan en la publicación, que serán posteriormente extendidas en favor de una mejor comprensión y para reforzar las ideas que han motivado la decisión de utilizar este algoritmo para el estudio conducido.
+El primer paso para entender el algoritmo pasa por presentar el pseudocódigo general del mismo, donde se destacarán las tres partes principales que se resaltan en la publicación, que serán posteriormente extendidas en favor de una mejor comprensión y para reforzar las ideas que han motivado la decisión de utilizar este algoritmo para el estudio conducido.
 
 \begin{algorithm}[h]
 	\begin{algorithmic}[1]
@@ -196,7 +189,7 @@ En este apartado se presenta el pseudocódigo general del algoritmo, donde se de
 \end{algorithm}
 
 \begin{enumerate}
-	\item  \label{algSHADEILS:1} \textbf{Algoritmo de Exploracion SHADE}: este sencillo algoritmo de DE autoajusta sus parámetros (CR y F) \textbf{basándose en el concepto de \textit{historia}}\cite{SHADE}, manteniendo la población de una iteración a otra con lo que se \textbf{intensifica el proceso de exploración}, dejando lugar a las LS para ocupar la explotación. Con las versiones reducidas como L-SHADE, que reducen la población de forma lineal, se perdería la tan indispensable característica exploratoria del algoritmo.
+	\item  \label{algSHADEILS:1} \textbf{Algoritmo de Exploración SHADE}: este sencillo algoritmo de DE autoajusta sus parámetros (CR y F) \textbf{basándose en el concepto de \textit{historia}}\cite{SHADE}, una memoria de tamaño $k$ que contiene valores $F$ y $Cr$ que han generado individuos mejores tras el proceso de mutación.  Además, la población se mantiene de una iteración a otra con lo que se \textbf{intensifica el proceso de exploración}, dejando lugar a las LS para ocupar la explotación. Con las versiones reducidas como L-SHADE\cite{LSHADE}, que reducen la población de forma lineal, se perdería la característica exploratoria del algoritmo de la que se precisa en este ámbito y es por ello que se opta por SHADE frente a L-SHADE en esta propuesta.
 	
 	Cabe destacar las tres estrategias de SHADE, \textbf{mutación}, \textbf{cruce} y \textbf{selección}, donde cada una se desarrolla como sigue:
 	\begin{itemize}
@@ -207,9 +200,9 @@ En este apartado se presenta el pseudocódigo general del algoritmo, donde se de
 			\end{gathered}
 		\end{equation}
 		 
-		 donde $F_i$ se obtiene de forma aleatoria de una distribución normal de media $F_{meanK}$, $x_{pbest}$ es un individual aleatoriamente elegido de los $p$ mejores individuos, $x_{r1}$ es un individuo aleatorio de la población y $a_{r2}$ es un individuo aleatorio de la Poblacion $\cup$ A, donde A es un archivo poblacional externo con una series de \textbf{vectores padre} que han producido mejores \textbf{vectores soluciones}.
+		 donde $F_i$ se obtiene de forma aleatoria de una distribución normal de media $F_{meanK}$, $x_{pbest}$ es un solución elegido aleatoriamente de los $p$ mejores, $x_{r1}$ es un individuo aleatorio de la población y $a_{r2}$ es un individuo aleatorio de la Poblacion $\cup$ A, donde A es un archivo poblacional externo con una series de \textbf{vectores padre} que han producido mejores \textbf{vectores soluciones}\cite{SHADE}. 
 			
-		\item \textbf{Cruce}: donde la probabilidad de cruce \textit{CR} se obtiene al igual que F, de una distribución normal de media $CR_{meanK}$, siendo ésta una de las probabilidades de cruce \textit{alojadas en memoria} de forma interna por el algoritmo según un parámetro que se especifica al inicio del mismo, lo que añade más diversidad al algoritmo.
+		\item \textbf{Cruce}: donde la probabilidad de cruce \textit{CR} se obtiene al igual que F, de una distribución normal de media $CR_{meanK}$, siendo ésta una de las probabilidades de cruce \textit{alojadas en memoria} de forma interna por el algoritmo según un parámetro que se especifica al inicio del mismo, lo que añade más diversidad al algoritmo; se muestra en la siguiente ecuación.
 		
 		\begin{equation}\label{eq:CrossoverSH}
 			\begin{gathered}
@@ -220,10 +213,10 @@ En este apartado se presenta el pseudocódigo general del algoritmo, donde se de
 			\end{gathered}
 		\end{equation}
 		
-		\item \textbf{Selección}: el gen que se selecciona es $u_i$ si mejora $x_i^t$, o el mismo en caso contrario.
+		\item \textbf{Selección}: el gen que se selecciona es $u_i$ si mejora el valor fitness de $x_i^t$, o el mismo en caso contrario.
 	\end{itemize}
 
-	\item \label{algoSHADEILS:2}\textbf{Selección de la búsqueda local a aplicar}: la elección de qué LS ejecutar se basa en una primera ejecución de \textbf{ambas búsquedas locales}, tras las cuales se calcula un \textbf{ratio de mejora} de cada una con respecto a la mejor solución encontrada hasta el momento sigueindo la ecuación:
+	\item \label{algoSHADEILS:2}\textbf{Selección de la búsqueda local a aplicar}: la elección de qué LS ejecutar se basa en una primera ejecución de \textbf{ambas búsquedas locales}, tras las cuales se calcula un \textbf{ratio de mejora} de cada una con respecto a la mejor solución encontrada hasta el momento siguiendo la ecuación:
 	
 	 \begin{equation}\label{eq:LS-Seleccion}
 	 	\begin{gathered}
@@ -241,65 +234,25 @@ En este apartado se presenta el pseudocódigo general del algoritmo, donde se de
 
 Queda descrito el algoritmo SHADEILS, con todas sus componentes principales y todos los aspectos relativos a su implementación. En el siguiente capítulo, cuando se proponga el diseño experimental, los valores utilizados en la experimentación referentes a cada algoritmo serán detallados con claridad para garantizar que los experimentos sean completos, claros y repetibles. 
 
-\section{Algoritmos LSGO: MLSHADE-SPA}
+\section{MLSHADE-SPA}
 
 La cuarta propuesta elegida como fuente de estudio se trata de una técnica peculiar, propuesta durante el reciente \textbf{IEEE WCCI 2018: Special Session and Competition on Large-Scale Global Optimization}\cite{WCCI-SHADEILS}, que combina \textbf{cuatro algoritmos distintos} a través del framework CC\cite{CCoevo} para conseguir un balance exploración-explotación flexible y robusto cuyo funcionamiento sea independiente de la naturaleza del problema. Así, \textbf{\textit{LSHADE-SPA Memetic Framework for Solving Large Scale Problems}} o \textbf{MLSHADE-SPA}\cite{ML-SHADE-SPA} obtiene resultados muy competitivos en la \textbf{Special Session and Competition on LSGO}, lo que le otorga la segunda posición en la misma.
 
 A grandes rasgos, se trata de una propuesta innovadora que utiliza la Cooperación Co-evolutiva\cite{CCoevo} para organizar y dirigir cuatro técnicas que se encargan de mantener un balance adecuado entre exploración y explotación, sin realizar ninguna suposición previa acerca de la naturaleza del problema y realizando las particiones de forma aleatoria. El proceso de exploración está liderado por tres algoritmos DE, cada uno con su particular funcionamiento, y son \textbf{LSHADE-SPA}\cite{LSHADESPA}, \textbf{ANDE}\cite{ANDE} y \textbf{EADE}\cite{EADE}. La explotación es llevada a cabo principalmente por una versión modificada del algoritmo \textbf{MTS}\cite{MTS-LSGO}, diseñada específicamente para esta publicación.
 
-La selección de esta cuarta técnica está principalmente respaldada por el uso del enfoque \textbf{divide y vencerás}, dado que ninguna técnica elegida anteriormente utilizaba este planteamiento. La potencia que ofrece el framework CC\cite{CCoevo} cuando tiene a su disposición agentes robustos y eficaces, puede llegar a obtener \textbf{resultados tanto o incluso más competitivos} que los principales algoritmos de referencia en el campo LSGO. Naturalmente, se precisa de una descomposición que, en este caso, al ser \textbf{aleatoria y distinta para cada generación}, consigue aumentar las capacidades individuales de cada técnica, potenciando aún más los resultados.
+La selección de esta cuarta técnica está principalmente respaldada por el uso del enfoque \textbf{divide y vencerás}, dado que ninguna técnica elegida anteriormente utilizaba este planteamiento. La potencia que ofrece el framework CC\cite{CCoevo} cuando tiene a su disposición agentes robustos y eficaces, puede llegar a obtener \textbf{resultados tanto o incluso más competitivos} que los principales algoritmos de referencia aplicados de forma separada. Naturalmente, se precisa de una descomposición que, en este caso, al ser \textbf{aleatoria y distinta para cada generación}, consigue aumentar las capacidades individuales de cada técnica, potenciando aún más los resultados.
 
-Adicionalmente, el empleo de técnicas \textit{novel} de \textbf{mutación y adaptación de parámetros} en cada uno de los tres algoritmos que se encargan de la exploración, hace que la riqueza de este proceso se vea beneficiada directamente por las \textbf{posibilidades de explotación que se añaden de forma paralela durante la exploración} que otorga la propia naturaleza de los operadores. Finalmente, el empleo de una versión modificada de la búsqueda local por múltiples trayectorias (MTS) permite utilizar \textbf{toda la capacidad de la técnica} dado utiliza todos los subprocesos de búsqueda.
+Adicionalmente, el empleo de técnicas \textit{novel} de \textbf{mutación y adaptación de parámetros} en cada uno de los tres algoritmos que se encargan de la exploración, hace que la riqueza de este proceso se vea beneficiada directamente por las \textbf{posibilidades de explotación que se añaden de forma paralela durante la exploración} que conducen los operadores. Finalmente, el empleo de una versión modificada de la búsqueda local por múltiples trayectorias (MTS) permite utilizar \textbf{toda la capacidad de la técnica} utilizando todos los subprocesos de búsqueda.
 
 A continuación, se detallan las 3 componentes utilizadas en el proceso de exploración, así como las modificaciones realizadas en la técnica de explotación. La combinación de todos estos agentes se verá retratado en el pseudocódigo del algoritmo para facilitar su comprensión estructural.
 
-\subsection{Propuesta del algoritmo: MLSHADE-SPA}
-
-Este framework memético está compuesto por dos partes bien diferenciadas: las técnicas evolutivas encargadas de la exploración y la técnica de múltiples trayectorias para la explotación. Estos agentes están coordinados por el framework de cooperación co-evolutiva, conformando la totalidad de la propuesta principal. Se hace imprescindible por tanto desgranar el funcionamiento de todas las técnicas para clarificar los atributos que aporta cada una de cara a la obtención de soluciones.
-
-\begin{algorithm}[h]
-	\begin{algorithmic}[1]
-		\STATE $N_r = N^{init}$ ; $nfes = 0$ ; $cc\_n = 50$
-		\STATE Inicializar poblacion $P_r$ aleatoriamente
-		\STATE Inicializar parametros de SPA, EADE, ANDE y MMTS
-		\STATE round\_nfes = max\_nfes/cc\_n ; flag = 0
-		\WHILE{$nfes < max\_nfes$}
-		
-			\STATE EA\_nfes = MMTS\_nfes=  round(round\_nfes/2)
-			\STATE SPA\_nfes = round(EA\_nfes/2)
-			\IF{$flag == 0$}
-				\STATE SPA\_CC\_nfes=ANDE\_CC\_nfes=EADE\_CC\_nfes=round(EA\_nfes/6); flag = 1
-			\ELSE 
-				\STATE Recalcular CC\_nfes
-			\ENDIF	
-			
-			\STATE [Pop, Fit] = SPA(SPA\_nfes,Pop, Fit)
-			\STATE nfes = nfes+SPA\_nfes; Grupo\_num = 3
-			\STATE CC\_Ind = dividir\_dimensiones(Grupo\_num, D)
-			\STATE Alg\_Ind = find(CC\_Ind==1)
-			\STATE [Pop, Fit, imp(1)] = SPA\_CC(CC\_nfes(1), Pop, Fit, Alg\_Ind); nfes+=CC\_nfes(1)
-			\STATE Alg\_Ind = find(CC\_Ind==2)
-			\STATE [Pop, Fit, imp(2)] = ANDE\_CC(CC\_nfes(2), Pop, Fit, Alg\_Ind); nfes+=CC\_nfes(2)
-			\STATE Alg\_Ind = find(CC\_Ind==3)
-			\STATE [Pop, Fit, imp(3)] = EADE\_CC(CC\_nfes(3), Pop, Fit, Alg\_Ind); nfes+=CC\_nfes(3)	
-			\STATE [Pop, Fit] = MMTS(MMTS\_nfes, Pop, Fit); nfes+=MMTS\_nfes
-			\STATE Calcular imp y $N_{r+1}$
-			
-			\IF{$N_r < N_{r+1}$}
-				\STATE 	Ordenar individuos de P basado en fitness y eliminar los $N_r - N_{r+1}$ individuos más abajo
-			\ENDIF
-		
-		\ENDWHILE
-		
-	\end{algorithmic}
-	\caption{: MLSHADE-SPA} \label{Alg: MLSHADE-SPA}
-\end{algorithm}
+Este framework memético está compuesto por dos partes bien diferenciadas: las técnicas evolutivas encargadas de la exploración y la técnica de múltiples trayectorias para la explotación. Estos agentes están coordinados por el framework de cooperación co-evolutiva, conformando la totalidad de la propuesta principal. Se hace imprescindible por tanto desgranar el funcionamiento de todas las técnicas para clarificar los atributos que aporta cada una de cara a la obtención de soluciones. Se detalla el pseudocódigo del algoritmo en paralelo con las técnicas.
 
 \begin{enumerate}
 	
 	\item \textbf{LSHADE-SPA}: desarrollada para el \textbf{CEC2017}\cite{LSHADESPA} es una técnica que combina la variante de \textbf{SHADE}\cite{SHADE} que implementa una r\textbf{educción lineal del tamaño de la población} llamada \textbf{LSHADE}\cite{LSHADE} con una \textbf{semi-adaptación en dos etapas} de los parámetros del algoritmo, principalmente el factor de escalado \textbf{F} y la probabilidad de cruce \textbf{Cr}. Esta descripción se centrará en los elementos particulares de la implementación de LSHADE-SPA, donde se describen los procesos que conforman la propuesta.
 	
-	La población se inicializa de forma aleatoria entre las cotas inferior y superior del espacio de búsqueda. Posteriormente, se utiliza el operador \textit{current-to-pbest/1} propuesto en \cite{JADE} para generar el vector de mutación, estando guiado mayoritariamente por uno de los b, donde $p\in (0,1]$ y otros dos individuos seleccionados aleatoriamente. El \textit{trial vector} se genera mezclando el \textit{target vector} con el \textbf{vector mutación} siguiendo una probabilidad de cruce \textbf{Cr} y la selección es guiada por la calidad de la solución obtenida.
+	La población se inicializa de forma aleatoria entre las cotas inferior y superior del espacio de búsqueda. Posteriormente, se utiliza el operador \textit{current-to-pbest/1} propuesto en \cite{JADE} para generar el vector de mutación, estando guiado mayoritariamente por una de las $p$ mejores soluciones, donde $p\in (0,1]$ y otros dos individuos seleccionados aleatoriamente. El \textit{trial vector} se genera mezclando el \textit{target vector} con el \textbf{vector mutación} siguiendo una probabilidad de cruce \textbf{Cr} y la selección es guiada por la calidad de la solución obtenida.
 	
 	A partir de este punto, entra en escena la modificación introducida por LSHADE: se utiliza una \textbf{reducción lineal del tamaño de la población} para mejorar el rendimiento de SHADE. Esta reducción se dice lineal debido a que es una función del número de evaluaciones de la función objetivo, y sigue la siguiente ecuación donde $ N^{init}$ representa el tamaño inicial de la población, $ N^{min}$ es el mínimo de individuos con el que puede trabajar un DE, \textit{NFE} representa la cantidad actual de evaluaciones de la función objetivo y $MAX_{NFE}$ el máximo de evaluaciones:
 	
@@ -312,7 +265,7 @@ Este framework memético está compuesto por dos partes bien diferenciadas: las 
 	El proceso de semi-adaptación de parámetros también juega un papel fundamental en este algoritmo. Se aplica en dos etapas que se detallan a continuación, y segun se indica en \cite{LSHADESPA}, obtiene mejores resultados que las técnicas \textbf{aleatorias}, que no son capaces de resolver eficientemente una gran variedad de problemas al \textbf{no estar acotada la dirección} seguida en el espacio de búsqueda, y que las técnicas de \textbf{adaptación completa o auto-adaptadas}, dado que no existen garantías de prevenir estancamientos u óptimos locales debido a la tendencia de mantenerse en un espacio de búsqueda limitado durante muchas generaciones. Para conocer en mayor profundidad este algoritmo, se remite al lector a \cite{LSHADESPA}.
 
 	\begin{itemize}
-		\item \textbf{Etapa 1}: aplicada durante la primera mitad de la búsqueda, $nfes < max_nfes/2$, se adapta la probabilidad de cruce \textbf{Cr} mientras que \textit{F} se genera siguiendo una distribución uniforme. Durante la fase de \textbf{SPA} (Semi-Parameter Adaptation), cada individuo tiene su $F_i$ y $C_r$ donde se generan siguiendo las ecuaciones:
+		\item \textbf{Etapa 1}: aplicada durante la primera mitad de la búsqueda, $nfes < max_{nfes}/2$, se adapta la probabilidad de cruce \textbf{Cr} mientras que \textit{F} se genera siguiendo una distribución uniforme. Durante la fase de \textbf{SPA} (Semi-Parameter Adaptation), cada individuo tiene su $F_i$ y $C_r$ donde se generan siguiendo las ecuaciones:
 		
 		\begin{equation}\label{eq:SPA-FiCr}
 			\begin{gathered}
@@ -334,7 +287,7 @@ Este framework memético está compuesto por dos partes bien diferenciadas: las 
 		donde $\sigma = 0.1$ es la desviación estándar de la distribución y $MF_i$ representa el mismo concepto que $Cr_i$ pero para el factor de escalado. La memoria de $MF_i$ comiena con los valores de $F_i$ de las últimas 5 generaciones de la etapa 1 y se actualiza nuevamente una posición aleatoria mediante la media Lehmer.
 	\end{itemize}
 	
-	\item \textbf{EADE}: este \textit{enhanced adaptive DE algorithm}\cite{EADE} introduce un \textbf{operador de mutación novel} basado en tres algoritmos seleccionados de forma aleatoria de porciones de la población total. Este operador se mezcla con el \textbf{DE/rand/1/bin} clásico con probabilidad de aplicación 0.5 para cada uno, ayudando a mantener un equilibrio entre la exploración global y la explotación local del algoritmo. Además, se propone un \textbf{esquema auto-adaptativo del parámetro CR} que basa su funcionamiento en la historia evolutiva reciente. 
+	\item \textbf{EADE}: este \textit{enhanced adaptive DE algorithm}\cite{EADE} introduce un \textbf{operador de mutación novel} basado en \textbf{tres vectores solución seleccionados de forma aleatoria} de porciones de la población total. Este operador se mezcla con el \textbf{DE/rand/1/bin} clásico con probabilidad de aplicación 0.5 para cada uno, ayudando a mantener un equilibrio entre la exploración global y la explotación local del algoritmo. Además, se propone un \textbf{esquema auto-adaptativo del parámetro CR} que basa su funcionamiento en la historia evolutiva reciente. 
 	
 	\begin{itemize}
 		\item El esquema del nuevo operador se basa en utilizar \textbf{tres vectores} para generar el vector mutación, donde se utiliza \textbf{dos vectores $x_{p\_best}$ y $x_{p\_worst}$ elegidos aleatoriamente} de la parte \textbf{superior e inferior} del 100p\% de los individuos de la población de tamaño NP, mientras que un \textbf{tercer vector $x_r$} se selecciona de la \textbf{mitad restante de individuos} (NP-2(100p\%)), con $p \in (0,1]$. La generación del vector de mutación se rige por la ecuación:
@@ -345,11 +298,11 @@ Este framework memético está compuesto por dos partes bien diferenciadas: las 
 		\end{gathered}
 		\end{equation}
 		
-		Tanto F1 como F2 son los factores de escalado de la mutación que se generan siguiendo una \textbf{distribución uniforme en (0,1)}. La interpretación de este operador es simple: cada vector mutación, de cierta forma, \textbf{aprende de ambas vertienes buena y mala} de los individuos disponibles. Siguiendo estas pautas, se pueden evitar \textbf{estancamientos prematuros en óptimos locales} ya que no se sigue siempre el mismo camino de la mejor solución y además, concentrar los \textbf{esfuerzos de explotación en subespacios prometedores} es posible evitando las malas soluciones, factor al que contribuye el tercer sumando de la ecuación anterior.
+		Tanto F1 como F2 son los factores de escalado de la mutación que se generan siguiendo una \textbf{distribución uniforme en (0,1)}. La interpretación de este operador es simple: cada vector mutación, de cierta forma, \textbf{aprende de ambas vertientes buena y mala} de los individuos disponibles. Siguiendo estas pautas, se pueden evitar \textbf{estancamientos prematuros en óptimos locales} ya que no se sigue siempre el mismo camino de la mejor solución y además, concentrar los \textbf{esfuerzos de explotación en subespacios prometedores} es posible evitando las malas soluciones, factor al que contribuye el tercer sumando de la ecuación anterior.
 		
 		\item En cuanto al esquema de adaptación de la probabilidad de cruce \textbf{Cr}, para cada individuo se calcula un $CR_i$ de una \textit{pool} \textbf{A} de valores CR que cambian durante un \textbf{periodo de aprendizaje LP}, donde $LP = 10\%$ de GEN, donde G es la generación actual y GEN el total de generaciones. \textit{CR\_Flag\_List[i]} representa una lista con valores 0 y 1, donde 0 indica que no se ha mejorado un individuo y 1 el caso contrario; otra \textit{failure\_counter\_list[i]} cuenta la cantidad de veces que no se ha mejorado ese individuo en concreto tras el proceso de aprendizaje, hasta un máximo de 20. 
 		
-		Una última \textit{CR\_Ratio\_List[k]} aloja la mejora relativa entre los vectores \textbf{target y trial} con respecto a cada valor k de la pool A en la generación G. A grandes rasgos, según la \textbf{generación G} en la que se encuentre el algoritmo y si \textbf{\textit{f(target vector)} $>$ \textit{f(trial vector)} }, \textbf{el valor CR se elegirá de una pool A cada vez mayor} (empezando en 0.05 y aumentando en 0.05 la primera vez y 0.1 a partir de entonces, hasta un máximo de 0.95) si se cumple $G<=LP$ y la segunda condición, o se elegirá el valor de \textbf{CR} con mayor ratio de la lista anterior si el trial vector es mejor que el target vector. Se remite finalmente al lector a \cite{ANDE} si se quiere profundizar en este operador.
+		Una última \textit{CR\_Ratio\_List[k]} aloja la mejora relativa entre los vectores \textbf{target y trial} con respecto a cada valor k de la pool A en la generación G. A grandes rasgos, según la \textbf{generación G} en la que se encuentre el algoritmo y si \textbf{\textit{f(target vector)} $>$ \textit{f(trial vector)} }, \textbf{el valor CR se elegirá de una pool A cada vez mayor} (empezando con un único valor 0.05 y añadiendo más valores en incrementos de 0.05 la primera vez y 0.1 a partir de entonces, hasta un máximo de 0.95) si se cumple $G<=LP$ y la segunda condición, o se elegirá el valor de \textbf{CR} con mayor ratio de la lista anterior si el trial vector es mejor que el target vector. Se remite finalmente al lector a \cite{ANDE} si se quiere profundizar en este operador.
 	\end{itemize}
 
 	\item \textbf{ANDE}: esta técnica introduce nuevamente una modificación en el \textbf{operador de mutación}, donde se genera una \textbf{mutación triangular basada en una combinación convexa de una tripleta de vectores} elegidos aleatoriamente. Como en la técnica anterior, también se combina con la estrategia \textbf{DE/rand/1/bin} pero con una probabilidad de 2/3, al poseer ambas capacidades de exploración y explotación. También introduce un esquema de adaptación de la probabilidad de cruce \textbf{Cr} muy similar a la de la técnica anterior que se discutirá brevemente en los siguientes puntos.
@@ -369,33 +322,75 @@ Este framework memético está compuesto por dos partes bien diferenciadas: las 
 		\begin{gathered}
 			\overline{x}_c^G = \omega_1 \cdot x_{best} + \omega_2 \cdot x_{better} + \omega_2 \cdot x_{worst} \\
 			\mid \forall \omega_i \geq 0 \ y \ \sum_{i=1}^{3} \omega_i = 1 \ ; \ ademas \\
-			\omega_i = p_i / \sum_{i=1}^{3}p_i  \mid i=[1,2,3], p_1=1, p_2 = rand(0.75,1),  p_3 = rand(0.75,p_2) 
+			\omega_i = p_i / \sum_{i=1}^{3}p_i  \mid i=[1,2,3], p_1=1, p_2 = rand(0.75,1),  \\p_3 = rand(0.75,p_2) 
 		\end{gathered}
 		\end{equation}
 		
 	\end{itemize}
 
-	Mediante este enfoque se quiere dotar de un \textbf{comportamiento de gradiente} al operador, dirigiendo las perturbaciones en la dirección (mayoritariamente) de la zona más prometedora, al realizarse de la \textbf{peor a la mejor solución} aleatoria, aumentando la capacidad exploratoria global del algoritmo a la vez que la explotación de subregiones prometedoras del espacio de búsqueda son explotadas. Para terminar, los factores de escalado se generan a partir de distribuciones uniformes en (0,1) y la adaptación del parámetro \textbf{Cr} se realiza de la misma forma que en \textbf{EADE}, por lo que se remite al lector a \cite{ANDE} si se quiere profundizar en el algoritmo o la adaptacion en cuestión.
+	Mediante este enfoque se quiere dotar de un \textbf{comportamiento de gradiente} al operador, dirigiendo las perturbaciones en la dirección (mayoritariamente) de la zona más prometedora, al realizarse desde la \textbf{peor a la mejor solución} aleatoria, aumentando la capacidad exploratoria global del algoritmo a la vez que las subregiones prometedoras del espacio de búsqueda son explotadas. Para terminar, los factores de escalado se generan a partir de distribuciones uniformes en (0,1) y la adaptación del parámetro \textbf{Cr} se realiza de la misma forma que en \textbf{EADE}, por lo que se remite al lector a \cite{ANDE} si se quiere profundizar en el algoritmo o la adaptación en cuestión.
 	
-	\item \textbf{MMTS}: versión modificada del algoritmo MTS donde la principal diferencia radica en la \textbf{selección de los agentes de partida}. En vez de generarse tal y como se propone en \cite{MTS-LSGO}, se eligen estos agentes de \textbf{la población de entrada} tras la ejecución iterativa de los 3 anteriores algoritmos poblaciones, donde se seleccionan por un procedimiento de \textit{limpieza}. Posteriomente se procede de manera similar a la propuesta original.
+	\item \textbf{MMTS}: versión modificada del algoritmo MTS donde la principal diferencia radica en la \textbf{selección de los agentes de partida}. En vez de generarse tal y como se propone en \cite{MTS-LSGO}, se eligen estos agentes de \textbf{la población de entrada} tras la ejecución iterativa de los 3 anteriores algoritmos poblaciones, donde se seleccionan por un procedimiento de \textit{limpieza}. 
 	
 \end{enumerate} 
-\newpage
-\section{Algoritmos LSGO: Differential Grouping 2}
 
-La quinta y última propuesta de algoritmo sometida a estudio en este trabajo se trata de una técnica particularmente distinta a las anteriores. Esta técnica denominada \textbf{\textit{DG2: A Faster and More Accurate Differential Grouping for Large-Scale Black-Box Optimization}}\cite{DG2} es una versión mejorada del algoritmo de descomposición de variables \textbf{DG} de la publicación \textbf{\textit{Cooperative Co-Evolution With Differential Grouping for Large Scale Optimization}} \cite{DG}, donde se intenta solventar una serie problemas relacionados con la forma en la que se aborda el problema de la \textbf{dimensionalidad} y de la \textbf{interacción de variables}, inconventientes típicos de los problemas de \textit{large-scale global optimization}.
+A continuación, se detalla el pseudocódigo del algoritmo en cuestión. 
+
+\begin{algorithm}[h]
+	\begin{algorithmic}[1]
+		\STATE [Pop, Fit] = SPA(SPA\_nfes,Pop, Fit)
+		\STATE nfes = nfes+SPA\_nfes; Grupo\_num = 3
+		\STATE CC\_Ind = dividir\_dimensiones(Grupo\_num, D)
+		\STATE Alg\_Ind = find(CC\_Ind==1)
+		\STATE [Pop, Fit, imp(1)] = SPA\_CC(CC\_nfes(1), Pop, Fit, Alg\_Ind); nfes+=CC\_nfes(1)
+		\STATE Alg\_Ind = find(CC\_Ind==2)
+		\STATE [Pop, Fit, imp(2)] = ANDE\_CC(CC\_nfes(2), Pop, Fit, Alg\_Ind); nfes+=CC\_nfes(2)
+		\STATE Alg\_Ind = find(CC\_Ind==3)
+		\STATE [Pop, Fit, imp(3)] = EADE\_CC(CC\_nfes(3), Pop, Fit, Alg\_Ind); nfes+=CC\_nfes(3)	
+		\STATE [Pop, Fit] = MMTS(MMTS\_nfes, Pop, Fit); nfes+=MMTS\_nfes
+		\STATE Calcular imp y $N_{r+1}$	
+	\end{algorithmic}
+	\caption{: \textit{\textbf{Evolve\_MLSHADESPA()}}} \label{Alg: MLSHADE-SPA-EVOLVE}
+\end{algorithm}
+
+
+\begin{algorithm}[H]
+	\begin{algorithmic}[1]
+		\STATE $N_r = N^{init}$ ; $nfes = 0$ ; $cc\_n = 50$
+		\STATE Inicializar poblacion $P_r$ aleatoriamente
+		\STATE Inicializar parametros de SPA, EADE, ANDE y MMTS
+		\STATE round\_nfes = max\_nfes/cc\_n ; flag = 0
+		\WHILE{$nfes < max\_nfes$}
+		
+		\STATE EA\_nfes = MMTS\_nfes=  round(round\_nfes/2)
+		\STATE SPA\_nfes = round(EA\_nfes/2)
+		\IF{$flag == 0$}
+		\STATE SPA\_CC\_nfes=ANDE\_CC\_nfes=EADE\_CC\_nfes=round(EA\_nfes/6); flag = 1
+		\ELSE 
+		\STATE Recalcular CC\_nfes
+		\ENDIF	
+		\STATE\textit{ \textbf{Evolve\_MLSHADESPA()}}
+		\IF{$N_r < N_{r+1}$}
+		\STATE 	Ordenar individuos de P basado en fitness y eliminar los $N_r - N_{r+1}$ individuos más abajo
+		\ENDIF
+		\ENDWHILE		
+	\end{algorithmic}
+	\caption{: MLSHADE-SPA} \label{Alg: MLSHADE-SPA}
+\end{algorithm}
+
+\section{Differential Grouping 2}
+
+La quinta y última propuesta de algoritmo sometida a estudio en este trabajo se trata de una técnica particularmente distinta a las anteriores. Esta técnica denominada \textbf{\textit{DG2: A Faster and More Accurate Differential Grouping for Large-Scale Black-Box Optimization}}\cite{DG2} es una versión mejorada del algoritmo de descomposición de variables \textbf{DG} de la publicación \textbf{\textit{Cooperative Co-Evolution With Differential Grouping for Large Scale Optimization}} \cite{DG}, donde se intenta solventar una serie problemas relacionados con la forma en la que se aborda el problema de la \textbf{dimensionalidad} y de la \textbf{interacción de variables}, inconvenientes típicos de los problemas de \textit{large-scale global optimization}.
 
 La optimalidad de las soluciones que un algoritmo obtiene están intimamente relacionadas con la \textbf{interacción de las variables en el problema}. Es por esta razón que surgen este tipo de técnicas, donde se pretende identificar las variables con interacción a través de un estudio exhaustivo de \textbf{pares de variables} que es incluso capaz de detectar \textbf{componentes solapadas} de una función objetivo (representación de un problema de optimización), para que un enfoque de tipo \textbf{divide y vencerás} pueda resolver de la mejor forma posible el problema, centrándose en aquellas conjuntos de variables que, de cierta forma, aportan más a la \textbf{calidad del fitness} que otras.
 
-Elegir esta última propuesta se justifica debido a la posibilidad que ofrece de atacar el \textbf{problema de la dimensionalidad} con una herramienta distinta a las anteriores meteheurísticas. Descomponer el problema en subproblemas más pequeños que son optimizados de forma iterativa disminuye considerablemente la \textbf{complejidad del espacio de soluciones}. A través de la \textbf{cooperación co-evolutiva}, una descomposición óptima del problema que se aplica de forma iterativa a una metaheurística potente puede arrojar resultados mucho más competitivos que de forma individual.
+Elegir esta última propuesta se justifica debido a la posibilidad que ofrece de atacar el \textbf{problema de la dimensionalidad} con una herramienta distinta a las anteriores meteheurísticas. Descomponer el problema en subproblemas optimales más pequeños que son optimizados de forma iterativa disminuye considerablemente la \textbf{complejidad del espacio de soluciones}. A través de la \textbf{cooperación co-evolutiva}, una descomposición óptima del problema que se aplica de forma iterativa a una metaheurística potente puede arrojar resultados mucho más competitivos que de forma individual.
 
 Este tipo de técnica en particular, dados sus orígenes y la familia de algoritmos a la que pertenece, se encuentra actualmente en la cúspide debido a que no sólo es capaz de descomponer \textbf{problemas de dimensionalidad superior a 1000} con bastante precisión sino que además \textbf{resuelve todos los inconvenientes y vulnerabilidades de su generación}: tiene un mecanismo \textbf{renovado para identificar la interacción} que requiere un número considerablemente menor de evaluaciones de la función objetivo que sus predecesores y además es completamente \textit{parameter-free}, ya que el único \textbf{parámetro} que necesita \textbf{especificación previa} en otras propuestas de su familia y que es decisivo para una descomposición óptima, DG2 lo calcula de forma \textbf{automática e independiente para cada variable}, lo que naturalmente, aumenta la efectividad y permite un ajuste más adecuado a cualquier tipo de problema.
 
 Partiendo de estos preceptos se procede a especificar el algoritmo en su totalidad y detallar sus componentes principales, destacando los aspectos relevantes que respaldan la elección de esta técnica. Al término de esta ilustración se precisarán ciertas condiciones a cumplir con el algoritmo que a su vez determinarán el grado de implicación de éste a lo largo del proceso de experimentación.
 
-\subsection{Propuesta del algoritmo: DG2}
-
-DG2, como técnica de tipo \textbf{divide y vencerás}, descompone el problema en una serie de subproblemas más pequeños y simples, con el objetivo de optimizarlos de forma iterativa mediante un algoritmo de co-evolución cooperativa. Para llevar a cabo esta tarea, una función objetivo $f$ se debe descomponer de tal forma que se \textbf{minimice la interacción entre las componentes resultantes}; esto es una tarea realmente compleja para funciones de tipo black-box, donde no se tiene \textbf{información acerca de la interacción de variables}.
+DG2, como técnica de tipo \textbf{divide y vencerás}, descompone el problema en una serie de subproblemas más pequeños y simples, con el objetivo de optimizarlos posteriormente de forma iterativa mediante un algoritmo de co-evolución cooperativa y distintos agentes. Para llevar a cabo esta tarea, una función objetivo $f$ se debe descomponer de tal forma que se \textbf{minimice la interacción entre las componentes resultantes}; esto es una tarea realmente compleja para funciones de tipo black-box, donde no se tiene \textbf{información acerca de la interacción de variables}.
 
 La propuesta elegida está destinada a solventar los inconvenientes que tenía su predecesora DG, principalmente: alto coste computacional para funciones separables, incapacidad de detectar componentes solapadas, sensibilidad a errores de redondeo y dependencia de un parámetro umbral. DG2 \textbf{mejora la eficiencia}, requiriendo de tan sólo la \textbf{mitad de las evaluaciones de la función objetivo que DG} para funciones separables, que es el caso que más consume. Además, aumenta la capacidad de agrupamiento debido a la \textbf{estimación automática del umbral para cada variable}, lo que otorga mayor sensibilidad frente a interacciones débiles.
 
@@ -407,7 +402,7 @@ Para que la descomposición de variables sea óptima, se requiere \textbf{minimi
 	\end{gathered}
 \end{equation}
  
-Por tanto, una función será \textbf{separable} si es posible alcanzar su óptimo global únicamente optimizando \textbf{una dimensión a la vez}, independientemente del valor que tomen las demás variables. A partir de esta definición surgen otras definiciones de separabilidad: una función se dice \textbf{parciamente separable} con $m$ componentes independientes sí y sólo si:
+Por tanto, una función será \textbf{separable} si es posible alcanzar su óptimo global únicamente optimizando \textbf{una dimensión a la vez}, independientemente del valor que tomen las demás variables. A partir de esta definición surgen otras definiciones de separabilidad: una función se dice \textbf{parcialmente separable} con $m$ componentes independientes sí y sólo si:
 
 \begin{equation}\label{eq:partSeparable}
 	\begin{gathered}
@@ -417,7 +412,7 @@ Por tanto, una función será \textbf{separable} si es posible alcanzar su ópti
 
 donde $\textbf{x}=(x_1,...,x_n)^T$, $x_1,...,x_m$ son vectores solución de \textbf{x} y $2 \leq m \leq n$
 
-Finalmente se define una función parcialmente aditivamente separable como sigue:
+Finalmente se define una función \textbf{parcialmente aditivamente separable} como sigue:
 
 \begin{equation}\label{eq:addPartSeparable}
 	\begin{gathered}
@@ -427,7 +422,7 @@ Finalmente se define una función parcialmente aditivamente separable como sigue
 
 donde $f_i(\cdot)$ es una subfunción no-separable y $m$ el número de subcomponentes independientes de $f$ como se describe en la ecuación \ref{eq:partSeparable}.
 
-Partiendo de estas definiciones se proponen distintos tipos de algoritmos de descomposición que mezclan diversas heurísticas para llevar a cabo la agrupación, sin embargo obtienen bajos índices de agrupación. Dentro de estos algoritmos está DG, la base de DG2, donde su rendimiento de agrupación es muy superior a las demás propuestas, y esto se debe al teorema enunciado a continuación\cite{DG}.
+Partiendo de estas definiciones se proponen distintos tipos de algoritmos de descomposición que mezclan diversas heurísticas para llevar a cabo la agrupación, sin embargo obtienen bajos índices de agrupación. Dentro de estos algoritmos está DG\cite{DG}, la base de DG2, donde su rendimiento de agrupación es muy superior a las demás propuestas, y esto se debe al teorema enunciado a continuación.
 
 \textbf{Teorema 1}: sea $f(x)$ una función parcialmente aditivamente separable (ecuación \ref{eq:addPartSeparable}). $\forall a, \ b_1 \neq b_2, \ \delta \neq 0$, las variables $x_p$ y $x_q$ interactúan si se cumple la siguiente condición:
 
@@ -439,29 +434,29 @@ Partiendo de estas definiciones se proponen distintos tipos de algoritmos de des
 
 donde $\Delta_{\delta,x_p} [f](x)= f(...,x_p+\delta,...) -  f(...,x_p,...)$ hace referencia a la \textit{forward difference}\cite{DG} de $f$ con respecto a $x_p$ y un intervalo $\delta$. Si se evalúa la ecuación \ref{eq:interactionAddPartSep} con dos valores distintos de $x_q$ dando distintos resultados, entonces se dice que \textbf{$x_p$ y $x_q$ interactúan}. Se denota a la parte izquierda de la ecuación anterior como $\Delta^{(1) }$ y a la derecha como $\Delta^{(2)} $, con el único objetivo de abreviar.
 
-Sin embargo, la comprobación $\Delta^{(1)} \neq \Delta^{(2)} \implies \mid \Delta^{(1)} - \Delta^{(2)}\mid \neq 0 $ es prácticamente imposible de realizar a nivel computacional debido a la precisión de los número expresados en coma flotante. Por esta razón se introduce un término $\epsilon$ para restringir estos errores, quedando finalmente la ecuación: $\lambda = \ \mid \Delta^{(1)} - \Delta^{(2)}\mid \ > \ \epsilon$. Es este el parámetro que DG2 calcula de forma automática para cada par de variables y que sus antecesores DG definen de forma global para todas las variables. Para diferenciar DG2 de sus predecesores se muestra el pseudocódigo del algoritmo, donde las tres partes principales se discuten seguidamente.
+Sin embargo, la comprobación $\Delta^{(1)} \neq \Delta^{(2)} \implies \mid \Delta^{(1)} - \Delta^{(2)}\mid \neq 0 $ es prácticamente imposible de realizar a nivel computacional debido a la precisión de los número expresados en coma flotante. Por esta razón se introduce un término $\epsilon$ para restringir estos errores, quedando finalmente la ecuación: $\lambda = \ \mid \Delta^{(1)} - \Delta^{(2)}\mid \ > \ \epsilon$. Este es el parámetro que DG2 calcula de forma automática para cada par de variables y que sus antecesores DG definen de forma global para todas las variables. Para diferenciar DG2 de sus predecesores se muestra el pseudocódigo del algoritmo, donde las tres partes principales se discuten seguidamente.
+
+\begin{algorithm}[h]
+	\begin{algorithmic}[1]
+		\STATE $(\Lambda, F , \hat{f}, f_{base}, \Gamma) = ISM(f,n,  \overline{x}, \underline{x})$
+		\STATE $\Theta = DSM(\Lambda, F , \hat{f}, f_{base}, \Gamma)$
+		\STATE $(k, y_1,...,y_k)=ConnComp(\Theta)$
+		\STATE $x_{sep} = {}$ , $g = 0$
+		\FOR{$i=1 \rightarrow k$}
+		\IF{$|y_i| = 1$}
+		\STATE $x_{sep} = x_{sep} \cup y_i$
+		\ELSE
+		\STATE $g = g +1$; $x_g = y_i$
+		\ENDIF
+		\ENDFOR
+	\end{algorithmic}
+	\caption{: (g,$x_1,...,x_g$, $x_{sep},\Gamma$) = $DG2(f, n, \overline{x}, \underline{x})$} \label{Alg: DG2}
+\end{algorithm}
 
 \begin{enumerate}
-	\item \textbf{Formación de \textit{raw interaction structure matrix}}: la matriz $\Lambda$ contiene la cantidad $\mid \Delta^{(1)} - \Delta^{(2)}\mid$ para cada par de variables y es computada en la función \textbf{ISM}. Aquí es imprescindible prestar atención a la \textbf{formulación del algoritmo \textit{ISM}} que se puede ver en \cite{DG2}, dado que para una función \textit{n-dimensional} el número total de interacciónes es $n \choose 2$.
+	\item \textbf{Formación de \textit{raw interaction structure matrix}}: la matriz $\Lambda$ contiene la cantidad $\mid \Delta^{(1)} - \Delta^{(2)}\mid$ para cada par de variables y es computada en la función \textbf{ISM}. Aquí es imprescindible prestar atención a la \textbf{formulación del algoritmo \textit{ISM}} que se puede ver en \cite{DG2}, dado que para una función \textit{n-dimensional} el número total de interacciones es $n \choose 2$.
 	
 	Según el teorema 1, se requieren de 4 evaluaciones de la función objetivo, lo que implica un total de  $4\cdot$ $n \choose 2$ $= 2n(n-1)$ evaluaciones de la función objetivo. Para reducir de forma considerable el número de evaluaciones de la función objetivo y por consiguiente el tiempo de respuesta, se realiza una \textbf{agrupación de los 4 puntos necesarios} para el cálculo de $\mid \Delta^{(1)} - \Delta^{(2)}\mid$ mediante un proceso de \textbf{generalización para cualquier número de variables}, lo que finalmente, tras eliminar las evaluaciones redundantes de la interacción $x_i - x_j$ descrita en \cite{DG2}, resulta en un número inferior de evaluaciones: $\frac{n(n+1)}{2}+1$.
-	
-	\begin{algorithm}[h]
-		\begin{algorithmic}[1]
-			\STATE $(\Lambda, F , \hat{f}, f_{base}, \Gamma) = ISM(f,n,  \overline{x}, \underline{x})$
-			\STATE $\Theta = DSM(\Lambda, F , \hat{f}, f_{base}, \Gamma)$
-			\STATE $(k, y_1,...,y_k)=ConnComp(\Theta)$
-			\STATE $x_{sep} = {}$ , $g = 0$
-			\FOR{$i=1 \rightarrow k$}
-			\IF{$|y_i| = 1$}
-			\STATE $x_{sep} = x_{sep} \cup y_i$
-			\ELSE
-			\STATE $g = g +1$; $x_g = y_i$
-			\ENDIF
-			\ENDFOR
-		\end{algorithmic}
-		\caption{: (g,$x_1,...,x_g$, $x_{sep},\Gamma$) = $DG2(f, n, \overline{x}, \underline{x})$} \label{Alg: DG2}
-	\end{algorithm}
 	
 	\item \textbf{Determinación del parámetro $\epsilon$}: parámetro para transformar $\Lambda$ en $\Theta$, la \textit{design structure matrix} donde $\Theta = 1 \iff \Lambda_{i,j} > \epsilon$, 0 en otro caso. El cálculo de $\epsilon$ es informado: se obtiene a partir de estimar la magnitud de la función $f$ y de los valores de $\Lambda$.
 	
@@ -469,75 +464,12 @@ Sin embargo, la comprobación $\Delta^{(1)} \neq \Delta^{(2)} \implies \mid \Del
 	
 	Se estiman por tanto dos cotas $(e_{inf})$,la cota inferior más grande, y $(e_{sup})$ - la cota superior más pequeña -  de $\epsilon$ para cada par de variables, nuevamente utilizando la información de $\lambda = \ \mid \Delta^{(1)} - \Delta^{(2)}\mid$, por lo que ahora se considera \textbf{interacción} si $\lambda > e_{sup}$ y \textbf{separable} si $\lambda < e_{inf}$.
 	
-	El algoritmo se suple del error de representación de un número \textit{x} a través de una función $f(x) =x(1+\delta)$, que indica que el error de representación crece con x, de los errores que acarrean por las operaciones en coma flotante y la cantidad de éstas para calcular las cotas anteriormente mencionada
+	El algoritmo se suple del error de representación computacional de un número \textit{x} a través de una función $f(x) =x(1+\delta)$, que indica que el error de representación crece con x. Se basa además en los errores que acarrean las operaciones en coma flotante y la cantidad de estas para calcular las cotas anteriormente mencionadas.
 	
 	El cálculo de $(e_{inf})$ estará guiado por los \textbf{errores que se cometen al aplicar DG} en el cálculo de la diferencia $\lambda = \ \mid \Delta^{(1)} - \Delta^{(2)}\mid$, siguiendo la ecuación descrita en \cite{DG2}, que será obviada para no extender innecesariamente este documento. La mínima cota superior $(e_{sup})$, se calcula a partir del error que acarrean las \textbf{operaciones de coma flotante y el número de éstas}, estimando este último parámetro asumiendo \textbf{complejidad lineal en el número de operaciones de \textit{coma flotante}}, asegurando un ajuste más estricto para esta cota. Se remite al lector nuevamente a \cite{DG2} si se quiere conocer en profundidad las ecuaciones utilizadas para el cálculo de las cotas. 
 	\\
 	\item \textbf{Descomposición de variables en grupos no-separables}: identificar las componentes conexas del grafo a través de la matriz $\Theta$ de adyacencia.
 \end{enumerate}
 
-Las implementaciones concretas de los algoritmos \textbf{ISM} y \textbf{DSM} se recogen en la publicación anteriormente mencionada \cite{DG2} y se remite al lector a ésta para evitar engrosar esta descripción sin necesidad alguna. Queda por tanto detallada la última propuesta de algoritmo perteneciente a este estudio. En el siguiente capítulo se propone el diseño experimental que permitirá emitir las conclusiones adecuadas tras obtener los resultados de la experimentacion, resaltando aquellas propuestas que exhiban un mejor rendimiento.
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Las implementaciones concretas de los algoritmos \textbf{ISM} y \textbf{DSM} se recogen en la publicación anteriormente mencionada \cite{DG2} y se remite al lector a ésta para evitar engrosar esta descripción sin necesidad alguna. Queda por tanto detallada la última propuesta de algoritmo perteneciente a este estudio. En el siguiente capítulo se lleva a cabo la implementación en cuanto a adaptación de los algoritmos se refiere, atendiendo y resolviendo todos los inconvenientes que se derivan de esta tarea.
 
