@@ -1,0 +1,24 @@
+This project contains the C++ and MATLAB/Octave implementation of the
+DG2 algorithm. 
+
+
+-----------
+Known Bugs:
+-----------
+
+The MATLAB implementation has only been tested with GNU Octave version
+4.0.0. The program may result in syntax error in MATLAB; however, with
+some minor changes it can be easily ported to MATLAB. This portability
+issue will be fixed in the near future.
+
+The C++ implementation has not been fully tested. For more information
+please see README file specific to each implementation.
+
+-----------
+References:
+-----------
+
+[1] Omidvar, M. N., Yang, M., Mei, Y., Li, X., & Yao, X. (2017). DG2: A
+    Faster and More Accurate Differential Grouping for Large-Scale
+    Black-Box Optimization. IEEE Transactions on Evolutionary Computation.
+    https://doi.org/10.1109/TEVC.2017.2694221
